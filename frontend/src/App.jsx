@@ -3,7 +3,6 @@ import Home from './pages/Home'
 import NavBar from './components/NavBar'
 import ReachOut from './pages/ReachOut'
 import { Routes, Route } from 'react-router-dom'
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const App = () => {
   const [isContactOpen, setIsContactOpen] = useState(false)
