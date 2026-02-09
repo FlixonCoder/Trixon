@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000
 
 // Middleware
 app.use(cors({
-    origin: ["http://localhost:5173", `${process.env.CLIENT_URI}`, "https://trixon-three.vercel.app", "https://www.trixon.cloud", "https://trixon.cloud"],
+    origin: [`${process.env.CLIENT_URI_1}`, `${process.env.CLIENT_URI_2}`, `${process.env.CLIENT_URI_3}`, `${process.env.CLIENT_URI_4}`],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }))
