@@ -19,7 +19,7 @@ const About = () => {
                     <div className="flex flex-col items-center justify-center space-y-2">
                         <div className="h-px w-20 bg-stone-300 mb-4"></div>
                         <div className="text-stone-900 font-bold text-lg tracking-wide uppercase font-sans">
-                            Mohammed Saqib Junaid Khan
+                            — Mohammed Saqib Junaid Khan
                         </div>
                         <div className="text-stone-500 text-sm font-sans tracking-widest uppercase">
                             Founder of Trixon
