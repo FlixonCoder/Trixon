@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
+
 const ReachOut = ({ isOpen, onClose }) => {
     const [formData, setFormData] = useState({
         name: '',
@@ -26,7 +28,7 @@ const ReachOut = ({ isOpen, onClose }) => {
         setStatus('submitting')
 
         try {
-            const response = await fetch('http://localhost:5000/api/contact', {
+            const response = await fetch(`${BACKEND_URL}/api/contact`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
