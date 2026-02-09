@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Message = require('../models/Message')
+const authMiddleware = require('../middleware/authMiddleware')
 
 // POST /api/contact - Submit a new contact message
 router.post('/', async (req, res) => {
@@ -27,7 +28,7 @@ router.post('/', async (req, res) => {
 })
 
 // GET /api/contact - Get all messages (for admin panel)
-router.get('/', async (req, res) => {
+router.get('/', authMiddleware, async (req, res) => {
     try {
         const messages = await Message.find().sort({ createdAt: -1 })
         res.status(200).json(messages)
@@ -38,7 +39,7 @@ router.get('/', async (req, res) => {
 })
 
 // DELETE /api/contact/:id - Delete a message
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', authMiddleware, async (req, res) => {
     try {
         const message = await Message.findById(req.params.id)
         if (!message) {
@@ -54,7 +55,7 @@ router.delete('/:id', async (req, res) => {
 })
 
 // PUT /api/contact/:id - Update message (e.g., toggle save)
-router.put('/:id', async (req, res) => {
+router.put('/:id', authMiddleware, async (req, res) => {
     try {
         const message = await Message.findById(req.params.id)
         if (!message) {

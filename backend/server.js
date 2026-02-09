@@ -23,6 +23,7 @@ mongoose.connect(process.env.MONGODB_URI)
     .catch(err => console.error('MongoDB Connection Error:', err))
 
 // Routes
+app.use('/api/auth', require('./routes/authRoutes'))
 app.use('/api/contact', require('./routes/contactRoutes'))
 
 // Basic Route
