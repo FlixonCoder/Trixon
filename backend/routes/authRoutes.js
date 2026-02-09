@@ -7,33 +7,42 @@ const jwt = require('jsonwebtoken');
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
-    // Validate email
+    if (!email || !password) {
+        return res.status(400).json({ message: 'Email and password required' });
+    }
+
+    if (!process.env.ADMIN_PASSWORD_HASH) {
+        console.error("ADMIN_PASSWORD_HASH missing");
+        return res.status(500).json({ message: 'Server misconfiguration' });
+    }
+
     if (email !== process.env.ADMIN_EMAIL) {
         return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    // Validate password
-    const isMatch = await bcrypt.compare(password, process.env.ADMIN_PASSWORD_HASH);
+    const isMatch = await bcrypt.compare(
+        password,
+        process.env.ADMIN_PASSWORD_HASH.trim()
+    );
+
     if (!isMatch) {
         return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    // Create token
     const payload = {
-        admin: {
-            id: 'admin' // Static ID since there is only one admin
-        }
+        admin: { id: 'admin' }
     };
 
     jwt.sign(
         payload,
         process.env.JWT_SECRET,
-        { expiresIn: '1h' }, // Token valid for 1 hour
+        { expiresIn: '1h' },
         (err, token) => {
-            if (err) throw err;
+            if (err) return res.status(500).json({ message: 'Token error' });
             res.json({ token });
         }
     );
 });
+
 
 module.exports = router;

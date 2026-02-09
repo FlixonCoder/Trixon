@@ -49,12 +49,26 @@ const Home = () => {
 
     const fetchMessages = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/contact')
+            const token = localStorage.getItem('token')
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+
+            const response = await axios.get(`${apiUrl}/contact`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
             setMessages(response.data)
             setFilteredMessages(response.data)
             setLoading(false)
         } catch (err) {
             console.error('Error fetching messages:', err)
+            if (err.response && err.response.status === 401) {
+                // Token invalid or expired
+                localStorage.removeItem('token')
+                localStorage.removeItem('isAuthenticated')
+                window.location.href = '/login'
+                return
+            }
             setError('Failed to load messages')
             setLoading(false)
         }
@@ -64,10 +78,20 @@ const Home = () => {
         e.stopPropagation()
         if (window.confirm('Are you sure you want to delete this message?')) {
             try {
-                await axios.delete(`http://localhost:5000/api/contact/${id}`)
+                const token = localStorage.getItem('token')
+                const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+                await axios.delete(`${apiUrl}/contact/${id}`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                })
                 setMessages(messages.filter(msg => msg._id !== id))
             } catch (err) {
                 console.error('Error deleting message:', err)
+                if (err.response && err.response.status === 401) {
+                    window.location.href = '/login'
+                    return
+                }
                 alert('Failed to delete message')
             }
         }
@@ -76,14 +100,24 @@ const Home = () => {
     const handleSave = async (id, currentStatus, e) => {
         e.stopPropagation()
         try {
-            const response = await axios.put(`http://localhost:5000/api/contact/${id}`, {
+            const token = localStorage.getItem('token')
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+            const response = await axios.put(`${apiUrl}/contact/${id}`, {
                 isSaved: !currentStatus
+            }, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
             })
             setMessages(messages.map(msg =>
                 msg._id === id ? { ...msg, isSaved: response.data.isSaved } : msg
             ))
         } catch (err) {
             console.error('Error updating message:', err)
+            if (err.response && err.response.status === 401) {
+                window.location.href = '/login'
+                return
+            }
             alert('Failed to update message')
         }
     }

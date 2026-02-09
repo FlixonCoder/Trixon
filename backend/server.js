@@ -10,8 +10,9 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 // Middleware
+console.log("Allowed Origins:", [process.env.CLIENT_URI_1, process.env.CLIENT_URI_2, process.env.CLIENT_URI_3, process.env.CLIENT_URI_4]);
 app.use(cors({
-    origin: [`${process.env.CLIENT_URI_1}`, `${process.env.CLIENT_URI_2}`, `${process.env.CLIENT_URI_3}`, `${process.env.CLIENT_URI_4}`],
+    origin: [process.env.CLIENT_URI_1, process.env.CLIENT_URI_2, process.env.CLIENT_URI_3, process.env.CLIENT_URI_4],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }))

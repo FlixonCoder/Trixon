@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -7,21 +8,22 @@ const Login = () => {
     const [error, setError] = useState('')
     const navigate = useNavigate()
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault()
 
-        const adminMail = import.meta.env.VITE_USER_MAIL
-        const adminPwd = import.meta.env.VITE_USER_PWD
+        try {
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+            const response = await axios.post(`${apiUrl}/auth/login`, {
+                email,
+                password
+            })
 
-        // Remove quotes if they exist in the env var string
-        const cleanMail = adminMail.replace(/['"]+/g, '')
-        const cleanPwd = adminPwd.replace(/['"]+/g, '')
-
-        if (email === cleanMail && password === cleanPwd) {
+            localStorage.setItem('token', response.data.token) // Store JWT token
             localStorage.setItem('isAuthenticated', 'true')
             navigate('/')
-        } else {
-            setError('Invalid credentials')
+        } catch (err) {
+            console.error('Login error:', err)
+            setError(err.response?.data?.message || 'Invalid credentials')
         }
     }
 
