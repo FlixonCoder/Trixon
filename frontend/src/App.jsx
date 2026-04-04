@@ -4,6 +4,7 @@ import HireStart from './pages/HireStart'
 import NavBar from './components/NavBar'
 import ReachOut from './pages/ReachOut'
 import { Routes, Route, useLocation } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 
 const ScrollToTop = () => {
   const { pathname } = useLocation()
@@ -28,6 +29,7 @@ const App = () => {
         </Routes>
       </div>
       <ReachOut isOpen={isContactOpen} onClose={closeContact} />
+      <Analytics />
     </div>
   )
 }
