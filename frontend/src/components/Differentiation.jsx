@@ -7,47 +7,38 @@ const Differentiation = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <MotionSection className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-serif italic text-stone-900 mb-6 font-light">
-                        Not an Agency. <span className="font-sans font-bold not-italic">A Partner.</span>
+                        The Independence <span className="font-sans font-bold not-italic">Promise.</span>
                     </h2>
+                    <p className="mt-4 text-xl text-stone-600 max-w-2xl mx-auto">
+                        We are the only partner whose primary goal is to fire ourselves.
+                    </p>
                 </MotionSection>
 
-                <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto items-center">
-                    {/* The "Old Way" List - Muted, Passive */}
-                    <MotionSection delay={0.2} className="p-10 rounded-3xl bg-stone-50 border border-stone-100 opacity-70 hover:opacity-100 transition-opacity">
-                        <h3 className="text-lg font-bold text-stone-400 uppercase tracking-widest mb-8">
-                            Traditional Agencies
-                        </h3>
-                        <ul className="space-y-6">
-                            {["Focus on billing hours", "Create long-term dependency", "Vague consulting deliverables", "Outsourced junior talent"].map((item, i) => (
-                                <li key={i} className="flex items-center text-stone-400 line-through decoration-stone-300">
-                                    <span className="w-2 h-2 rounded-full bg-stone-300 mr-4"></span>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </MotionSection>
-
-                    {/* The "Trixon Way" List - Bold, Active */}
-                    <MotionSection delay={0.4} className="p-10 rounded-3xl bg-stone-900 text-stone-50 shadow-2xl shadow-stone-900/10 transform md:scale-110 relative z-10">
-                        <h3 className="text-lg font-bold text-emerald-400 uppercase tracking-widest mb-8">
-                            The Trixon Partner
-                        </h3>
-                        <ul className="space-y-6">
-                            {[
-                                "Outcome-based leadership",
-                                "Clear exit plan from Day 1",
-                                "Founder education focused",
-                                "Senior technical talent only"
-                            ].map((item, i) => (
-                                <li key={i} className="flex items-center text-white text-lg font-medium">
-                                    <svg className="w-6 h-6 mr-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </MotionSection>
+                <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+                    {[
+                        {
+                            title: "Metric of Success",
+                            desc: "We are the only partner whose primary goal is to make ourselves redundant. Your independence is the only outcome we optimize for."
+                        },
+                        {
+                            title: "The Documentation Standard",
+                            desc: "Every architectural decision is recorded in a way that is readable by your future CTO. No tribal knowledge, no single points of failure."
+                        },
+                        {
+                            title: "AI-Native by Design",
+                            desc: "We leverage the 2026 shift toward agentic engineering to lower your operational costs while increasing system resilience."
+                        }
+                    ].map((item, i) => (
+                        <MotionSection key={i} delay={i * 0.2} className="group p-10 bg-white rounded-3xl shadow-sm border border-stone-100/50 hover:shadow-xl hover:border-stone-200 transition-all duration-300">
+                            <div className="mb-6">
+                                <span className="font-serif italic text-4xl text-stone-300 group-hover:text-stone-900 transition-colors duration-300">
+                                    0{i + 1}
+                                </span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-stone-900 mb-4 font-sans">{item.title}</h3>
+                            <p className="text-stone-600 leading-relaxed">{item.desc}</p>
+                        </MotionSection>
+                    ))}
                 </div>
             </div>
         </section>

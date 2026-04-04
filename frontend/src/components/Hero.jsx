@@ -18,7 +18,7 @@ const Hero = ({ openContact }) => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium text-stone-600 ring-1 ring-stone-900/10 bg-white/50 backdrop-blur-sm mb-6 md:mb-10 shadow-sm"
                 >
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 mr-2"></span> Accepting new partners for Q2
+                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 mr-2"></span> Based on the proven Build-Operate-Transfer model
                 </motion.div>
 
                 <motion.h1
@@ -27,12 +27,10 @@ const Hero = ({ openContact }) => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-5xl font-bold tracking-tight text-stone-900 sm:text-6xl md:text-7xl mb-6 md:mb-8 font-sans"
                 >
-                    <span className="block mb-1">We help startups build the</span>
+                    <span className="block mb-1">You've built the vision. </span>
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-stone-800 to-stone-600">
-                        right tech foundation
+                        We build the engine that scales it.
                     </span>
-                    {/* Serif font for contrast and 'human' element (Psychology: Empathy/Natural) */}
-                    <span className="block font-serif italic font-light text-stone-500 mt-3 text-4xl sm:text-5xl md:text-6xl">— then step out of the way.</span>
                 </motion.h1>
 
                 <motion.p
@@ -41,7 +39,7 @@ const Hero = ({ openContact }) => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="mt-6 md:mt-8 max-w-2xl mx-auto text-xl text-stone-600 leading-relaxed"
                 >
-                    Trixon is your <span className="font-semibold text-stone-800">initial technical partner</span>, helping you go from idea to a scalable product and an independent tech team.
+                    Most startups fail not because of a bad idea, but because of the <span className="font-semibold text-stone-800">“Scale-Up Gap”</span> — the point where a prototype needs to become a production-grade institution. We provide the high-intensity leadership of a Technical Co-Founder today, with a mission to make ourselves redundant by tomorrow.
                 </motion.p>
 
                 <motion.div
@@ -55,11 +53,18 @@ const Hero = ({ openContact }) => {
                         onClick={openContact}
                         className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-stone-900 rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-stone-900/20 hover:bg-stone-800 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-2"
                     >
-                        Talk to us
+                        Secure Your Foundation
                         <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </button>
+
+                    <Link
+                        to="/how-we-hire"
+                        className="inline-flex items-center text-lg font-medium text-stone-500 hover:text-stone-900 transition-colors border-b border-stone-300 hover:border-stone-900 pb-1"
+                    >
+                        How we hire our replacement
+                    </Link>
                 </motion.div>
             </div>
 

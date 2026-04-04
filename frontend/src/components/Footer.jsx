@@ -1,40 +1,16 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import MotionSection from './MotionSection'
 import { Link } from 'react-router-dom'
 
 const Footer = ({ openContact }) => {
-    useEffect(() => {
-        const link = document.createElement('link')
-        link.href = 'https://assets.calendly.com/assets/external/widget.css'
-        link.rel = 'stylesheet'
-        document.head.appendChild(link)
-
-        const script = document.createElement('script')
-        script.src = 'https://assets.calendly.com/assets/external/widget.js'
-        script.async = true
-        document.body.appendChild(script)
-
-        return () => {
-            document.head.removeChild(link)
-            document.body.removeChild(script)
-        }
-    }, [])
-
-    const openCalendly = (e) => {
-        e.preventDefault()
-        if (window.Calendly) {
-            window.Calendly.initPopupWidget({ url: 'https://calendly.com/saqibjunaid3/client-introduction-meeting' })
-        }
-    }
-
     return (
         <footer className="bg-stone-900 text-stone-50 py-32" id="contact">
             <MotionSection className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 className="text-4xl md:text-6xl font-serif italic mb-6 text-stone-200">
-                    Ready to build?
+                    Don't just build an app. Build an institution.
                 </h2>
                 <p className="text-xl md:text-2xl text-stone-400 font-sans max-w-2xl mx-auto mb-16">
-                    If you’re building a startup and need technical clarity, let’s talk.
+                    Book your free 30-minute strategy session. No pitch deck required — just a direct conversation about your technical foundation.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -42,19 +18,11 @@ const Footer = ({ openContact }) => {
                         onClick={openContact}
                         className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-stone-900 bg-white rounded-full overflow-hidden transition-all duration-300 shadow-xl hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-stone-900 w-full sm:w-auto"
                     >
-                        Email Us
+                        Secure Your Foundation
                         <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </button>
-
-                    <a
-                        href="#"
-                        onClick={openCalendly}
-                        className="inline-flex items-center text-lg font-medium text-stone-400 hover:text-white transition-colors border-b border-stone-800 hover:border-white pb-1"
-                    >
-                        Schedule a Chat
-                    </a>
                 </div>
 
                 <div className="mt-32 pt-8 border-t border-stone-800/50 text-stone-600 text-sm flex flex-col md:flex-row justify-between items-center gap-6">

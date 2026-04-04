@@ -13,7 +13,7 @@ const About = () => {
                     </div>
 
                     <blockquote className="text-3xl md:text-5xl font-serif leading-tight text-stone-900 mb-12">
-                        "I’ve worked with multiple startups and seen the same pattern repeat — <span className="italic text-stone-500">great ideas failing due to poor technical foundations.</span> Trixon was created to solve exactly that."
+                        "We don't claim to be the best in the world. We claim to be <span className="italic text-stone-500">your technical foundation — based on the proven Build-Operate-Transfer model used by global R&D centers,</span> adapted for the pace of startups."
                     </blockquote>
 
                     <div className="flex flex-col items-center justify-center space-y-2">

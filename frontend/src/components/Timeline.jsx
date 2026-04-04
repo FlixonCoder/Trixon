@@ -4,22 +4,25 @@ import MotionSection from './MotionSection'
 const Timeline = () => {
     const steps = [
         {
-            month: "0-2",
-            title: "Direction & Foundation",
-            desc: "We align on vision and set the technical groundwork.",
+            month: "1–3",
+            title: "Build",
+            subtitle: "Institutional Integrity",
+            desc: "We don't just 'write code.' We audit your architecture, select a tech stack that is easy to hire for in your local market, and automate your deployments from Day 1.",
             color: "bg-white text-stone-900 border-stone-200"
         },
         {
-            month: "2-5",
-            title: "Build & Stabilize",
-            desc: "Rapid development with a focus on scalability and core features.",
+            month: "4–9",
+            title: "Operate",
+            subtitle: "The Recruiting Sprint",
+            desc: "We shift from 'builders' to 'mentors.' We define Role Scorecards, conduct every technical interview, and ensure only the top 5% of talent reaches your desk.",
             color: "bg-white text-stone-900 border-stone-200"
         },
         {
-            month: "5-6",
-            title: "Transition & Handover",
-            desc: "We hire your team and hand over the keys. You are independent.",
-            color: "bg-emerald-50/50 text-stone-900 border-emerald-200 ring-1 ring-emerald-100" // Subtle Highlight
+            month: "10–12",
+            title: "Transfer",
+            subtitle: "The Seamless Exit",
+            desc: "Our success is measured by your independence. We execute a formal shadowing period for your new internal lead and transition all legal IP and administrative rights.",
+            color: "bg-emerald-50/50 text-stone-900 border-emerald-200 ring-1 ring-emerald-100"
         }
     ]
 
@@ -33,9 +36,9 @@ const Timeline = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <MotionSection className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 sm:text-4xl font-sans">
-                        The Roadmap to Independence
+                        What We Actually Do
                     </h2>
-                    <p className="mt-4 text-xl text-stone-600 font-serif italic">From idea to independent tech team in 6 months.</p>
+                    <p className="mt-4 text-xl text-stone-600 font-serif italic">The Build-Operate-Transfer Framework — a clear, time-boxed roadmap to your independence.</p>
                 </MotionSection>
 
                 <div className="relative">
@@ -52,10 +55,11 @@ const Timeline = () => {
 
                                 {/* Content Card */}
                                 <div className={`p-8 rounded-3xl h-full transition-all duration-300 border ${step.color} hover:shadow-lg`}>
-                                    <div className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-stone-200 bg-white">
-                                        Month {step.month}
+                                    <div className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-stone-200 bg-white">
+                                        Months {step.month}
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4 font-sans">{step.title}</h3>
+                                    <h3 className="text-2xl font-bold mb-2 font-sans">{step.title}</h3>
+                                    <p className="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-4">{step.subtitle}</p>
                                     <p className="text-stone-600 leading-relaxed">{step.desc}</p>
                                 </div>
                             </MotionSection>

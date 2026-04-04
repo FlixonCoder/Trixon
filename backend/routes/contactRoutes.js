@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Message = require('../models/Message')
 const authMiddleware = require('../middleware/authMiddleware')
+const { sendContactNotification } = require('../utils/mailer')
 
 // POST /api/contact - Submit a new contact message
 router.post('/', async (req, res) => {
@@ -24,6 +25,25 @@ router.post('/', async (req, res) => {
     } catch (error) {
         console.error('Error saving message:', error)
         res.status(500).json({ message: 'Server error' })
+    }
+})
+
+// POST /api/contact/notify - Send contact email without scheduling
+router.post('/notify', async (req, res) => {
+    try {
+        const { name, email, message } = req.body
+
+        if (!name || !email || !message) {
+            return res.status(400).json({ message: 'All fields are required' })
+        }
+
+        await sendContactNotification({ name, email, message })
+        console.log('✓ Contact-only notification sent for', name)
+
+        res.status(200).json({ message: 'Email sent successfully' })
+    } catch (error) {
+        console.error('✗ Failed to send contact email:', error.message)
+        res.status(500).json({ message: 'Failed to send email' })
     }
 })
 

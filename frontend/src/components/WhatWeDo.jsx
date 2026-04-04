@@ -12,18 +12,18 @@ const WhatWeDo = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <MotionSection className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 mb-6 font-sans">
-                        What Trixon Does
+                        Start with a Fixed-Fee Engagement
                     </h2>
                     <p className="mt-4 text-xl text-stone-600 max-w-2xl mx-auto">
-                        We act as your temporary technical leadership and founding engineering team.
+                        No long-term contracts. No ambiguity. Clear outcomes, fixed price.
                     </p>
                 </MotionSection>
 
                 <div className="grid gap-8 md:grid-cols-3">
                     {[
-                        { title: "Foundation", desc: "Make the right technical decisions early." },
-                        { title: "Build", desc: "Build a solid, scalable product foundation." },
-                        { title: "Transition", desc: "Become technically aware enough to run independently." }
+                        { title: "Technical Audit & Roadmap", desc: "A 4-week deep dive to identify systemic bottlenecks and build an investor-ready technical roadmap. The lowest-risk way to start." },
+                        { title: "The Hiring Sprint", desc: "We define your Role Scorecards and conduct all technical screenings to find your first elite engineers. You keep the talent, we step back." },
+                        { title: "AI-First Architecture", desc: "Leverage the 2026 shift toward agentic engineering. We future-proof your startup without creating unmanageable technical debt." }
                     ].map((item, index) => (
                         <MotionSection key={index} delay={index * 0.2} className="group p-10 bg-white rounded-3xl shadow-sm border border-stone-100/50 hover:shadow-xl hover:border-stone-200 transition-all duration-300">
                             <div className="mb-6">
