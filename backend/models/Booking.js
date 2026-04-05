@@ -9,9 +9,12 @@ const bookingSchema = new mongoose.Schema({
         type: String,  // stored as "2:00 PM"
         required: true
     },
-    name: { type: String, required: true },
+    fullName: { type: String, required: true },
     email: { type: String, required: true },
-    message: { type: String, default: '' },
+    phone: { type: String, required: true },
+    companyName: { type: String, required: true },
+    companyWebsite: { type: String, default: '' },
+    role: { type: String, required: true },
     createdAt: { type: Date, default: Date.now }
 })
 

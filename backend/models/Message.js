@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const messageSchema = new mongoose.Schema({
-    name: {
+    fullName: {
         type: String,
         required: true
     },
@@ -9,7 +9,19 @@ const messageSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    message: {
+    phone: {
+        type: String,
+        required: true
+    },
+    companyName: {
+        type: String,
+        required: true
+    },
+    companyWebsite: {
+        type: String,
+        default: ''
+    },
+    role: {
         type: String,
         required: true
     },

@@ -7,16 +7,19 @@ const { sendContactNotification } = require('../utils/mailer')
 // POST /api/contact - Submit a new contact message
 router.post('/', async (req, res) => {
     try {
-        const { name, email, message } = req.body
+        const { fullName, email, phone, companyName, companyWebsite, role } = req.body
 
-        if (!name || !email || !message) {
-            return res.status(400).json({ message: 'All fields are required' })
+        if (!fullName || !email || !phone || !companyName || !role) {
+            return res.status(400).json({ message: 'All required fields must be provided' })
         }
 
         const newMessage = new Message({
-            name,
+            fullName,
             email,
-            message
+            phone,
+            companyName,
+            companyWebsite: companyWebsite || '',
+            role
         })
 
         const savedMessage = await newMessage.save()
@@ -31,14 +34,14 @@ router.post('/', async (req, res) => {
 // POST /api/contact/notify - Send contact email without scheduling
 router.post('/notify', async (req, res) => {
     try {
-        const { name, email, message } = req.body
+        const { fullName, email, phone, companyName, companyWebsite, role } = req.body
 
-        if (!name || !email || !message) {
-            return res.status(400).json({ message: 'All fields are required' })
+        if (!fullName || !email || !phone || !companyName || !role) {
+            return res.status(400).json({ message: 'All required fields must be provided' })
         }
 
-        await sendContactNotification({ name, email, message })
-        console.log('✓ Contact-only notification sent for', name)
+        await sendContactNotification({ fullName, email, phone, companyName, companyWebsite, role })
+        console.log('✓ Contact-only notification sent for', fullName)
 
         res.status(200).json({ message: 'Email sent successfully' })
     } catch (error) {

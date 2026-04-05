@@ -126,10 +126,10 @@ router.get('/availability', (req, res) => {
 // Books a meeting: saves to DB then sends emails
 router.post('/', async (req, res) => {
     try {
-        const { name, email, message, date, time, dateISO } = req.body
+        const { fullName, email, phone, companyName, companyWebsite, role, date, time, dateISO } = req.body
 
-        if (!name || !email || !date || !time || !dateISO) {
-            return res.status(400).json({ message: 'Name, email, date, dateISO, and time are required' })
+        if (!fullName || !email || !phone || !companyName || !role || !date || !time || !dateISO) {
+            return res.status(400).json({ message: 'All required fields must be provided' })
         }
 
         // Double-check slot is still free (race condition guard)
@@ -145,18 +145,18 @@ router.post('/', async (req, res) => {
         }
 
         // Save the booking
-        await Booking.create({ date: dateISO, time, name, email, message: message || '' })
+        await Booking.create({ date: dateISO, time, fullName, email, phone, companyName, companyWebsite: companyWebsite || '', role })
 
         // Build calendar URL for visitor
-        const calendarUrl = buildCalendarUrl({ dateISO, time, name })
+        const calendarUrl = buildCalendarUrl({ dateISO, time, name: fullName })
 
         // Send notification to founder
-        await sendMeetingNotification({ name, email, message: message || 'No message provided', date, time, meetLink: MEET_LINK })
+        await sendMeetingNotification({ fullName, email, phone, companyName, companyWebsite, role, date, time, meetLink: MEET_LINK })
 
         // Send confirmation to visitor (with Meet link + calendar URL)
-        await sendUserConfirmation({ name, email, date, time, meetLink: MEET_LINK, calendarUrl })
+        await sendUserConfirmation({ name: fullName, email, date, time, meetLink: MEET_LINK, calendarUrl })
 
-        console.log(`✓ Meeting booked: ${name} on ${date} at ${time}`)
+        console.log(`✓ Meeting booked: ${fullName} on ${date} at ${time}`)
         res.status(201).json({ message: 'Meeting scheduled successfully' })
     } catch (error) {
         if (error.code === 11000) {

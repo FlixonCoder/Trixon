@@ -42,21 +42,27 @@ const transporter = nodemailer.createTransport({
 /**
  * Send a contact notification email
  */
-const sendContactNotification = async ({ name, email, message }) => {
-    const safeName = escapeHTML(name)
+const sendContactNotification = async ({ fullName, email, phone, companyName, companyWebsite, role }) => {
+    const safeName = escapeHTML(fullName)
     const safeEmail = escapeHTML(email)
-    const safeMessage = escapeHTML(message).replace(/\n/g, '<br>')
+    const safePhone = escapeHTML(phone)
+    const safeCompanyName = escapeHTML(companyName)
+    const safeCompanyWebsite = escapeHTML(companyWebsite)
+    const safeRole = escapeHTML(role)
 
     return transporter.sendMail({
         from: `"Trixon Website" <${process.env.SMTP_USER}>`,
         to: process.env.NOTIFY_EMAIL,
-        subject: `🔔 New Contact: ${safeName}`,
+        subject: `🔔 New Contact: ${safeName} (${safeCompanyName})`,
         html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: auto;">
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${safeName}</p>
         <p><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>
-        <p><strong>Message:</strong><br>${safeMessage}</p>
+        <p><strong>Phone / WhatsApp:</strong> ${safePhone}</p>
+        <p><strong>Company:</strong> ${safeCompanyName}</p>
+        <p><strong>Website:</strong> ${safeCompanyWebsite || 'N/A'}</p>
+        <p><strong>Role:</strong> ${safeRole}</p>
       </div>
     `
     })
@@ -65,10 +71,13 @@ const sendContactNotification = async ({ name, email, message }) => {
 /**
  * Send a meeting scheduled notification email
  */
-const sendMeetingNotification = async ({ name, email, message, date, time, meetLink }) => {
-    const safeName = escapeHTML(name)
+const sendMeetingNotification = async ({ fullName, email, phone, companyName, companyWebsite, role, date, time, meetLink }) => {
+    const safeName = escapeHTML(fullName)
     const safeEmail = escapeHTML(email)
-    const safeMessage = escapeHTML(message).replace(/\n/g, '<br>')
+    const safePhone = escapeHTML(phone)
+    const safeCompanyName = escapeHTML(companyName)
+    const safeCompanyWebsite = escapeHTML(companyWebsite)
+    const safeRole = escapeHTML(role)
     const safeMeetLink = escapeHTML(meetLink)
 
     return transporter.sendMail({
@@ -85,7 +94,10 @@ const sendMeetingNotification = async ({ name, email, message, date, time, meetL
         <hr>
         <p><strong>Name:</strong> ${safeName}</p>
         <p><strong>Email:</strong> ${safeEmail}</p>
-        <p><strong>Message:</strong><br>${safeMessage}</p>
+        <p><strong>Phone / WhatsApp:</strong> ${safePhone}</p>
+        <p><strong>Company:</strong> ${safeCompanyName}</p>
+        <p><strong>Website:</strong> ${safeCompanyWebsite || 'N/A'}</p>
+        <p><strong>Role:</strong> ${safeRole}</p>
       </div>
     `
     })

@@ -60,7 +60,7 @@ function getAvailableDates() {
 
 const ReachOut = ({ isOpen, onClose }) => {
     const [step, setStep] = useState('form') // 'form' | 'schedule' | 'confirmed' | 'query-sent'
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+    const [formData, setFormData] = useState({ fullName: '', email: '', phone: '', companyName: '', companyWebsite: '', role: '' })
     const [formStatus, setFormStatus] = useState(null) // null, 'submitting', 'error'
     const [selectedDate, setSelectedDate] = useState(null)
     const [selectedTime, setSelectedTime] = useState(null)
@@ -73,7 +73,7 @@ const ReachOut = ({ isOpen, onClose }) => {
     useEffect(() => {
         if (isOpen) {
             setStep('form')
-            setFormData({ name: '', email: '', message: '' })
+            setFormData({ fullName: '', email: '', phone: '', companyName: '', companyWebsite: '', role: '' })
             setFormStatus(null)
             setSelectedDate(null)
             setSelectedTime(null)
@@ -149,9 +149,7 @@ const ReachOut = ({ isOpen, onClose }) => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    name: formData.name,
-                    email: formData.email,
-                    message: formData.message,
+                    ...formData,
                     date: dateStr,
                     dateISO: dateISO,
                     time: selectedTime
@@ -304,7 +302,7 @@ const ReachOut = ({ isOpen, onClose }) => {
                             {step === 'schedule' && (
                                 <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
                                     {/* Left: Date picker */}
-                                    <div className="bg-stone-900 p-6 sm:p-8 text-stone-50 md:w-2/5 overflow-y-auto relative">
+                                    <div className="bg-stone-900 p-6 sm:p-8 text-stone-50 md:w-2/5 flex-1 md:flex-none overflow-y-auto relative">
                                         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                                             <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-stone-700 blur-3xl"></div>
                                         </div>
@@ -334,7 +332,7 @@ const ReachOut = ({ isOpen, onClose }) => {
                                     </div>
 
                                     {/* Right: Time slots */}
-                                    <div className="p-6 sm:p-8 md:w-3/5 overflow-y-auto max-h-[60vh] md:max-h-none relative">
+                                    <div className="p-6 sm:p-8 md:w-3/5 flex-1 overflow-y-auto relative">
                                         <button onClick={onClose} className="absolute top-4 right-4 text-stone-400 hover:text-stone-600 transition-colors p-2 z-10">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -444,7 +442,7 @@ const ReachOut = ({ isOpen, onClose }) => {
                             {step === 'form' && (
                                 <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
                                     {/* Left Side: Contact Info */}
-                                    <div className="bg-stone-900 p-8 sm:p-10 text-stone-50 md:w-2/5 flex flex-col justify-between relative overflow-hidden">
+                                    <div className="bg-stone-900 p-8 sm:p-10 text-stone-50 md:w-2/5 shrink-0 flex flex-col justify-between relative overflow-hidden">
                                         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                                             <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-stone-700 blur-3xl"></div>
                                             <div className="absolute top-1/2 -right-24 w-64 h-64 rounded-full bg-stone-600 blur-3xl"></div>
@@ -475,7 +473,7 @@ const ReachOut = ({ isOpen, onClose }) => {
                                     </div>
 
                                     {/* Right Side: Form */}
-                                    <div className="p-8 sm:p-10 md:w-3/5 overflow-y-auto max-h-[80vh] md:max-h-none relative">
+                                    <div className="p-8 sm:p-10 md:w-3/5 flex-1 overflow-y-auto relative">
                                         <button onClick={onClose} className="absolute top-4 right-4 text-stone-400 hover:text-stone-600 transition-colors p-2 z-10">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -496,29 +494,55 @@ const ReachOut = ({ isOpen, onClose }) => {
                                         </div>
 
                                         <form className="space-y-5" onSubmit={handleFormSubmit}>
-                                            <div>
-                                                <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-1">Name</label>
-                                                <input
-                                                    type="text" id="name" value={formData.name} onChange={handleChange} required
-                                                    className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-stone-500 focus:ring-2 focus:ring-stone-200 outline-none transition-all text-stone-900 placeholder-stone-400"
-                                                    placeholder="Your full name"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-1">Email</label>
-                                                <input
-                                                    type="email" id="email" value={formData.email} onChange={handleChange} required
-                                                    className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-stone-500 focus:ring-2 focus:ring-stone-200 outline-none transition-all text-stone-900 placeholder-stone-400"
-                                                    placeholder="you@company.com"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label htmlFor="message" className="block text-sm font-medium text-stone-700 mb-1">How can we help?</label>
-                                                <textarea
-                                                    id="message" rows="3" value={formData.message} onChange={handleChange} required
-                                                    className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-stone-500 focus:ring-2 focus:ring-stone-200 outline-none transition-all text-stone-900 placeholder-stone-400 resize-none"
-                                                    placeholder="Tell us about your project..."
-                                                ></textarea>
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                                <div>
+                                                    <label htmlFor="fullName" className="block text-sm font-medium text-stone-700 mb-1">Full Name</label>
+                                                    <input
+                                                        type="text" id="fullName" value={formData.fullName} onChange={handleChange} required
+                                                        className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-stone-500 focus:ring-2 focus:ring-stone-200 outline-none transition-all text-stone-900 placeholder-stone-400"
+                                                        placeholder="Jane Doe"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-1">Email</label>
+                                                    <input
+                                                        type="email" id="email" value={formData.email} onChange={handleChange} required
+                                                        className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-stone-500 focus:ring-2 focus:ring-stone-200 outline-none transition-all text-stone-900 placeholder-stone-400"
+                                                        placeholder="jane@company.com"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label htmlFor="phone" className="block text-sm font-medium text-stone-700 mb-1">Phone / WhatsApp</label>
+                                                    <input
+                                                        type="tel" id="phone" value={formData.phone} onChange={handleChange} required
+                                                        className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-stone-500 focus:ring-2 focus:ring-stone-200 outline-none transition-all text-stone-900 placeholder-stone-400"
+                                                        placeholder="+1 234 567 8900"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label htmlFor="role" className="block text-sm font-medium text-stone-700 mb-1">Role / Designation</label>
+                                                    <input
+                                                        type="text" id="role" value={formData.role} onChange={handleChange} required
+                                                        className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-stone-500 focus:ring-2 focus:ring-stone-200 outline-none transition-all text-stone-900 placeholder-stone-400"
+                                                        placeholder="Founder, CTO, etc."
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label htmlFor="companyName" className="block text-sm font-medium text-stone-700 mb-1">Company Name</label>
+                                                    <input
+                                                        type="text" id="companyName" value={formData.companyName} onChange={handleChange} required
+                                                        className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-stone-500 focus:ring-2 focus:ring-stone-200 outline-none transition-all text-stone-900 placeholder-stone-400"
+                                                        placeholder="Acme Corp"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <label htmlFor="companyWebsite" className="block text-sm font-medium text-stone-700 mb-1">Company Website <span className="text-stone-400 font-normal">(Optional)</span></label>
+                                                    <input
+                                                        type="url" id="companyWebsite" value={formData.companyWebsite} onChange={handleChange}
+                                                        className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-stone-500 focus:ring-2 focus:ring-stone-200 outline-none transition-all text-stone-900 placeholder-stone-400"
+                                                        placeholder="https://acme.com"
+                                                    />
+                                                </div>
                                             </div>
 
                                             {formStatus === 'error' && (

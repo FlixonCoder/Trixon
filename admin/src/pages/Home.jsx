@@ -24,9 +24,9 @@ const Home = () => {
         if (searchTerm) {
             const lowerTerm = searchTerm.toLowerCase()
             result = result.filter(msg =>
-                msg.name.toLowerCase().includes(lowerTerm) ||
+                msg.fullName.toLowerCase().includes(lowerTerm) ||
                 msg.email.toLowerCase().includes(lowerTerm) ||
-                msg.message.toLowerCase().includes(lowerTerm)
+                msg.companyName.toLowerCase().includes(lowerTerm)
             )
         }
 
@@ -192,7 +192,7 @@ const Home = () => {
                                 <th scope="col" className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider">Date</th>
                                 <th scope="col" className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider">Name</th>
                                 <th scope="col" className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider">Email</th>
-                                <th scope="col" className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider">Message</th>
+                                <th scope="col" className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider">Company</th>
                                 <th scope="col" className="px-6 py-4 text-right text-xs font-semibold uppercase tracking-wider">Actions</th>
                             </tr>
                         </thead>
@@ -207,7 +207,7 @@ const Home = () => {
                                         {new Date(msg.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-stone-900 group-hover:text-stone-700">
-                                        {msg.name}
+                                        {msg.fullName}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-stone-500">
                                         <a
@@ -219,8 +219,8 @@ const Home = () => {
                                             {msg.email}
                                         </a>
                                     </td>
-                                    <td className="px-6 py-4 text-sm text-stone-600 max-w-lg">
-                                        <p className="line-clamp-2 leading-relaxed">{msg.message}</p>
+                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-stone-600">
+                                        {msg.companyName}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <div className="flex items-center justify-end gap-2">
@@ -291,22 +291,39 @@ const Home = () => {
                         <div className="px-6 py-6 space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">From</label>
-                                    <p className="text-stone-900 font-medium text-lg">{selectedMessage.name}</p>
+                                    <label className="block text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Full Name</label>
+                                    <p className="text-stone-900 font-medium text-lg">{selectedMessage.fullName}</p>
                                 </div>
                                 <div>
                                     <label className="block text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Email</label>
                                     <a href={`mailto:${selectedMessage.email}`} className="text-stone-600 hover:text-stone-900 underline decoration-stone-300 hover:decoration-stone-900 flex items-center gap-2">
                                         {selectedMessage.email}
-                                        <span className="material-symbols-outlined text-[16px]">open_in_new</span>
                                     </a>
                                 </div>
-                            </div>
-
-                            <div>
-                                <label className="block text-xs font-semibold text-stone-400 uppercase tracking-wider mb-2">Message</label>
-                                <div className="bg-stone-50 rounded-xl p-4 text-stone-700 leading-relaxed border border-stone-100 whitespace-pre-wrap max-h-96 overflow-y-auto custom-scrollbar">
-                                    {selectedMessage.message}
+                                <div>
+                                    <label className="block text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Phone / WhatsApp</label>
+                                    <a href={`tel:${selectedMessage.phone}`} className="text-stone-600 hover:text-stone-900 underline decoration-stone-300 hover:decoration-stone-900 flex items-center gap-2">
+                                        {selectedMessage.phone}
+                                    </a>
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Company Name</label>
+                                    <p className="text-stone-900 font-medium">{selectedMessage.companyName}</p>
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Company Website</label>
+                                    {selectedMessage.companyWebsite ? (
+                                        <a href={selectedMessage.companyWebsite} target="_blank" rel="noopener noreferrer" className="text-stone-600 hover:text-stone-900 underline decoration-stone-300 hover:decoration-stone-900 flex items-center gap-2">
+                                            {selectedMessage.companyWebsite}
+                                            <span className="material-symbols-outlined text-[16px]">open_in_new</span>
+                                        </a>
+                                    ) : (
+                                        <p className="text-stone-500 italic">Not provided</p>
+                                    )}
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Role / Designation</label>
+                                    <p className="text-stone-900 font-medium">{selectedMessage.role}</p>
                                 </div>
                             </div>
                         </div>
