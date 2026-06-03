@@ -21,7 +21,7 @@ const SocialProof = () => {
                     </h2>
                 </MotionSection>
 
-                {/* Testimonial cards */}
+                {/* Testimonial cards - Kept for later implementation 
                 <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto mb-16">
                     {testimonials.map((item, i) => (
                         <MotionSection key={i} delay={i * 0.2} className="p-8 bg-white rounded-3xl shadow-sm border border-stone-100/50 hover:shadow-xl hover:border-stone-200 transition-all duration-300">
@@ -38,8 +38,9 @@ const SocialProof = () => {
                         </MotionSection>
                     ))}
                 </div>
+                */}
 
-                {/* Logo strip */}
+                {/* Logo strip - Kept for later implementation
                 <MotionSection delay={0.3} className="text-center">
                     <p className="text-sm font-bold text-stone-400 uppercase tracking-widest mb-8">Backed by experience at:</p>
                     <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
@@ -50,6 +51,7 @@ const SocialProof = () => {
                         ))}
                     </div>
                 </MotionSection>
+                */}
 
             </div>
         </section>

@@ -5,6 +5,7 @@ import Personas from '../components/Personas'
 import Timeline from '../components/Timeline'
 import WhatWeDo from '../components/WhatWeDo'
 import AboutFounder from '../components/AboutFounder'
+import SocialProof from '../components/SocialProof'
 import Differentiation from '../components/Differentiation'
 import Footer from '../components/Footer'
 
@@ -17,6 +18,7 @@ const Home = ({ openContact }) => {
             <Timeline />
             <WhatWeDo />
             <AboutFounder />
+            <SocialProof />
             <Differentiation openContact={openContact} />
             <Footer openContact={openContact} />
         </main>
