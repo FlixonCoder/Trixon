@@ -3,6 +3,14 @@ import MotionSection from './MotionSection'
 import { Link } from 'react-router-dom'
 
 const Footer = ({ openContact }) => {
+
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id)
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+
     return (
         <footer className="bg-stone-900 text-stone-50 py-32" id="contact">
             <MotionSection className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -25,11 +33,29 @@ const Footer = ({ openContact }) => {
                     </button>
                 </div>
 
-                <div className="mt-32 pt-8 border-t border-stone-800/50 text-stone-600 text-sm flex flex-col md:flex-row justify-between items-center gap-6">
+                {/* Footer nav links */}
+                <div className="mt-16 mb-8">
+                    <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-stone-400">
+                        <Link to="/" className="hover:text-stone-200 transition-colors">Home</Link>
+                        <span className="text-stone-700">·</span>
+                        <Link to="/process" className="hover:text-stone-200 transition-colors">Our Process</Link>
+                        <span className="text-stone-700">·</span>
+                        <button onClick={() => scrollToSection('about')} className="hover:text-stone-200 transition-colors">About</button>
+                        <span className="text-stone-700">·</span>
+                        <button onClick={openContact} className="hover:text-stone-200 transition-colors">Let's Talk</button>
+                    </nav>
+                </div>
+
+                <div className="mt-8 pt-8 border-t border-stone-800/50 text-stone-600 text-sm flex flex-col md:flex-row justify-between items-center gap-6">
                     <p>&copy; {new Date().getFullYear()} Trixon. All rights reserved.</p>
                     <div className="flex items-center gap-6">
+                        {/* Email */}
+                        <a href="mailto:office.trixon.co@gmail.com" className="text-stone-500 hover:text-stone-300 transition-colors text-sm">
+                            office.trixon.co@gmail.com
+                        </a>
 
-                        <a href="https://www.linkedin.com/company/trixon-cloud/" target="_blank" className="text-stone-500 hover:text-stone-300 transition-colors" aria-label="LinkedIn">
+                        {/* LinkedIn (company) */}
+                        <a href="https://www.linkedin.com/company/trixon-cloud/" target="_blank" className="text-stone-500 hover:text-stone-300 transition-colors" aria-label="LinkedIn Company">
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" />
                             </svg>

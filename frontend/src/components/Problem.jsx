@@ -11,9 +11,9 @@ const Problem = () => {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <MotionSection className="max-w-3xl mx-auto text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-serif italic font-light tracking-wide mb-6 text-stone-200">The Impossible Choice for Non-Technical Founders</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif italic font-light tracking-wide mb-6 text-stone-200">The Scale-Up Gap: Where Funded Startups Stall</h2>
                     <p className="text-lg text-stone-400 max-w-2xl mx-auto">
-                        The high-stakes middle ground where most startups get stuck.
+                        Finding a permanent CTO takes 100+ days and $400K/year. Hiring a traditional agency locks you into a black box. Trixon is the strategic middle ground — fractional CTO leadership today, full team independence by Month 12.
                     </p>
                 </MotionSection>
 

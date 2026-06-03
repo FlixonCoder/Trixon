@@ -67,29 +67,24 @@ const HireStart = ({ openContact }) => {
 
     return (
         <main>
+            {/* Breadcrumb */}
+            <div className="bg-stone-50 pt-4 pb-0">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav className="text-sm text-stone-400">
+                        <Link to="/" className="hover:text-stone-900 transition-colors">Home</Link>
+                        <span className="mx-2">→</span>
+                        <span className="text-stone-600">Our Process</span>
+                    </nav>
+                </div>
+            </div>
+
             {/* Hero Section */}
-            <section className="relative pt-12 pb-16 lg:pt-32 lg:pb-32 bg-stone-50 overflow-hidden">
+            <section className="relative pt-8 pb-16 lg:pt-24 lg:pb-32 bg-stone-50 overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.03] text-stone-900"
                     style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }}>
                 </div>
 
                 <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                    >
-                        <Link
-                            to="/"
-                            className="inline-flex items-center text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors mb-10 group"
-                        >
-                            <svg className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                            </svg>
-                            Back to Home
-                        </Link>
-                    </motion.div>
-
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -105,9 +100,9 @@ const HireStart = ({ openContact }) => {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="text-4xl font-bold tracking-tight text-stone-900 sm:text-5xl md:text-6xl mb-8 font-sans"
                     >
-                        <span className="block mb-1">We aren't building a dependency. </span>
+                        <span className="block mb-1">How We Hire Our Own Replacement: </span>
                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-stone-800 to-stone-600">
-                            We're building your independence.
+                            The Trixon 4-Stage Process
                         </span>
                     </motion.h1>
 
@@ -117,7 +112,7 @@ const HireStart = ({ openContact }) => {
                         transition={{ duration: 0.8, delay: 0.5 }}
                         className="max-w-2xl mx-auto text-xl text-stone-600 leading-relaxed"
                     >
-                        Most agencies want to stay "sticky." We measure our success by the quality of the team we leave behind. This is the exact process we use to hire our replacement — and ensure you never need us again.
+                        Most technical partners want to stay forever. We do the opposite. Here is the exact process we use to find, vet, and integrate your permanent engineering leadership — and then walk away for good.
                     </motion.p>
                 </div>
 
@@ -128,20 +123,21 @@ const HireStart = ({ openContact }) => {
                 </div>
             </section>
 
-            {/* Agency vs. Trixon Contrast */}
+            {/* Agency vs. Trixon vs In-House CTO Contrast */}
             <section className="py-24 bg-stone-900 text-stone-50 overflow-hidden relative">
                 <div className="absolute inset-0 opacity-[0.05] text-stone-100"
                     style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '24px 24px' }}>
                 </div>
 
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <MotionSection className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-serif italic font-light tracking-wide mb-6 text-stone-200">
-                            The "Black Box" Agency vs. The Trixon Model
+                            The "Black Box" Agency vs. The Trixon Model vs. In-House CTO
                         </h2>
                     </MotionSection>
 
-                    <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch">
+                    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+                        {/* Agency column */}
                         <MotionSection delay={0.2} className="p-10 rounded-3xl bg-stone-800/50 border border-stone-700/50 opacity-70 hover:opacity-100 transition-opacity">
                             <h3 className="text-lg font-bold text-stone-500 uppercase tracking-widest mb-8">
                                 The "Sticky" Agency
@@ -161,6 +157,7 @@ const HireStart = ({ openContact }) => {
                             </ul>
                         </MotionSection>
 
+                        {/* Trixon column */}
                         <MotionSection delay={0.4} className="p-10 rounded-3xl bg-stone-50 text-stone-900 shadow-2xl shadow-stone-900/30">
                             <h3 className="text-lg font-bold text-emerald-600 uppercase tracking-widest mb-8">
                                 The Trixon Model
@@ -176,6 +173,26 @@ const HireStart = ({ openContact }) => {
                                         <svg className="w-6 h-6 mr-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                         </svg>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </MotionSection>
+
+                        {/* In-House CTO column */}
+                        <MotionSection delay={0.6} className="p-10 rounded-3xl bg-stone-800/50 border border-stone-700/50 opacity-80 hover:opacity-100 transition-opacity">
+                            <h3 className="text-lg font-bold text-amber-400 uppercase tracking-widest mb-8">
+                                In-House CTO
+                            </h3>
+                            <ul className="space-y-5">
+                                {[
+                                    "Codebase visible but knowledge is siloed to one person",
+                                    "Documentation only if they prioritise it",
+                                    "You recruit, they may or may not own hiring",
+                                    "Success = personal equity and career growth"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-start text-stone-400">
+                                        <span className="w-2 h-2 rounded-full bg-amber-400/60 mr-4 mt-2 shrink-0"></span>
                                         <span>{item}</span>
                                     </li>
                                 ))}

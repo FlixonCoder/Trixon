@@ -27,9 +27,9 @@ const Hero = ({ openContact }) => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-5xl font-bold tracking-tight text-stone-900 sm:text-6xl md:text-7xl mb-6 md:mb-8 font-sans"
                 >
-                    <span className="block mb-1">You've built the vision. </span>
+                    <span className="block mb-1">Your Fractional CTO. </span>
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-stone-800 to-stone-600">
-                        We build the engine that scales it.
+                        Until You Don't Need One.
                     </span>
                 </motion.h1>
 
@@ -39,32 +39,38 @@ const Hero = ({ openContact }) => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="mt-6 md:mt-8 max-w-2xl mx-auto text-xl text-stone-600 leading-relaxed"
                 >
-                    Most startups fail not because of a bad idea, but because of the <span className="font-semibold text-stone-800">“Scale-Up Gap”</span> — the point where a prototype needs to become a production-grade institution. We provide the high-intensity leadership of a Technical Co-Founder today, with a mission to make ourselves redundant by tomorrow.
+                    We give non-technical founders <span className="font-semibold text-stone-800">C-level technical leadership</span> from day one — and exit with a fully-staffed, self-sufficient engineering team.
                 </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
-                    className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-5 justify-center items-center"
+                    className="mt-8 md:mt-12 flex flex-col items-center"
                 >
-                    {/* Primary CTA: High contrast, solid (Psychology: Action) */}
+                    {/* Primary CTA */}
                     <button
                         onClick={openContact}
                         className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-stone-900 rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-stone-900/20 hover:bg-stone-800 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-2"
                     >
-                        Secure Your Foundation
+                        Book a Free Strategy Session
                         <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </button>
 
-                    <Link
-                        to="/how-we-hire"
-                        className="inline-flex items-center text-lg font-medium text-stone-500 hover:text-stone-900 transition-colors border-b border-stone-300 hover:border-stone-900 pb-1"
-                    >
-                        How we hire our replacement
-                    </Link>
+                    {/* Muted subtext below CTA */}
+                    <p className="mt-4 text-sm text-stone-400">No pitch deck. No commitment. 30 minutes.</p>
+
+                    {/* Trust badges */}
+                    <div className="mt-6 flex flex-wrap justify-center gap-3">
+                        {['IP Fully Transferred', 'Fixed-Fee Engagements', 'Built on the BOT Model'].map((badge, i) => (
+                            <span key={i} className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-white/70 text-stone-500 ring-1 ring-stone-200/80 backdrop-blur-sm">
+                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2"></span>
+                                {badge}
+                            </span>
+                        ))}
+                    </div>
                 </motion.div>
             </div>
 

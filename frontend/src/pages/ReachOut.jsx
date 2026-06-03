@@ -300,9 +300,9 @@ const ReachOut = ({ isOpen, onClose }) => {
 
                             {/* ---- STEP: SCHEDULE ---- */}
                             {step === 'schedule' && (
-                                <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
+                                <div className="flex-1 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden">
                                     {/* Left: Date picker */}
-                                    <div className="bg-stone-900 p-6 sm:p-8 text-stone-50 md:w-2/5 flex-1 md:flex-none overflow-y-auto relative">
+                                    <div className="bg-stone-900 p-6 sm:p-8 text-stone-50 md:w-2/5 md:flex-none md:overflow-y-auto relative">
                                         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                                             <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-stone-700 blur-3xl"></div>
                                         </div>
@@ -332,7 +332,7 @@ const ReachOut = ({ isOpen, onClose }) => {
                                     </div>
 
                                     {/* Right: Time slots */}
-                                    <div className="p-6 sm:p-8 md:w-3/5 flex-1 overflow-y-auto relative">
+                                    <div className="p-6 sm:p-8 md:w-3/5 md:flex-1 md:overflow-y-auto relative">
                                         <button onClick={onClose} className="absolute top-4 right-4 text-stone-400 hover:text-stone-600 transition-colors p-2 z-10">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -440,7 +440,7 @@ const ReachOut = ({ isOpen, onClose }) => {
 
                             {/* ---- STEP: FORM ---- */}
                             {step === 'form' && (
-                                <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
+                                <div className="flex-1 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden">
                                     {/* Left Side: Contact Info */}
                                     <div className="bg-stone-900 p-8 sm:p-10 text-stone-50 md:w-2/5 shrink-0 flex flex-col justify-between relative overflow-hidden">
                                         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -473,7 +473,7 @@ const ReachOut = ({ isOpen, onClose }) => {
                                     </div>
 
                                     {/* Right Side: Form */}
-                                    <div className="p-8 sm:p-10 md:w-3/5 flex-1 overflow-y-auto relative">
+                                    <div className="p-8 sm:p-10 md:w-3/5 md:flex-1 md:overflow-y-auto relative">
                                         <button onClick={onClose} className="absolute top-4 right-4 text-stone-400 hover:text-stone-600 transition-colors p-2 z-10">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

@@ -4,8 +4,8 @@ import Problem from '../components/Problem'
 import Personas from '../components/Personas'
 import Timeline from '../components/Timeline'
 import WhatWeDo from '../components/WhatWeDo'
+import AboutFounder from '../components/AboutFounder'
 import Differentiation from '../components/Differentiation'
-import About from '../components/About'
 import Footer from '../components/Footer'
 
 const Home = ({ openContact }) => {
@@ -13,11 +13,11 @@ const Home = ({ openContact }) => {
         <main>
             <Hero openContact={openContact} />
             <Problem />
-            <Personas />
+            <Personas openContact={openContact} />
             <Timeline />
             <WhatWeDo />
-            <Differentiation />
-            <About />
+            <AboutFounder />
+            <Differentiation openContact={openContact} />
             <Footer openContact={openContact} />
         </main>
     )

@@ -2,6 +2,24 @@ import React from 'react'
 import MotionSection from './MotionSection'
 
 const WhatWeDo = () => {
+    const items = [
+        {
+            title: "Technical Audit & Roadmap",
+            desc: "A 4-week deep dive to identify systemic bottlenecks and build an investor-ready technical roadmap. The lowest-risk way to start.",
+            support: "Fixed scope. Fixed price. The lowest-risk way to start."
+        },
+        {
+            title: "The Hiring Sprint",
+            desc: "We define your Role Scorecards and conduct all technical screenings to find your first elite engineers. You keep the talent, we step back.",
+            support: "You keep every hire. We step back when the team is set."
+        },
+        {
+            title: "AI-First Architecture",
+            desc: "Leverage the 2026 shift toward agentic engineering. We future-proof your startup without creating unmanageable technical debt.",
+            support: "Future-proof infrastructure without unmanageable technical debt."
+        }
+    ]
+
     return (
         <section id="solution" className="py-24 bg-stone-50 relative overflow-hidden">
             {/* Subtle Texture */}
@@ -20,11 +38,7 @@ const WhatWeDo = () => {
                 </MotionSection>
 
                 <div className="grid gap-8 md:grid-cols-3">
-                    {[
-                        { title: "Technical Audit & Roadmap", desc: "A 4-week deep dive to identify systemic bottlenecks and build an investor-ready technical roadmap. The lowest-risk way to start." },
-                        { title: "The Hiring Sprint", desc: "We define your Role Scorecards and conduct all technical screenings to find your first elite engineers. You keep the talent, we step back." },
-                        { title: "AI-First Architecture", desc: "Leverage the 2026 shift toward agentic engineering. We future-proof your startup without creating unmanageable technical debt." }
-                    ].map((item, index) => (
+                    {items.map((item, index) => (
                         <MotionSection key={index} delay={index * 0.2} className="group p-10 bg-white rounded-3xl shadow-sm border border-stone-100/50 hover:shadow-xl hover:border-stone-200 transition-all duration-300">
                             <div className="mb-6">
                                 <span className="font-serif italic text-4xl text-stone-300 group-hover:text-stone-900 transition-colors duration-300">
@@ -32,7 +46,8 @@ const WhatWeDo = () => {
                                 </span>
                             </div>
                             <h3 className="text-2xl font-bold text-stone-900 mb-4 font-sans">{item.title}</h3>
-                            <p className="text-stone-600 leading-relaxed">{item.desc}</p>
+                            <p className="text-stone-600 leading-relaxed mb-4">{item.desc}</p>
+                            <p className="text-sm text-stone-400 italic">{item.support}</p>
                         </MotionSection>
                     ))}
                 </div>

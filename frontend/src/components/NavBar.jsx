@@ -50,13 +50,16 @@ const NavBar = ({ openContact }) => {
                     <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
                         <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-stone-100 rounded-2xl bg-stone-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
                             <li>
-                                <button onClick={() => { navigate('/'); setTimeout(() => scrollToSection('problem'), 100) }} className="block py-2 px-3 text-stone-600 rounded hover:bg-stone-100 md:hover:bg-transparent md:hover:text-stone-900 md:p-0 transition-colors">The Scale-Up Gap</button>
+                                <button onClick={() => { navigate('/'); setTimeout(() => scrollToSection('problem'), 100) }} className="block py-2 px-3 text-stone-600 rounded hover:bg-stone-100 md:hover:bg-transparent md:hover:text-stone-900 md:p-0 transition-colors">The Problem</button>
                             </li>
                             <li>
-                                <button onClick={() => { navigate('/'); setTimeout(() => scrollToSection('personas'), 100) }} className="block py-2 px-3 text-stone-600 rounded hover:bg-stone-100 md:hover:bg-transparent md:hover:text-stone-900 md:p-0 transition-colors">Is This You?</button>
+                                <button onClick={() => { navigate('/'); setTimeout(() => scrollToSection('personas'), 100) }} className="block py-2 px-3 text-stone-600 rounded hover:bg-stone-100 md:hover:bg-transparent md:hover:text-stone-900 md:p-0 transition-colors">Who It's For</button>
                             </li>
                             <li>
-                                <button onClick={() => { navigate('/'); setTimeout(() => scrollToSection('roadmap'), 100) }} className="block py-2 px-3 text-stone-600 rounded hover:bg-stone-100 md:hover:bg-transparent md:hover:text-stone-900 md:p-0 transition-colors">Our Process</button>
+                                <button onClick={() => { navigate('/'); setTimeout(() => scrollToSection('roadmap'), 100) }} className="block py-2 px-3 text-stone-600 rounded hover:bg-stone-100 md:hover:bg-transparent md:hover:text-stone-900 md:p-0 transition-colors">How It Works</button>
+                            </li>
+                            <li>
+                                <button onClick={() => { navigate('/'); setTimeout(() => scrollToSection('about'), 100) }} className="block py-2 px-3 text-stone-600 rounded hover:bg-stone-100 md:hover:bg-transparent md:hover:text-stone-900 md:p-0 transition-colors">About</button>
                             </li>
 
                             {/* Mobile Only CTA */}

@@ -35,10 +35,11 @@ const Timeline = () => {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <MotionSection className="text-center mb-20">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-stone-400 mb-4">The Build-Operate-Transfer Framework</p>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 sm:text-4xl font-sans">
-                        What We Actually Do
+                        A Clear, Time-Boxed Road to Your Independence
                     </h2>
-                    <p className="mt-4 text-xl text-stone-600 font-serif italic">The Build-Operate-Transfer Framework — a clear, time-boxed roadmap to your independence.</p>
+                    <p className="mt-4 text-xl text-stone-600 font-serif italic">A clear, time-boxed roadmap to your independence.</p>
                 </MotionSection>
 
                 <div className="relative">
