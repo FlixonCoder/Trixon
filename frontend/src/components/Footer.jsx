@@ -1,8 +1,11 @@
+"use client";
 import React from 'react'
 import MotionSection from './MotionSection'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
+import { useContact } from '../context/ContactContext'
 
-const Footer = ({ openContact }) => {
+const Footer = () => {
+    const { openContact } = useContact()
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id)
@@ -24,7 +27,7 @@ const Footer = ({ openContact }) => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                     <button
                         onClick={openContact}
-                        className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-stone-900 bg-white rounded-full overflow-hidden transition-all duration-300 shadow-xl hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-stone-900 w-full sm:w-auto"
+                        className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-stone-900 bg-white rounded-full overflow-hidden transition-all duration-300 shadow-xl hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-stone-900 w-full sm:w-auto cursor-pointer"
                     >
                         Secure Your Foundation
                         <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -36,13 +39,13 @@ const Footer = ({ openContact }) => {
                 {/* Footer nav links */}
                 <div className="mt-16 mb-8">
                     <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-stone-400">
-                        <Link to="/" className="hover:text-stone-200 transition-colors">Home</Link>
+                        <Link href="/" className="hover:text-stone-200 transition-colors">Home</Link>
                         <span className="text-stone-700">·</span>
-                        <Link to="/process" className="hover:text-stone-200 transition-colors">Our Process</Link>
+                        <Link href="/how-we-hire" className="hover:text-stone-200 transition-colors">Our Process</Link>
                         <span className="text-stone-700">·</span>
-                        <button onClick={() => scrollToSection('about')} className="hover:text-stone-200 transition-colors">About</button>
+                        <button onClick={() => scrollToSection('about')} className="hover:text-stone-200 transition-colors cursor-pointer">About</button>
                         <span className="text-stone-700">·</span>
-                        <button onClick={openContact} className="hover:text-stone-200 transition-colors">Let's Talk</button>
+                        <button onClick={openContact} className="hover:text-stone-200 transition-colors cursor-pointer">Let's Talk</button>
                     </nav>
                 </div>
 

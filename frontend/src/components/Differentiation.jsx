@@ -1,8 +1,12 @@
+"use client";
 import React from 'react'
 import MotionSection from './MotionSection'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
+import { useContact } from '../context/ContactContext'
 
-const Differentiation = ({ openContact }) => {
+const Differentiation = () => {
+    const { openContact } = useContact()
+
     return (
         <section className="py-24 bg-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +49,7 @@ const Differentiation = ({ openContact }) => {
                 <MotionSection delay={0.3} className="text-center">
                     <button
                         onClick={openContact}
-                        className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-stone-900 rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-stone-900/20 hover:bg-stone-800 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-2"
+                        className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-stone-900 rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-stone-900/20 hover:bg-stone-800 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-2 cursor-pointer"
                     >
                         Secure Your Foundation
                         <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,7 +60,7 @@ const Differentiation = ({ openContact }) => {
                     {/* Secondary CTA */}
                     <div className="mt-6">
                         <Link
-                            to="/process"
+                            href="/how-we-hire"
                             className="inline-flex items-center text-base font-medium text-stone-500 hover:text-stone-900 transition-colors border-b border-stone-300 hover:border-stone-900 pb-1"
                         >
                             See exactly how our process works →

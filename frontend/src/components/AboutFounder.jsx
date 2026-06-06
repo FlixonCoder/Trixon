@@ -1,6 +1,7 @@
 import React from 'react'
 import MotionSection from './MotionSection'
 import { assets } from '../assets/assets'
+import Image from 'next/image'
 
 const AboutFounder = () => {
     return (
@@ -14,9 +15,11 @@ const AboutFounder = () => {
                         <div className="shrink-0">
                             <div className="w-[140px] h-[140px] rounded-full bg-stone-100 border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
                                 {assets.founder_img ? (
-                                    <img 
+                                    <Image 
                                         src={assets.founder_img} 
                                         alt="Mohammed Saqib Junaid Khan" 
+                                        width={140}
+                                        height={140}
                                         className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                                     />
                                 ) : (
@@ -44,7 +47,7 @@ const AboutFounder = () => {
                                 <p>
                                     Every Trixon engagement is built on one core principle — the best technical partner is the one who makes themselves unnecessary by giving you full independence.
                                 </p>
-                            </div>
+                             </div>
 
                             {/* LinkedIn link */}
                             <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">

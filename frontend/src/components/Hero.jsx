@@ -1,8 +1,11 @@
+"use client";
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { useContact } from '../context/ContactContext'
 
-const Hero = ({ openContact }) => {
+const Hero = () => {
+    const { openContact } = useContact()
+
     return (
         <section className="relative pt-20 pb-16 lg:pt-48 lg:pb-40 bg-stone-50 overflow-hidden">
             {/* Subtle Texture/Grain Effect could be added via CSS here, using a clean gradient for now */}
@@ -51,7 +54,7 @@ const Hero = ({ openContact }) => {
                     {/* Primary CTA */}
                     <button
                         onClick={openContact}
-                        className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-stone-900 rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-stone-900/20 hover:bg-stone-800 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-2"
+                        className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-stone-900 rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-stone-900/20 hover:bg-stone-800 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-2 cursor-pointer"
                     >
                         Book a Free Strategy Session
                         <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

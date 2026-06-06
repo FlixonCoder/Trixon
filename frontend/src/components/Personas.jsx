@@ -1,7 +1,11 @@
+"use client";
 import React from 'react'
 import MotionSection from './MotionSection'
+import { useContact } from '../context/ContactContext'
 
-const Personas = ({ openContact }) => {
+const Personas = () => {
+    const { openContact } = useContact()
+
     const personas = [
         {
             label: "The AI Prototype Founder",
@@ -59,7 +63,7 @@ const Personas = ({ openContact }) => {
                             <div className="mt-auto pt-4 border-t border-stone-100">
                                 <button
                                     onClick={openContact}
-                                    className="text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors inline-flex items-center group/cta"
+                                    className="text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors inline-flex items-center group/cta cursor-pointer"
                                 >
                                     Does this sound like you? Let's talk
                                     <svg className="ml-1 w-4 h-4 transition-transform group-hover/cta:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
