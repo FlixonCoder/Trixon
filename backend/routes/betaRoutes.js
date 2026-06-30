@@ -54,7 +54,7 @@ router.post('/', async (req, res) => {
 
         // Send email notifications (non-blocking for response)
         try {
-            await sendBetaNotification({
+            const notifyRes = await sendBetaNotification({
                 fullName,
                 email: email.toLowerCase(),
                 linkedin,
@@ -69,10 +69,14 @@ router.post('/', async (req, res) => {
                 availability,
                 motivation
             })
-            await sendBetaConfirmation({
+            console.log('✓ Admin notify email response:', notifyRes.messageId, notifyRes.response)
+
+            const confirmRes = await sendBetaConfirmation({
                 name: fullName,
                 email: email.toLowerCase()
             })
+            console.log('✓ User confirmation email response:', confirmRes.messageId, confirmRes.response)
+
             console.log(`✓ Beta application notifications sent for: ${fullName}`)
         } catch (emailErr) {
             console.error('Error sending beta emails:', emailErr)
