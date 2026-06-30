@@ -34,9 +34,9 @@ const Footer = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-12 py-16 border-t border-stone-800/60">
                     {/* Brand column */}
                     <div className="col-span-2 md:col-span-1 space-y-6">
-                        <div className="flex items-center space-x-3">
-                            <img src="/light-logo.png" alt="Trixon Logo" className="h-10 w-10 object-cover rounded-xl" />
-                            <span className="text-2xl font-bold text-white font-sans tracking-tight">Trixon</span>
+                        <div className="flex items-center space-x-2.5">
+                            <img src="/light-logo.png" alt="Trixon Logo" className="h-8 w-8 object-contain" />
+                            <span className="text-xl font-bold text-white font-sans tracking-tight">Trixon</span>
                         </div>
                         <p className="text-sm text-stone-400 leading-relaxed font-light">
                             Technical Co-Founder leadership and software engineering maturity for growing startups.

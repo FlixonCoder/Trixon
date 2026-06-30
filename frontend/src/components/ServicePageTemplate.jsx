@@ -8,7 +8,7 @@ import { useContact } from '../context/ContactContext';
 import Footer from './Footer';
 
 export default function ServicePageTemplate({ service }) {
-    const { title, headline, subheadline, overview, problems, capabilities, techStack, caseStudies, linkedProject } = service;
+    const { title, slug, headline, subheadline, overview, problems, capabilities, techStack, caseStudies, linkedProject } = service;
     const { openContact } = useContact();
 
     return (
@@ -141,55 +141,57 @@ export default function ServicePageTemplate({ service }) {
             </section>
 
             {/* Linked Project */}
-            <section className="py-24 bg-white relative border-t border-stone-100">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <MotionSection className="text-center mb-12">
-                        <h2 className="text-sm font-bold text-accent uppercase tracking-widest mb-3">See It In Action</h2>
-                        <h3 className="text-3xl md:text-4xl font-bold text-stone-900 font-sans">Real Project Example</h3>
-                    </MotionSection>
+            {slug !== 'infrastructure-engineering' && (
+                <section className="py-24 bg-white relative border-t border-stone-100">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <MotionSection className="text-center mb-12">
+                            <h2 className="text-sm font-bold text-accent uppercase tracking-widest mb-3">See It In Action</h2>
+                            <h3 className="text-3xl md:text-4xl font-bold text-stone-900 font-sans">Real Project Example</h3>
+                        </MotionSection>
 
-                    <MotionSection className="max-w-xl mx-auto">
-                        <div className="space-y-4">
-                            {linkedProject ? (
-                                Array.isArray(linkedProject) ? (
-                                    linkedProject.map((project, idx) => (
+                        <MotionSection className="max-w-xl mx-auto">
+                            <div className="space-y-4">
+                                {linkedProject ? (
+                                    Array.isArray(linkedProject) ? (
+                                        linkedProject.map((project, idx) => (
+                                            <Link
+                                                key={idx}
+                                                href={project.path}
+                                                className="group flex items-center justify-between p-8 bg-stone-50 rounded-3xl border border-stone-100 hover:shadow-xl hover:border-stone-200 transition-all duration-300"
+                                            >
+                                                <div>
+                                                    <p className="font-bold text-stone-900 font-sans text-lg mb-1">{project.name}</p>
+                                                    <p className="text-sm text-stone-500">View the full case study</p>
+                                                </div>
+                                                <svg className="w-5 h-5 text-stone-400 group-hover:text-stone-900 transition-colors group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </Link>
+                                        ))
+                                    ) : (
                                         <Link
-                                            key={idx}
-                                            href={project.path}
+                                            href={linkedProject.path}
                                             className="group flex items-center justify-between p-8 bg-stone-50 rounded-3xl border border-stone-100 hover:shadow-xl hover:border-stone-200 transition-all duration-300"
                                         >
                                             <div>
-                                                <p className="font-bold text-stone-900 font-sans text-lg mb-1">{project.name}</p>
+                                                <p className="font-bold text-stone-900 font-sans text-lg mb-1">{linkedProject.name}</p>
                                                 <p className="text-sm text-stone-500">View the full case study</p>
                                             </div>
                                             <svg className="w-5 h-5 text-stone-400 group-hover:text-stone-900 transition-colors group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
                                         </Link>
-                                    ))
+                                    )
                                 ) : (
-                                    <Link
-                                        href={linkedProject.path}
-                                        className="group flex items-center justify-between p-8 bg-stone-50 rounded-3xl border border-stone-100 hover:shadow-xl hover:border-stone-200 transition-all duration-300"
-                                    >
-                                        <div>
-                                            <p className="font-bold text-stone-900 font-sans text-lg mb-1">{linkedProject.name}</p>
-                                            <p className="text-sm text-stone-500">View the full case study</p>
-                                        </div>
-                                        <svg className="w-5 h-5 text-stone-400 group-hover:text-stone-900 transition-colors group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg>
-                                    </Link>
-                                )
-                            ) : (
-                                <div className="flex items-center justify-center p-8 bg-stone-50 rounded-3xl border border-stone-100">
-                                    <p className="text-stone-400 text-sm font-medium">Project example coming soon</p>
-                                </div>
-                            )}
-                        </div>
-                    </MotionSection>
-                </div>
-            </section>
+                                    <div className="flex items-center justify-center p-8 bg-stone-50 rounded-3xl border border-stone-100">
+                                        <p className="text-stone-400 text-sm font-medium">Project example coming soon</p>
+                                    </div>
+                                )}
+                            </div>
+                        </MotionSection>
+                    </div>
+                </section>
+            )}
 
             {/* Final CTA Section */}
             <section className="py-24 bg-stone-900 text-stone-50 text-center relative overflow-hidden">

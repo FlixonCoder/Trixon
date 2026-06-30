@@ -29,11 +29,11 @@ const NavBar = () => {
                     {/* Brand Logo */}
                     <button 
                         onClick={() => handleNavigation('/')} 
-                        className="flex items-center space-x-3 cursor-pointer select-none"
+                        className="flex items-center space-x-2.5 cursor-pointer select-none"
                         suppressHydrationWarning
                     >
-                        <img src="/dark-logo.png" alt="Trixon Logo" className="h-10 w-10 object-cover rounded-xl" />
-                        <span className="text-2xl font-bold whitespace-nowrap text-stone-900 tracking-tight font-sans">Trixon</span>
+                        <img src="/dark-logo.png" alt="Trixon Logo" className="h-8 w-8 object-contain" />
+                        <span className="text-xl font-bold whitespace-nowrap text-stone-900 tracking-tight font-sans">Trixon</span>
                     </button>
 
                     {/* Desktop Navigation */}

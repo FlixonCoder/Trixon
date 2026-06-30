@@ -131,8 +131,74 @@ const sendUserConfirmation = async ({ name, email, date, time, meetLink, calenda
     })
 }
 
+/**
+ * Send a beta application notification email to the admin
+ */
+const sendBetaNotification = async ({ fullName, email, linkedin, company, role, industry, experienceYears, productInterest, categories, testingExperience, feedbackStyle, availability, motivation }) => {
+    const safeName = escapeHTML(fullName)
+    const safeEmail = escapeHTML(email)
+    const safeLinkedin = escapeHTML(linkedin)
+    const safeCompany = escapeHTML(company)
+    const safeRole = escapeHTML(role)
+    const safeIndustry = escapeHTML(industry)
+    const safeProductInterest = escapeHTML(productInterest)
+    const safeTestingExperience = escapeHTML(testingExperience)
+    const safeFeedbackStyle = escapeHTML(feedbackStyle)
+    const safeAvailability = escapeHTML(availability)
+    const safeMotivation = escapeHTML(motivation)
+
+    return transporter.sendMail({
+        from: `"Trixon Website" <${process.env.SMTP_USER}>`,
+        to: process.env.NOTIFY_EMAIL,
+        subject: `🧪 New Beta Registration: ${safeName}`,
+        replyTo: safeEmail,
+        html: `
+      <div style="font-family: sans-serif; max-width: 600px; margin: auto;">
+        <h2>🧪 New Beta Application</h2>
+        <p><strong>Name:</strong> ${safeName}</p>
+        <p><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>
+        <p><strong>LinkedIn:</strong> ${safeLinkedin || 'N/A'}</p>
+        <p><strong>Company:</strong> ${safeCompany || 'N/A'}</p>
+        <p><strong>Role:</strong> ${safeRole}</p>
+        <p><strong>Industry:</strong> ${safeIndustry}</p>
+        <p><strong>Years of Experience:</strong> ${experienceYears}</p>
+        <p><strong>Product Interest:</strong> ${safeProductInterest}</p>
+        <p><strong>Categories:</strong> ${categories ? (Array.isArray(categories) ? categories.join(', ') : categories) : 'N/A'}</p>
+        <p><strong>Testing Experience:</strong> ${safeTestingExperience}</p>
+        <p><strong>Feedback Style:</strong> ${safeFeedbackStyle || 'N/A'}</p>
+        <p><strong>Availability:</strong> ${safeAvailability}</p>
+        <p><strong>Motivation:</strong> ${safeMotivation || 'N/A'}</p>
+      </div>
+    `
+    })
+}
+
+/**
+ * Send a confirmation email to the beta applicant
+ */
+const sendBetaConfirmation = async ({ name, email }) => {
+    const safeName = escapeHTML(name)
+
+    return transporter.sendMail({
+        from: `"Trixon" <${process.env.SMTP_USER}>`,
+        to: email,
+        subject: `Your Trixon Beta application has been received!`,
+        html: `
+      <div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #e5e5e5; border-radius: 12px;">
+        <h2 style="color: #0c0a09; font-weight: bold; margin-bottom: 16px;">Thanks for applying to Trixon Beta, ${safeName}!</h2>
+        <p style="color: #44403c; line-height: 1.6;">We have successfully received your application to join the Trixon Beta Program.</p>
+        <p style="color: #44403c; line-height: 1.6;">Our team is reviewing submissions to ensure a tailored testing experience. We will get in touch with you shortly regarding the next steps and onboarding details.</p>
+        <br>
+        <p style="color: #78716c; font-size: 14px;">Best regards,<br>The Trixon Team</p>
+      </div>
+    `
+    })
+}
+
 module.exports = {
     sendContactNotification,
     sendMeetingNotification,
-    sendUserConfirmation
+    sendUserConfirmation,
+    sendBetaNotification,
+    sendBetaConfirmation
 }

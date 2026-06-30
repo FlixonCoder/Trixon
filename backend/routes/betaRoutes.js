@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const BetaApplication = require('../models/BetaApplication')
 const authMiddleware = require('../middleware/authMiddleware')
+const { sendBetaNotification, sendBetaConfirmation } = require('../utils/mailer')
 
 // POST /api/beta-program - Apply to the beta program
 router.post('/', async (req, res) => {
@@ -50,6 +51,33 @@ router.post('/', async (req, res) => {
         })
 
         const savedApplication = await newApplication.save()
+
+        // Send email notifications (non-blocking for response)
+        try {
+            await sendBetaNotification({
+                fullName,
+                email: email.toLowerCase(),
+                linkedin,
+                company,
+                role,
+                industry,
+                experienceYears,
+                productInterest,
+                categories,
+                testingExperience,
+                feedbackStyle,
+                availability,
+                motivation
+            })
+            await sendBetaConfirmation({
+                name: fullName,
+                email: email.toLowerCase()
+            })
+            console.log(`✓ Beta application notifications sent for: ${fullName}`)
+        } catch (emailErr) {
+            console.error('Error sending beta emails:', emailErr)
+        }
+
         res.status(201).json(savedApplication)
     } catch (error) {
         console.error('Error saving beta application:', error)
