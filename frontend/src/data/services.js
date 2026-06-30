@@ -45,7 +45,7 @@ export const services = [
             }
         ],
         linkedProject: [
-            { name: "AI Suspect Interrogation Chatbot", path: "/projects/ai-suspect-interrogation-chatbot" },
+            { name: "AI Interrogation Engine", path: "/projects/ai-interrogation-engine" },
             { name: "PersonalOS — AI Chief of Staff", path: "/projects/personalos-ai-chief-of-staff" },
             { name: "Local Voice-to-RAG Memory System", path: "/projects/voice-to-rag-memory" }
         ]

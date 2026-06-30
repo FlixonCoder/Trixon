@@ -10,18 +10,18 @@ export const projects = [
         stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "JWT Auth", "Nodemailer", "Express", "Google Calendar Integration"],
         outcomes: [
             { metric: "3", label: "Role-based dashboards", desc: "Patient, doctor, and admin views" },
-            { metric: "MVP", label: "Shipped in 4 weeks", desc: "From idea to production-ready" },
+            { metric: "MVP", label: "Production-ready build", desc: "From idea to deployable platform" },
             { metric: "100%", label: "IP transferred", desc: "Full ownership to founder" }
         ]
     },
     {
-        title: "AI Suspect Interrogation Chatbot",
-        slug: "ai-suspect-interrogation-chatbot",
-        description: "A Gemini-powered AI suspect built for a live crime investigation event, enabling participants to interrogate virtual suspects through natural conversations while preserving game integrity with custom personalities, memory, and guardrails.",
+        title: "AI Interrogation Engine — Multi-Persona Conversational System",
+        slug: "ai-interrogation-engine",
+        description: "A Gemini-powered conversational AI system with custom personas, session memory, and prompt-level guardrails — built and deployed end-to-end in under 24 hours for a live event.",
         tag: "AI Solutions",
         tagSecondary: "Live Deployment",
-        challenge: "A live theft investigation game needed an immersive way for participants to interrogate suspects without requiring volunteers to roleplay continuously. The solution had to answer naturally, stay true to each suspect's personality, avoid revealing hidden clues, and remain reliable throughout the event—all within a 24-hour development window.",
-        solution: "Developed and deployed a full-stack AI interrogation chatbot powered by Gemini 2.5 Flash. Each suspect was configured with a unique personality and trained on custom case files, allowing participants to conduct realistic interrogations. Session-based memory maintained conversational context while carefully engineered prompt guardrails prevented accidental clue leakage. A built-in Jammer System gave organizers the ability to instantly disable interactions whenever required during gameplay.",
+        challenge: "A live event needed multiple AI characters that could hold consistent personalities, retain conversational memory, and stay strictly within defined information boundaries — all under a 24-hour build-to-deploy window with zero room for error during live use.",
+        solution: "Built a full-stack multi-persona AI system powered by Gemini 2.5 Flash. Each persona was configured with a distinct personality and constrained knowledge base, with session-based memory maintaining context across conversations. Prompt-level guardrails prevented information leakage outside defined boundaries, and a built-in kill-switch ('Jammer System') gave operators real-time control to disable any persona instantly.",
         stack: [
             "React",
             "Vite",
@@ -37,30 +37,29 @@ export const projects = [
         outcomes: [
             {
                 metric: "24hr",
-                label: "Rapid Development",
-                desc: "Designed, built, and deployed for a live college event within a single day."
+                label: "Build-to-Deploy",
+                desc: "Designed, built, and shipped a production conversational AI system in under a day."
             },
             {
-                metric: "AI",
-                label: "Custom Personas",
-                desc: "Multiple AI suspects with distinct personalities, case knowledge, and conversational memory."
+                metric: "Multi",
+                label: "Persona Architecture",
+                desc: "Multiple AI personas with distinct personalities, scoped knowledge, and isolated memory."
             },
             {
                 metric: "Live",
-                label: "Event Gameplay",
-                desc: "Served as a core gameplay mechanic with organizer-controlled guardrails and a built-in Jammer System."
+                label: "Real-Time Control",
+                desc: "Operator-controlled guardrails with an instant kill-switch for live deployment safety."
             }
         ]
     },
-
     {
-        title: "AI-Powered Lead Manager Chatbot",
-        slug: "ai-powered-lead-manager-chatbot",
-        description: "An AI-driven lead management platform that captures unstructured leads from Telegram, intelligently extracts and validates data using Google Gemini, and manages everything through a modern MERN dashboard.",
-        tag: "AI Automation",
-        tagSecondary: "CRM & Lead Management",
-        challenge: "Lead collection was a manual, inconsistent process spread across Telegram conversations. Sales teams received unstructured messages containing links, deadlines, and notes that required manual formatting, validation, and duplicate checking before they could be tracked, resulting in wasted time and missed opportunities.",
-        solution: "Built a hybrid AI-powered lead management system combining a Telegram Bot, Google Gemini AI, Python automation, and a MERN dashboard. Users simply send natural language messages to the bot, which automatically extracts structured lead information, validates URLs, detects duplicates, stores everything in MongoDB, and instantly syncs it to a responsive React dashboard for seamless lead management.",
+        title: "AI Lead Pipeline — Telegram to MERN Dashboard",
+        slug: "telegram-lead-pipeline",
+        description: "An AI-driven lead management pipeline that captures unstructured leads from Telegram, extracts and validates data with Google Gemini, and surfaces everything in a real-time MERN dashboard.",
+        tag: "Data & Analytics",
+        tagSecondary: "Client Work",
+        challenge: "Lead collection was a manual, inconsistent process spread across Telegram conversations. Unstructured messages containing links, deadlines, and notes required manual formatting, validation, and duplicate-checking before they could be tracked — costing time and causing missed follow-ups.",
+        solution: "Built a hybrid AI-powered lead pipeline combining a Telegram bot, Google Gemini for extraction, Python automation, and a MERN dashboard. Natural-language messages sent to the bot are automatically parsed into structured lead records, validated, checked for duplicates, stored in MongoDB, and synced instantly to a searchable React dashboard.",
         stack: [
             "React",
             "Node.js",
@@ -77,28 +76,28 @@ export const projects = [
             {
                 metric: "AI",
                 label: "Intelligent Lead Parsing",
-                desc: "Transforms natural language into structured lead data using Gemini AI."
+                desc: "Converts natural language into structured lead data using Gemini AI."
             },
             {
-                metric: "100%",
-                label: "Automated Validation",
-                desc: "Checks URLs, prevents duplicates, and validates data before storage."
+                metric: "Automated",
+                label: "Validation Layer",
+                desc: "Checks URLs and prevents duplicates before storage."
             },
             {
                 metric: "Real-Time",
                 label: "Telegram → Dashboard",
-                desc: "New leads appear instantly in a searchable and responsive MERN dashboard."
+                desc: "New leads appear instantly in a searchable, responsive MERN dashboard."
             }
         ]
     },
     {
-        title: "Trixon — AI Codebase Intelligence",
-        slug: "trixon",
+        title: "Supremo — AI Codebase Intelligence",
+        slug: "supremo",
         description: "AI-powered engineering intelligence platform that analyzes GitHub repositories, generates comprehensive technical reports, enables natural-language codebase conversations, and helps founders understand, improve, and scale their software.",
         tag: "Products",
         tagSecondary: "Beta",
         challenge: "Founders and engineering teams often inherit unfamiliar codebases with little documentation, making it difficult to evaluate architecture, security, maintainability, scalability, and technical debt. Existing tools focus on isolated metrics, leaving teams without a unified understanding of their software.",
-        solution: "Trixon connects directly to GitHub repositories and performs AI-driven codebase analysis to generate detailed engineering reports covering architecture, code quality, security, documentation, scalability, onboarding, and business insights. It also includes an interactive AI assistant that lets users query their entire codebase in natural language, making complex software understandable for both technical and non-technical stakeholders.",
+        solution: "Supremo connects directly to GitHub repositories and performs AI-driven codebase analysis to generate detailed engineering reports covering architecture, code quality, security, documentation, scalability, onboarding, and business insights. It also includes an interactive AI assistant that lets users query their entire codebase in natural language, making complex software understandable for both technical and non-technical stakeholders.",
         stack: [
             "Next.js",
             "FastAPI",
@@ -130,13 +129,13 @@ export const projects = [
         ]
     },
     {
-        title: "PersonalOS — AI Chief of Staff",
+        title: "PersonalOS — Self-Hosted AI Agent Architecture",
         slug: "personalos-ai-chief-of-staff",
-        description: "A self-hosted AI productivity platform that combines long-term memory, browser automation, Discord interaction, voice processing, scheduling, and intelligent task management into a single personal operating system.",
+        description: "A personal R&D build: a self-hosted AI agent platform combining long-term memory, browser automation, voice processing, and proactive task management into a single system — built to stress-test agentic architecture patterns, not as client work.",
         tag: "AI Solutions",
         tagSecondary: "R&D Project",
-        challenge: "Managing tasks, notes, calendars, habits, web research, and personal knowledge across multiple disconnected applications creates constant context switching and fragmented productivity. The goal was to build a single AI assistant capable of understanding long-term context while proactively managing everyday workflows.",
-        solution: "Developed a self-hosted AI Chief of Staff powered by a dual-brain architecture that intelligently switches between cloud and local LLMs. The system combines long-term memory with RAG, browser automation, Discord-based interaction, voice transcription, proactive scheduling, and intelligent task management, allowing users to interact naturally while the agent manages information, performs web actions, and maintains persistent context across sessions.",
+        challenge: "Built independently to explore a hard architectural question: can a single agent maintain long-term context, take real actions (browser automation, scheduling), and run across a hybrid cloud/local inference setup without falling apart under everyday use.",
+        solution: "Developed a self-hosted AI agent powered by a dual-brain architecture that switches between cloud and local LLMs depending on task sensitivity and latency needs. Combines long-term memory via RAG, browser automation, voice transcription, and proactive scheduling, demonstrating patterns directly applicable to client-facing agentic systems.",
         stack: [
             "Python",
             "Discord.py",
@@ -154,38 +153,39 @@ export const projects = [
             {
                 metric: "Dual",
                 label: "Hybrid AI Architecture",
-                desc: "Automatically switches between Groq cloud models and local Ollama inference."
+                desc: "Automatically switches between cloud (Groq) and local (Ollama) inference."
             },
             {
                 metric: "Persistent",
                 label: "Long-Term Memory",
-                desc: "Combines SQLite and ChromaDB to retain structured and semantic knowledge across sessions."
+                desc: "Combines SQLite and ChromaDB for structured and semantic recall across sessions."
             },
             {
-                metric: "Unified",
-                label: "AI Personal Operating System",
-                desc: "Integrates browser automation, scheduling, voice processing, task management, notes, goals, and Discord into one intelligent assistant."
+                metric: "R&D",
+                label: "Architecture Proving Ground",
+                desc: "Patterns from this build inform agentic systems delivered to clients."
             }
         ]
     },
     {
         title: "Local Voice-to-RAG Memory System",
         slug: "voice-to-rag-memory",
-        description: "A local-first system that converts voice recordings into text in real time and caches them into a RAG-based memory store, enabling natural-language Q&A over entire meetings or seminars.",
-        tag: "AI Solutions | R&D Project",
-        challenge: "Meeting and seminar notes get lost or never get reviewed. The goal was passive capture with active recall — ask questions later instead of re-reading transcripts.",
-        solution: "A local bot continuously transcribes voice input and stores it in a RAG-indexed memory layer, allowing the user to query any past meeting or seminar conversationally.",
+        description: "A personal R&D build: a local-first system converting voice recordings into a queryable RAG-indexed memory store, exploring fully offline retrieval-augmented architecture.",
+        tag: "AI Solutions",
+        tagSecondary: "R&D Project",
+        challenge: "Explored whether a fully local, privacy-preserving RAG pipeline could reliably capture and surface meeting or seminar content on natural-language query, with zero cloud dependency.",
+        solution: "Built a local bot that continuously transcribes voice input and indexes it into a RAG-based memory layer, allowing conversational query over any past session — entirely offline.",
         stack: ["Whisper", "Vector Database", "RAG Pipeline", "Python"],
         outcomes: [
             {
                 metric: "Local",
-                label: "Data Privacy",
-                desc: "Fully local offline execution keeping transcripts secure."
+                label: "Zero Cloud Dependency",
+                desc: "Fully offline execution — no data leaves the device."
             },
             {
-                metric: "Session",
-                label: "Continuous Memory",
-                desc: "Queryable vector-cached seminar and meeting records."
+                metric: "R&D",
+                label: "Offline RAG Proving Ground",
+                desc: "Validates architecture used in privacy-sensitive client engagements."
             }
         ]
     },
@@ -193,7 +193,8 @@ export const projects = [
         title: "Yuvaratna — Public Website",
         slug: "yuvaratna",
         description: "Designed and built the public website for Yuvaratna, a regional NGO focused on social work and community development.",
-        tag: "Web Development | Client Work",
+        tag: "Web Development",
+        tagSecondary: "Client Work",
         challenge: "Yuvaratna, a regional NGO, lacked a modern online presence to display their initiatives, events, and community updates, making it difficult to reach local volunteers and share program updates.",
         solution: "Designed and developed a responsive, fast, and modern website using Next.js and Tailwind CSS, giving the organization a professional platform to showcase their social impact.",
         stack: ["Next.js", "Tailwind CSS", "React", "Framer Motion"],
@@ -206,7 +207,7 @@ export const projects = [
             {
                 metric: "Fast",
                 label: "Next.js Performance",
-                desc: "Optimized load times and responsive design to accommodate users on mobile networks."
+                desc: "Optimized load times and responsive design for mobile-first audiences."
             }
         ]
     }

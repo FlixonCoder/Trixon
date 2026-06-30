@@ -92,13 +92,13 @@ const Footer = () => {
                                 <Link href="/projects/ketpa" className="text-stone-400 hover:text-white transition-colors">Ketpa</Link>
                             </li>
                             <li>
-                                <Link href="/projects/ai-suspect-interrogation-chatbot" className="text-stone-400 hover:text-white transition-colors">AI Interrogation Chatbot</Link>
+                                <Link href="/projects/ai-interrogation-engine" className="text-stone-400 hover:text-white transition-colors">AI Interrogation Engine</Link>
                             </li>
                             <li>
                                 <Link href="/projects/telegram-lead-pipeline" className="text-stone-400 hover:text-white transition-colors">Telegram Pipeline</Link>
                             </li>
                             <li>
-                                <Link href="/projects/trixon" className="text-stone-400 hover:text-white transition-colors">Trixon</Link>
+                                <Link href="/projects/supremo" className="text-stone-400 hover:text-white transition-colors">Supremo</Link>
                             </li>
                         </ul>
                     </div>

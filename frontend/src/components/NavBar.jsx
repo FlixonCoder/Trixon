@@ -120,9 +120,9 @@ const NavBar = () => {
                                     <p className="px-5 py-1 text-xs font-bold text-stone-400 uppercase tracking-widest">Projects</p>
                                     {[
                                         { name: "Ketpa", path: "/projects/ketpa" },
-                                        { name: "AI Interrogation Chatbot", path: "/projects/ai-suspect-interrogation-chatbot" },
+                                        { name: "AI Interrogation Engine", path: "/projects/ai-interrogation-engine" },
                                         { name: "Telegram Pipeline", path: "/projects/telegram-lead-pipeline" },
-                                        { name: "Trixon", path: "/projects/trixon" }
+                                        { name: "Supremo", path: "/projects/supremo" }
                                     ].map((item, i) => (
                                         <button
                                             key={i}
@@ -250,9 +250,9 @@ const NavBar = () => {
                                     </li>
                                     {[
                                         { name: "Ketpa", path: "/projects/ketpa" },
-                                        { name: "AI Interrogation Chatbot", path: "/projects/ai-suspect-interrogation-chatbot" },
+                                        { name: "AI Interrogation Engine", path: "/projects/ai-interrogation-engine" },
                                         { name: "Telegram Pipeline", path: "/projects/telegram-lead-pipeline" },
-                                        { name: "Trixon", path: "/projects/trixon" }
+                                        { name: "Supremo", path: "/projects/supremo" }
                                     ].map((item, i) => (
                                         <li key={i}>
                                             <button 

@@ -3,7 +3,7 @@ import ProjectPageTemplate from '../../../components/ProjectPageTemplate';
 import { projects } from '../../../data/projects';
 import { assets } from '../../../assets/assets';
 
-const projectData = projects.find(p => p.slug === 'trixon');
+const projectData = projects.find(p => p.slug === 'supremo');
 const projectWithImages = {
     ...projectData,
     images: [
@@ -19,13 +19,13 @@ const projectWithImages = {
 };
 
 export const metadata = {
-    title: 'Trixon — AI Codebase Intelligence | Built by Trixon',
+    title: 'Supremo — AI Codebase Intelligence | Built by Trixon',
     description: 'AI-powered engineering intelligence platform that analyzes GitHub repositories, generates comprehensive technical reports, enables natural-language codebase conversations, and helps founders understand, improve, and scale their software.',
     alternates: {
-        canonical: '/projects/trixon',
+        canonical: '/projects/supremo',
     },
 };
 
-export default function TrixonProjectPage() {
+export default function SupremoProjectPage() {
     return <ProjectPageTemplate project={projectWithImages} />;
 }

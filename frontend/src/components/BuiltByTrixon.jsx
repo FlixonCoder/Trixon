@@ -15,10 +15,10 @@ const BuiltByTrixon = () => {
             image: assets.ketpa2
         },
         {
-            name: "AI Suspect Interrogation Chatbot",
-            description: "A Gemini-powered AI suspect built for a live crime investigation event, enabling participants to interrogate virtual suspects through natural conversations.",
+            name: "AI Interrogation Engine",
+            description: "A Gemini-powered conversational AI system with custom personas, session memory, and prompt-level guardrails — built and deployed end-to-end in under 24 hours for a live event.",
             tag: "AI Solutions",
-            href: "/projects/ai-suspect-interrogation-chatbot",
+            href: "/projects/ai-interrogation-engine",
             image: assets.chatbot1
         },
         {
@@ -29,10 +29,10 @@ const BuiltByTrixon = () => {
             image: assets.tele1
         },
         {
-            name: "Trixon — AI Codebase Intelligence",
+            name: "Supremo — AI Codebase Intelligence",
             description: "AI-powered GitHub repo analyzer. Generates 7 reports per repo, grades codebase health per commit, and lets you chat with your entire codebase.",
             tag: "Products",
-            href: "/projects/trixon",
+            href: "/projects/supremo",
             image: assets.saas1
         }
     ]
