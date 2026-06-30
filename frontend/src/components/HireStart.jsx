@@ -94,7 +94,7 @@ const HireStart = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium text-stone-600 ring-1 ring-stone-900/10 bg-white/50 backdrop-blur-sm mb-8 shadow-sm"
                     >
-                        <span className="flex h-2 w-2 rounded-full bg-emerald-500 mr-2"></span> Success is Our Absence
+                        <span className="flex h-2 w-2 rounded-full bg-accent mr-2"></span> Success is Our Absence
                     </motion.div>
 
                     <motion.h1
@@ -162,7 +162,7 @@ const HireStart = () => {
 
                         {/* Trixon column */}
                         <MotionSection delay={0.4} className="p-10 rounded-3xl bg-stone-50 text-stone-900 shadow-2xl shadow-stone-900/30">
-                            <h3 className="text-lg font-bold text-emerald-600 uppercase tracking-widest mb-8">
+                            <h3 className="text-lg font-bold text-accent uppercase tracking-widest mb-8">
                                 The Trixon Model
                             </h3>
                             <ul className="space-y-5">
@@ -173,7 +173,7 @@ const HireStart = () => {
                                     "Success = we became redundant"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-start text-stone-800 text-lg font-medium">
-                                        <svg className="w-6 h-6 mr-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg className="w-6 h-6 mr-4 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                         </svg>
                                         <span>{item}</span>
@@ -254,7 +254,7 @@ const HireStart = () => {
                                                 <ul className="space-y-4">
                                                     {stage.details.map((detail, di) => (
                                                         <li key={di} className="flex items-start">
-                                                            <svg className="w-5 h-5 mr-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <svg className="w-5 h-5 mr-4 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                             </svg>
                                                             <span className="text-stone-700">{detail}</span>
@@ -293,7 +293,7 @@ const HireStart = () => {
                             ].map((item, i) => (
                                 <MotionSection key={i} delay={i * 0.2} className="p-8 rounded-3xl bg-stone-50 border border-stone-100">
                                     <div className="text-4xl font-bold text-stone-900 mb-2 font-sans">{item.metric}</div>
-                                    <div className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">{item.label}</div>
+                                    <div className="text-sm font-bold text-accent uppercase tracking-widest mb-3">{item.label}</div>
                                     <p className="text-stone-500 text-sm">{item.desc}</p>
                                 </MotionSection>
                             ))}

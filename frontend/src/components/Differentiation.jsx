@@ -39,7 +39,7 @@ const Differentiation = () => {
                     ].map((item, i) => (
                         <MotionSection key={i} delay={i * 0.2} className="group p-10 bg-white rounded-3xl shadow-sm border border-stone-100/50 hover:shadow-xl hover:border-stone-200 transition-all duration-300 text-center">
                             <div className="text-4xl font-bold text-stone-900 mb-2 font-sans">{item.metric}</div>
-                            <div className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">{item.label}</div>
+                            <div className="text-sm font-bold text-accent uppercase tracking-widest mb-3">{item.label}</div>
                             <p className="text-stone-500 text-sm">{item.desc}</p>
                         </MotionSection>
                     ))}

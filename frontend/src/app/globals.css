@@ -2,4 +2,34 @@
 
 @theme {
   --font-sans: var(--font-manrope), sans-serif;
+  --animate-fade-in: fade-in 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Trixon accent color — single source of truth */
+  --color-accent: #039a85;
+  --color-accent-light: #e6f5f2;
+  --color-accent-dark: #027a6a;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
+
+/* Accent utility classes — replace emerald-* throughout the site */
+.text-accent { color: var(--color-accent); }
+.bg-accent { background-color: var(--color-accent); }
+.bg-accent-light { background-color: var(--color-accent-light); }
+.border-accent { border-color: var(--color-accent); }
+.ring-accent { --tw-ring-color: var(--color-accent); }
+.text-accent-dark { color: var(--color-accent-dark); }
+.bg-accent-dark { background-color: var(--color-accent-dark); }
+.hover\:text-accent:hover { color: var(--color-accent); }
+.hover\:bg-accent:hover { background-color: var(--color-accent); }
+.hover\:bg-accent-light:hover { background-color: var(--color-accent-light); }
+.group-hover\:text-accent:hover { color: var(--color-accent); }

@@ -233,8 +233,8 @@ const ReachOut = ({ isOpen, onClose }) => {
                                         </svg>
                                     </button>
                                     <div>
-                                        <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                                            <svg className="w-10 h-10 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div className="w-20 h-20 bg-accent-light rounded-full flex items-center justify-center mx-auto mb-6">
+                                            <svg className="w-10 h-10 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                             </svg>
                                         </div>
@@ -258,8 +258,8 @@ const ReachOut = ({ isOpen, onClose }) => {
                                         </svg>
                                     </button>
                                     <div>
-                                        <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                                            <svg className="w-10 h-10 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <div className="w-20 h-20 bg-accent-light rounded-full flex items-center justify-center mx-auto mb-6">
+                                            <svg className="w-10 h-10 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
@@ -283,7 +283,7 @@ const ReachOut = ({ isOpen, onClose }) => {
                                                 </div>
                                                 <div className="pt-4 border-t border-stone-200">
                                                     <p className="text-xs text-stone-500 uppercase tracking-wider font-bold mb-2">Meeting Link</p>
-                                                    <a href="https://meet.google.com/ijk-egyk-qgk" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-medium hover:underline flex items-center gap-2">
+                                                    <a href="https://meet.google.com/ijk-egyk-qgk" target="_blank" rel="noopener noreferrer" className="text-accent font-medium hover:underline flex items-center gap-2">
                                                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
                                                         meet.google.com/ijk-egyk-qgk
                                                     </a>

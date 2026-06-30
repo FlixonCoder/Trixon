@@ -10,17 +10,21 @@ const ProtectedRoute = ({ children }) => {
 }
 
 const App = () => {
+  const isLoginPage = window.location.pathname === '/login'
+
   return (
     <div className='bg-stone-50 min-h-screen text-stone-900 font-sans'>
-      {window.location.pathname !== '/login' && <Navbar />}
-      <Routes>
-        <Route path='/login' element={<Login />} />
-        <Route path='/' element={
-          <ProtectedRoute>
-            <Home />
-          </ProtectedRoute>
-        } />
-      </Routes>
+      {!isLoginPage && <Navbar />}
+      <div className={!isLoginPage ? 'pt-20' : ''}>
+        <Routes>
+          <Route path='/login' element={<Login />} />
+          <Route path='/' element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          } />
+        </Routes>
+      </div>
     </div>
   )
 }

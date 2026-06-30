@@ -54,7 +54,7 @@ const Personas = () => {
                                 <p className="text-stone-700 leading-relaxed">{persona.pain}</p>
                             </div>
                             <div className="mb-4">
-                                <h3 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Trixon's intervention</h3>
+                                <h3 className="text-sm font-bold text-accent uppercase tracking-widest mb-3">Trixon's intervention</h3>
                                 <p className="text-stone-600 leading-relaxed font-medium">{persona.intervention}</p>
                             </div>
                             {/* Outcome line */}

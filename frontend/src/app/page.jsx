@@ -4,6 +4,7 @@ import Problem from '../components/Problem';
 import Personas from '../components/Personas';
 import Timeline from '../components/Timeline';
 import WhatWeDo from '../components/WhatWeDo';
+import BuiltByTrixon from '../components/BuiltByTrixon';
 import AboutFounder from '../components/AboutFounder';
 import SocialProof from '../components/SocialProof';
 import Differentiation from '../components/Differentiation';
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Personas />
       <Timeline />
       <WhatWeDo />
+      <BuiltByTrixon />
       <AboutFounder />
       <SocialProof />
       <Differentiation />

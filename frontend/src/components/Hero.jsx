@@ -21,7 +21,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium text-stone-600 ring-1 ring-stone-900/10 bg-white/50 backdrop-blur-sm mb-6 md:mb-10 shadow-sm"
                 >
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 mr-2"></span> Based on the proven Build-Operate-Transfer model
+                    <span className="flex h-2 w-2 rounded-full bg-accent mr-2"></span> Based on the proven Build-Operate-Transfer model
                 </motion.div>
 
                 <motion.h1
@@ -69,7 +69,7 @@ const Hero = () => {
                     <div className="mt-6 flex flex-wrap justify-center gap-3">
                         {['IP Fully Transferred', 'Fixed-Fee Engagements', 'Built on the BOT Model'].map((badge, i) => (
                             <span key={i} className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-white/70 text-stone-500 ring-1 ring-stone-200/80 backdrop-blur-sm">
-                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2"></span>
+                                <span className="w-1.5 h-1.5 rounded-full bg-accent mr-2"></span>
                                 {badge}
                             </span>
                         ))}

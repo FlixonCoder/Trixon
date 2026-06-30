@@ -35,14 +35,14 @@ const AboutFounder = () => {
                         {/* Right: Bio text */}
                         <div className="flex-1 text-center md:text-left">
                             <h3 className="text-2xl font-bold text-stone-900 font-sans mb-1">Mohammed Saqib Junaid Khan</h3>
-                            <p className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-6">Founder, Trixon</p>
+                            <p className="text-sm font-bold text-accent uppercase tracking-widest mb-6">Founder, Trixon</p>
 
                             <div className="space-y-4 text-lg text-stone-600 leading-relaxed mb-8">
                                 <p>
-                                    Mohammed has spent his career at the intersection of engineering leadership and startup growth. He founded Trixon after seeing the same pattern repeat: strong ideas, sharp founders, and technical infrastructure that couldn't keep up.
+                                    Mohammed leads the technical vision at Trixon, working alongside a growing team of engineers, designers, and product specialists. He founded Trixon after seeing the same pattern repeat: strong ideas, sharp founders, and technical infrastructure that couldn't keep up.
                                 </p>
                                 <p className="italic font-serif border-l-2 border-stone-200 pl-6 py-1">
-                                    "We don't claim to be the best in the world. We claim to be your technical foundation — based on the proven <span className="text-stone-900 font-semibold not-italic">Build-Operate-Transfer</span> model used by global R&D centers, adapted for the pace of startups."
+                                    "We take non-technical founders from idea to production-ready product. No fluff, no bloat — just execution."
                                 </p>
                                 <p>
                                     Every Trixon engagement is built on one core principle — the best technical partner is the one who makes themselves unnecessary by giving you full independence.

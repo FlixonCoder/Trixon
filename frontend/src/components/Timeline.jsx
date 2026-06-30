@@ -22,7 +22,7 @@ const Timeline = () => {
             title: "Transfer",
             subtitle: "The Seamless Exit",
             desc: "Our success is measured by your independence. We execute a formal shadowing period for your new internal lead and transition all legal IP and administrative rights.",
-            color: "bg-emerald-50/50 text-stone-900 border-emerald-200 ring-1 ring-emerald-100"
+            color: "bg-accent-light text-stone-900 border-accent ring-1 ring-accent/20"
         }
     ]
 
