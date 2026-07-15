@@ -27,13 +27,6 @@ const BuiltByTrixon = () => {
             tag: "Data & Analytics",
             href: "/projects/telegram-lead-pipeline",
             image: assets.tele1
-        },
-        {
-            name: "Supremo — AI Codebase Intelligence",
-            description: "AI-powered GitHub repo analyzer. Generates 7 reports per repo, grades codebase health per commit, and lets you chat with your entire codebase.",
-            tag: "Products",
-            href: "/projects/supremo",
-            image: assets.saas1
         }
     ]
 

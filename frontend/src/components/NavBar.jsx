@@ -2,12 +2,14 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useContact } from '../context/ContactContext';
+import darkLogo from '../../public/dark-logo.png';
 
 const NavBar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [activeMobileDropdown, setActiveMobileDropdown] = useState(null); // null, 'services', 'products'
-    const [activeDesktopDropdown, setActiveDesktopDropdown] = useState(null); // null, 'services', 'products'
+    const [activeMobileDropdown, setActiveMobileDropdown] = useState(null); // null, 'services', 'projects'
+    const [activeDesktopDropdown, setActiveDesktopDropdown] = useState(null); // null, 'services', 'projects'
     const router = useRouter();
     const { openContact } = useContact();
 
@@ -32,7 +34,7 @@ const NavBar = () => {
                         className="flex items-center space-x-2.5 cursor-pointer select-none"
                         suppressHydrationWarning
                     >
-                        <img src="/dark-logo.png" alt="Trixon Logo" className="h-8 w-8 object-contain" />
+                        <Image src={darkLogo} alt="Trixon Logo" className="h-8 w-8 object-contain" />
                         <span className="text-xl font-bold whitespace-nowrap text-stone-900 tracking-tight font-sans">Trixon</span>
                     </button>
 
@@ -86,43 +88,33 @@ const NavBar = () => {
                             )}
                         </div>
 
-                        {/* Products Dropdown */}
+                        {/* Projects Dropdown */}
                         <div 
                             className="relative"
-                            onMouseEnter={() => setActiveDesktopDropdown('products')}
+                            onMouseEnter={() => setActiveDesktopDropdown('projects')}
                             onMouseLeave={() => setActiveDesktopDropdown(null)}
                         >
                             <button 
                                 className={`text-stone-600 hover:text-stone-900 text-sm font-medium transition-colors flex items-center gap-1 cursor-pointer py-4 ${
-                                    activeDesktopDropdown === 'products' ? 'text-stone-900' : ''
+                                    activeDesktopDropdown === 'projects' ? 'text-stone-900' : ''
                                 }`}
                                 suppressHydrationWarning
                             >
-                                Products
+                                Projects
                                 <svg className={`w-4 h-4 transition-transform duration-200 ${
-                                    activeDesktopDropdown === 'products' ? 'rotate-180' : ''
+                                    activeDesktopDropdown === 'projects' ? 'rotate-180' : ''
                                 }`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
 
                             {/* Dropdown Menu */}
-                            {activeDesktopDropdown === 'products' && (
+                            {activeDesktopDropdown === 'projects' && (
                                 <div className="absolute left-0 mt-0 w-56 bg-white border border-stone-100 rounded-2xl shadow-xl py-3 z-50 animate-fade-in">
-                                    <button
-                                        onClick={() => handleNavigation('/products')}
-                                        className="w-full text-left px-5 py-2.5 text-stone-600 hover:text-stone-900 hover:bg-stone-50 text-sm font-medium transition-all cursor-pointer"
-                                        suppressHydrationWarning
-                                    >
-                                        Supremo
-                                    </button>
-                                    <div className="mx-4 my-2 border-t border-stone-100"></div>
-                                    <p className="px-5 py-1 text-xs font-bold text-stone-400 uppercase tracking-widest">Projects</p>
                                     {[
                                         { name: "Ketpa", path: "/projects/ketpa" },
                                         { name: "AI Interrogation Engine", path: "/projects/ai-interrogation-engine" },
-                                        { name: "Telegram Pipeline", path: "/projects/telegram-lead-pipeline" },
-                                        { name: "Supremo", path: "/projects/supremo" }
+                                        { name: "Telegram Pipeline", path: "/projects/telegram-lead-pipeline" }
                                     ].map((item, i) => (
                                         <button
                                             key={i}
@@ -136,11 +128,6 @@ const NavBar = () => {
                                 </div>
                             )}
                         </div>
-
-                        {/* Beta Program */}
-                        <button onClick={() => handleNavigation('/beta-program')} className="text-stone-600 hover:text-stone-900 text-sm font-medium transition-colors cursor-pointer" suppressHydrationWarning>
-                            Beta Program
-                        </button>
 
                         {/* How We Hire */}
                         <button onClick={() => handleNavigation('/how-we-hire')} className="text-stone-600 hover:text-stone-900 text-sm font-medium transition-colors cursor-pointer" suppressHydrationWarning>
@@ -229,30 +216,17 @@ const NavBar = () => {
                                 className="w-full text-left py-2 text-stone-700 flex items-center justify-between border-b border-stone-50"
                                 suppressHydrationWarning
                             >
-                                Products
-                                <svg className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === 'products' ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                Projects
+                                <svg className={`w-4 h-4 transition-transform duration-200 ${activeMobileDropdown === 'projects' ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
-                            {activeMobileDropdown === 'products' && (
+                            {activeMobileDropdown === 'projects' && (
                                 <ul className="pl-4 mt-2 space-y-3 bg-stone-55 rounded-xl p-3">
-                                    <li>
-                                        <button 
-                                            onClick={() => handleNavigation('/products')}
-                                            className="w-full text-left py-1.5 text-stone-500 text-sm hover:text-stone-900 font-medium"
-                                            suppressHydrationWarning
-                                        >
-                                            Supremo
-                                        </button>
-                                    </li>
-                                    <li className="border-t border-stone-100 pt-2">
-                                        <p className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-2">Projects</p>
-                                    </li>
                                     {[
                                         { name: "Ketpa", path: "/projects/ketpa" },
                                         { name: "AI Interrogation Engine", path: "/projects/ai-interrogation-engine" },
-                                        { name: "Telegram Pipeline", path: "/projects/telegram-lead-pipeline" },
-                                        { name: "Supremo", path: "/projects/supremo" }
+                                        { name: "Telegram Pipeline", path: "/projects/telegram-lead-pipeline" }
                                     ].map((item, i) => (
                                         <li key={i}>
                                             <button 
@@ -266,12 +240,6 @@ const NavBar = () => {
                                     ))}
                                 </ul>
                             )}
-                        </li>
-
-                        <li>
-                            <button onClick={() => handleNavigation('/beta-program')} className="w-full text-left py-2 text-stone-700 border-b border-stone-50" suppressHydrationWarning>
-                                Beta Program
-                            </button>
                         </li>
 
                         <li>

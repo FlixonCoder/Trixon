@@ -2,7 +2,9 @@
 import React from 'react';
 import MotionSection from './MotionSection';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useContact } from '../context/ContactContext';
+import lightLogo from '../../public/light-logo.png';
 
 const Footer = () => {
     const { openContact } = useContact();
@@ -35,7 +37,7 @@ const Footer = () => {
                     {/* Brand column */}
                     <div className="col-span-2 md:col-span-1 space-y-6">
                         <div className="flex items-center space-x-2.5">
-                            <img src="/light-logo.png" alt="Trixon Logo" className="h-8 w-8 object-contain" />
+                            <Image src={lightLogo} alt="Trixon Logo" className="h-8 w-8 object-contain" />
                             <span className="text-xl font-bold text-white font-sans tracking-tight">Trixon</span>
                         </div>
                         <p className="text-sm text-stone-400 leading-relaxed font-light">
@@ -72,16 +74,10 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Products & Program Column */}
+                    {/* Platform & Projects Column */}
                     <div className="space-y-4">
                         <h4 className="text-xs font-bold uppercase tracking-wider text-stone-300">Platform</h4>
                         <ul className="space-y-2.5 text-sm">
-                            <li>
-                                <Link href="/products" className="text-stone-400 hover:text-white transition-colors">Supremo</Link>
-                            </li>
-                            <li>
-                                <Link href="/beta-program" className="text-stone-400 hover:text-white transition-colors">Beta Program</Link>
-                            </li>
                             <li>
                                 <Link href="/how-we-hire" className="text-stone-400 hover:text-white transition-colors">How We Hire</Link>
                             </li>
@@ -96,9 +92,6 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link href="/projects/telegram-lead-pipeline" className="text-stone-400 hover:text-white transition-colors">Telegram Pipeline</Link>
-                            </li>
-                            <li>
-                                <Link href="/projects/supremo" className="text-stone-400 hover:text-white transition-colors">Supremo</Link>
                             </li>
                         </ul>
                     </div>

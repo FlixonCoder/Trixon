@@ -91,44 +91,6 @@ export const projects = [
         ]
     },
     {
-        title: "Supremo — AI Codebase Intelligence",
-        slug: "supremo",
-        description: "AI-powered engineering intelligence platform that analyzes GitHub repositories, generates comprehensive technical reports, enables natural-language codebase conversations, and helps founders understand, improve, and scale their software.",
-        tag: "Products",
-        tagSecondary: "Beta",
-        challenge: "Founders and engineering teams often inherit unfamiliar codebases with little documentation, making it difficult to evaluate architecture, security, maintainability, scalability, and technical debt. Existing tools focus on isolated metrics, leaving teams without a unified understanding of their software.",
-        solution: "Supremo connects directly to GitHub repositories and performs AI-driven codebase analysis to generate detailed engineering reports covering architecture, code quality, security, documentation, scalability, onboarding, and business insights. It also includes an interactive AI assistant that lets users query their entire codebase in natural language, making complex software understandable for both technical and non-technical stakeholders.",
-        stack: [
-            "Next.js",
-            "FastAPI",
-            "Python",
-            "MongoDB",
-            "Supabase",
-            "GitHub API",
-            "Anthropic Claude",
-            "Groq",
-            "React",
-            "Tailwind CSS"
-        ],
-        outcomes: [
-            {
-                metric: "AI",
-                label: "Codebase Intelligence",
-                desc: "Transforms repositories into actionable engineering insights."
-            },
-            {
-                metric: "Multi",
-                label: "Comprehensive Analysis",
-                desc: "Evaluates architecture, security, quality, scalability, and documentation."
-            },
-            {
-                metric: "Beta",
-                label: "Early Access",
-                desc: "Currently available for beta users and early adopters."
-            }
-        ]
-    },
-    {
         title: "PersonalOS — Self-Hosted AI Agent Architecture",
         slug: "personalos-ai-chief-of-staff",
         description: "A personal R&D build: a self-hosted AI agent platform combining long-term memory, browser automation, voice processing, and proactive task management into a single system — built to stress-test agentic architecture patterns, not as client work.",
