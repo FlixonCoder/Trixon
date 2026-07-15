@@ -17,6 +17,13 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: [
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/favicon.ico', rel: 'shortcut icon' }
+    ],
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: 'Trixon — Your Technical Foundation, Built to Last Without Us',
     description: 'Trixon gives non-technical founders fractional CTO leadership and a fully-staffed engineering team — then exits cleanly. Fixed fees. Full IP transfer. No long-term dependency.',
