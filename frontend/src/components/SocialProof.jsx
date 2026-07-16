@@ -24,6 +24,12 @@ const SocialProof = () => {
             </div>
 
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <MotionSection className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-serif italic text-stone-900 mb-4 font-light">
+                        What clients say after <span className="font-sans font-bold not-italic">working with me directly</span>
+                    </h2>
+                </MotionSection>
+
                 <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
                     {testimonials.map((item, i) => (
                         <MotionSection key={i} delay={i * 0.2} className="p-8 bg-white rounded-3xl shadow-sm border border-stone-100/50 hover:shadow-xl hover:border-stone-200 transition-all duration-300">

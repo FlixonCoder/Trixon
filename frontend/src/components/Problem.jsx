@@ -13,7 +13,7 @@ const Problem = () => {
                 <MotionSection className="max-w-3xl mx-auto text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-serif italic font-light tracking-wide mb-6 text-stone-200">The Scale-Up Gap: Where Funded Startups Stall</h2>
                     <p className="text-lg text-stone-400 max-w-2xl mx-auto">
-                        Finding a permanent CTO takes 100+ days and $400K/year. Hiring a traditional agency locks you into a black box. Trixon is the strategic middle ground — fractional CTO leadership today, full team independence by Month 12.
+                        Finding a permanent CTO takes 100+ days and $400K/year. Hiring a traditional agency locks you into a black box. There is a better middle ground — fractional technical leadership today, full independence by the end of the engagement.
                     </p>
                 </MotionSection>
 
@@ -21,7 +21,7 @@ const Problem = () => {
                     {[
                         { title: "The 100-Day Void", desc: "In 2026, finding a permanent CTO takes an average of 100+ days and costs over $400,000/year. Meanwhile, your product stalls and your runway burns." },
                         { title: "The Black Box Trap", desc: "Your other choice? A traditional agency that treats your codebase like a 'black box,' creating a permanent dependency that scares away investors." },
-                        { title: "The Strategic Middle Ground", desc: "We give you C-level technical judgment immediately, without the dead equity or long-term dependency. We are your technical foundation." }
+                        { title: "The Strategic Middle Ground", desc: "You get direct, hands-on technical judgment from day one — not a rotating cast of junior devs, and not a black-box agency retainer. I'm building your technical foundation, personally, so you can move fast without hiring a full-time CTO before you're ready." }
                     ].map((item, index) => (
                         <MotionSection key={index} delay={index * 0.2} className="group relative p-8 border-t border-stone-800 hover:border-stone-600 transition-colors duration-500">
                             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-stone-800/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

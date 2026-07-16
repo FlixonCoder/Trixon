@@ -15,26 +15,26 @@ const Differentiation = () => {
                         Don't Just Build an App. Build an <span className="font-sans font-bold not-italic">Institution.</span>
                     </h2>
                     <p className="mt-4 text-xl text-stone-600 max-w-2xl mx-auto">
-                        We are the only partner whose primary goal is to fire ourselves.
+                        I'm the only partner whose primary goal is to make myself unnecessary.
                     </p>
                 </MotionSection>
 
                 <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto mb-16">
                     {[
                         {
-                            metric: "60–90",
-                            label: "Day shadowing period",
-                            desc: "Your new lead learns by doing, not reading."
+                            metric: "Full",
+                            label: "IP Transferred",
+                            desc: "Every account, domain, credential, and decision record — formally handed over at exit."
                         },
                         {
                             metric: "100%",
-                            label: "IP transferred",
-                            desc: "Every account, domain, and credential — formally."
+                            label: "Ownership to you",
+                            desc: "You leave with a codebase and documentation that is fully yours."
                         },
                         {
-                            metric: "3 Mo.",
-                            label: "Post-handover hypercare",
-                            desc: "We stay on-call to close any knowledge gaps."
+                            metric: "Clean",
+                            label: "Post-handover exit",
+                            desc: "Whoever comes next — your first hire or another vendor — can pick it up without needing me on a call."
                         }
                     ].map((item, i) => (
                         <MotionSection key={i} delay={i * 0.2} className="group p-10 bg-white rounded-3xl shadow-sm border border-stone-100/50 hover:shadow-xl hover:border-stone-200 transition-all duration-300 text-center">
@@ -57,13 +57,13 @@ const Differentiation = () => {
                         </svg>
                     </button>
 
-                    {/* Secondary CTA */}
+                    {/* Secondary CTA — now links to /work instead of /how-we-hire */}
                     <div className="mt-6">
                         <Link
-                            href="/how-we-hire"
+                            href="/work"
                             className="inline-flex items-center text-base font-medium text-stone-500 hover:text-stone-900 transition-colors border-b border-stone-300 hover:border-stone-900 pb-1"
                         >
-                            See exactly how our process works →
+                            See what I've built →
                         </Link>
                     </div>
                 </MotionSection>

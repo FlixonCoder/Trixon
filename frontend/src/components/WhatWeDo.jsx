@@ -4,19 +4,19 @@ import MotionSection from './MotionSection'
 const WhatWeDo = () => {
     const items = [
         {
-            title: "Technical Audit & Roadmap",
-            desc: "A 4-week deep dive to identify systemic bottlenecks and build an investor-ready technical roadmap. The lowest-risk way to start.",
-            support: "Fixed scope. Fixed price. The lowest-risk way to start."
+            title: "Technical Audit",
+            desc: "An independent, no-obligation look at your codebase — a clear before/after benchmark and a set of prioritized recommendations you can act on immediately, with or without hiring me further. Typical turnaround: 1–3 weeks depending on codebase size.",
+            support: "The lowest-risk way to see how I work before committing to anything larger."
         },
         {
-            title: "The Hiring Sprint",
-            desc: "We define your Role Scorecards and conduct all technical screenings to find your first elite engineers. You keep the talent, we step back.",
-            support: "You keep every hire. We step back when the team is set."
+            title: "TTCF — Temporary Technical Co-Founder",
+            desc: "I join your company under a partnership arrangement, functioning as a hands-on technical lead — MVP development, architecture decisions, and fundraising-readiness — directly and personally. Tenure is flexible and scoped to your actual needs.",
+            support: "No account manager. No junior devs executing while someone else takes the calls."
         },
         {
-            title: "AI-First Architecture",
-            desc: "Leverage the 2026 shift toward agentic engineering. We future-proof your startup without creating unmanageable technical debt.",
-            support: "Future-proof infrastructure without unmanageable technical debt."
+            title: "BOT — Build-Operate-Transfer",
+            desc: "I take ownership of building or fixing your product within a fixed tenure, working solo and communicating transparently about pace. The engagement concludes with full IP and documentation transfer — nothing lives only in my head.",
+            support: "Documentation happens as I build, not retrofitted at the end."
         }
     ]
 
@@ -30,10 +30,10 @@ const WhatWeDo = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <MotionSection className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 mb-6 font-sans">
-                        Start with a Fixed-Fee Engagement
+                        Three Ways to Engage
                     </h2>
                     <p className="mt-4 text-xl text-stone-600 max-w-2xl mx-auto">
-                        No long-term contracts. No ambiguity. Clear outcomes, fixed price.
+                        Every engagement is scoped to what you actually need — no long-term contracts, no ambiguity.
                     </p>
                 </MotionSection>
 

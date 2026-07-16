@@ -9,24 +9,24 @@ const BuiltByTrixon = () => {
     const projects = [
         {
             name: "Ketpa Veterinary Platform",
-            description: "Full-stack MVP with patient, doctor, and admin dashboards. Calendar-integrated appointment booking and emergency pipeline.",
+            description: "Full-stack MVP with patient, doctor, and admin dashboards. Calendar-integrated appointment booking, email verification, and emergency pipeline — built for handover from day one.",
             tag: "Product & SaaS Development",
-            href: "/projects/ketpa",
+            href: "/work",
             image: assets.ketpa2
+        },
+        {
+            name: "Yuvaratna — NGO Technical Co-Founder",
+            description: "Sole technical lead for 8 months. Designed, built, and maintained the organization's full web presence end-to-end from zero, using MERN stack.",
+            tag: "Technical Co-Founder (TTCF)",
+            href: "/work",
+            image: assets.yuvaratna1
         },
         {
             name: "AI Interrogation Engine",
             description: "A Gemini-powered conversational AI system with custom personas, session memory, and prompt-level guardrails — built and deployed end-to-end in under 24 hours for a live event.",
             tag: "AI Solutions",
-            href: "/projects/ai-interrogation-engine",
+            href: "/work",
             image: assets.chatbot1
-        },
-        {
-            name: "Telegram Lead Pipeline + MERN Dashboard",
-            description: "End-to-end data pipeline: submit leads via Telegram bot, parsed and stored in memory, with a sortable lead dashboard built in MERN stack.",
-            tag: "Data & Analytics",
-            href: "/projects/telegram-lead-pipeline",
-            image: assets.tele1
         }
     ]
 
@@ -37,10 +37,10 @@ const BuiltByTrixon = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <MotionSection className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-serif italic text-stone-900 mb-6 font-light">
-                        Built by <span className="font-sans font-bold not-italic">Trixon.</span>
+                        Proof of <span className="font-sans font-bold not-italic">Work.</span>
                     </h2>
                     <p className="mt-4 text-xl text-stone-600 max-w-2xl mx-auto">
-                        Real projects. Real outcomes. Here's what we've shipped.
+                        Real projects, shipped end-to-end. Here's what building with Trixon actually looks like.
                     </p>
                 </MotionSection>
 
@@ -50,8 +50,8 @@ const BuiltByTrixon = () => {
                             {/* Card Image Header */}
                             {project.image ? (
                                 <div className="h-48 relative border-b border-stone-100 overflow-hidden">
-                                    <Image 
-                                        src={project.image} 
+                                    <Image
+                                        src={project.image}
                                         alt={project.name}
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -59,7 +59,7 @@ const BuiltByTrixon = () => {
                                 </div>
                             ) : (
                                 <div className="h-48 bg-stone-100 border-b border-stone-100 flex items-center justify-center" style={{ borderBottom: '2px dashed var(--color-accent)' }}>
-                                    <span className="text-stone-400 text-sm font-medium">[ Image coming soon ]</span>
+                                    <span className="text-stone-400 text-sm font-medium">[ Screenshot coming soon ]</span>
                                 </div>
                             )}
 
@@ -76,7 +76,7 @@ const BuiltByTrixon = () => {
                                         href={project.href}
                                         className="text-sm font-semibold text-stone-700 hover:text-stone-950 inline-flex items-center gap-1.5 group/link"
                                     >
-                                        View Project
+                                        See Case Study
                                         <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
@@ -86,10 +86,18 @@ const BuiltByTrixon = () => {
                         </MotionSection>
                     ))}
                 </div>
+
+                <MotionSection delay={0.3} className="text-center mt-12">
+                    <Link
+                        href="/work"
+                        className="inline-flex items-center text-sm font-semibold text-stone-600 hover:text-stone-900 transition-colors border-b border-stone-300 hover:border-stone-900 pb-1"
+                    >
+                        View all case studies →
+                    </Link>
+                </MotionSection>
             </div>
         </section>
     )
 }
 
 export default BuiltByTrixon
-

@@ -10,20 +10,20 @@ const Personas = () => {
         {
             label: "The AI Prototype Founder",
             pain: "You built a prototype with AI tools, but enterprise clients are asking about security and scalability.",
-            intervention: "We architect an \"AI-First\" foundation that meets professional standards.",
-            outcome: "We've helped founders reach enterprise-ready security posture in under 90 days."
+            intervention: "I rebuild the foundation to meet the security and scalability bar enterprise buyers expect.",
+            outcome: "Full IP ownership, documented as I go — not reconstructed at the end."
         },
         {
             label: "The \"Burned\" Repeat Founder",
             pain: "You've had a bad experience with a dev shop and now prioritize owning your IP and building an internal team.",
-            intervention: "We act as your internal advocate, building processes that survive our departure.",
-            outcome: "100% IP ownership transferred at exit. No exceptions."
+            intervention: "I act as your internal advocate, building a codebase and processes that survive my departure.",
+            outcome: "Full IP ownership, documented as I go — not reconstructed at the end."
         },
         {
             label: "The \"Series A Bridge\" Company",
             pain: "You just raised capital, but your technical foundation is a mess and you need a leader while you search for a CTO.",
-            intervention: "We provide interim scaling and clean up technical debt to ensure a smooth CTO transition.",
-            outcome: "We've prepared technical foundations for smooth CTO onboarding in under 6 months."
+            intervention: "I stabilize the technical foundation and help you scope what a permanent CTO hire actually needs to walk into.",
+            outcome: "A clean, documented codebase ready for your next hire — internal or otherwise."
         }
     ]
 
@@ -34,10 +34,10 @@ const Personas = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <MotionSection className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-serif italic text-stone-900 mb-6 font-light">
-                        We've Seen This <span className="font-sans font-bold not-italic">Before.</span>
+                        I've Seen This <span className="font-sans font-bold not-italic">Before.</span>
                     </h2>
                     <p className="mt-4 text-xl text-stone-600 max-w-2xl mx-auto">
-                        We've seen these patterns before. Here's how we solve them.
+                        I've seen these patterns before. Here's how I solve them.
                     </p>
                 </MotionSection>
 

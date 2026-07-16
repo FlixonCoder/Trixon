@@ -6,12 +6,28 @@ export const projects = [
         tag: "Product & SaaS Development",
         tagSecondary: "Client Work",
         challenge: "Veterinary clinics were managing patient records, appointments, and emergency bookings across disconnected spreadsheets and phone calls. Doctors had no centralized view of patient history, and clinic admins lacked oversight into daily operations — leading to missed appointments, duplicated records, and delayed emergency responses.",
-        solution: "We designed and built a full-stack platform with three role-based dashboards (patient, doctor, admin), an integrated calendar for appointment scheduling, automated email verification flows, and a priority-routed emergency booking pipeline. The system was built for handover-readiness with clean documentation and modular architecture.",
+        solution: "I designed and built a full-stack platform with three role-based dashboards (patient, doctor, admin), an integrated calendar for appointment scheduling, automated email verification flows, and a priority-routed emergency booking pipeline. The system was built for handover-readiness with clean documentation and modular architecture.",
         stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "JWT Auth", "Nodemailer", "Express", "Google Calendar Integration"],
         outcomes: [
             { metric: "3", label: "Role-based dashboards", desc: "Patient, doctor, and admin views" },
             { metric: "MVP", label: "Production-ready build", desc: "From idea to deployable platform" },
             { metric: "100%", label: "IP transferred", desc: "Full ownership to founder" }
+        ]
+    },
+    {
+        title: "Yuvaratna — NGO Technical Co-Founder (CTO)",
+        slug: "yuvaratna",
+        description: "Served as sole technical lead for a regional NGO for 8 months — designed, built, and maintained their full web presence end-to-end from zero.",
+        tag: "Technical Co-Founder (TTCF)",
+        tagSecondary: "Client Work",
+        duration: "8 months",
+        challenge: "When I joined, the organization had no website, no online presence, and no technical credibility with the communities they were trying to reach. Everything needed to be built from scratch.",
+        solution: "I designed, built, and maintained the organization's full website end-to-end as sole technical lead — handling all architecture, development, and ongoing maintenance for the duration of the engagement. The organization later wound down due to a change in government NGO regulations, unrelated to the technical work.",
+        stack: ["MongoDB", "Express.js", "React", "Node.js"],
+        outcomes: [
+            { metric: "8mo", label: "Sole technical lead", desc: "End-to-end ownership of all technical work" },
+            { metric: "0→Live", label: "Built from scratch", desc: "From no online presence to a production-ready website" },
+            { metric: "Full", label: "IP transferred", desc: "Complete handover at engagement close" }
         ]
     },
     {
@@ -87,89 +103,6 @@ export const projects = [
                 metric: "Real-Time",
                 label: "Telegram → Dashboard",
                 desc: "New leads appear instantly in a searchable, responsive MERN dashboard."
-            }
-        ]
-    },
-    {
-        title: "PersonalOS — Self-Hosted AI Agent Architecture",
-        slug: "personalos-ai-chief-of-staff",
-        description: "A personal R&D build: a self-hosted AI agent platform combining long-term memory, browser automation, voice processing, and proactive task management into a single system — built to stress-test agentic architecture patterns, not as client work.",
-        tag: "AI Solutions",
-        tagSecondary: "R&D Project",
-        challenge: "Built independently to explore a hard architectural question: can a single agent maintain long-term context, take real actions (browser automation, scheduling), and run across a hybrid cloud/local inference setup without falling apart under everyday use.",
-        solution: "Developed a self-hosted AI agent powered by a dual-brain architecture that switches between cloud and local LLMs depending on task sensitivity and latency needs. Combines long-term memory via RAG, browser automation, voice transcription, and proactive scheduling, demonstrating patterns directly applicable to client-facing agentic systems.",
-        stack: [
-            "Python",
-            "Discord.py",
-            "Groq API",
-            "Ollama",
-            "SQLite",
-            "ChromaDB",
-            "Playwright",
-            "Faster Whisper",
-            "Browser-Use",
-            "Trafilatura",
-            "APScheduler"
-        ],
-        outcomes: [
-            {
-                metric: "Dual",
-                label: "Hybrid AI Architecture",
-                desc: "Automatically switches between cloud (Groq) and local (Ollama) inference."
-            },
-            {
-                metric: "Persistent",
-                label: "Long-Term Memory",
-                desc: "Combines SQLite and ChromaDB for structured and semantic recall across sessions."
-            },
-            {
-                metric: "R&D",
-                label: "Architecture Proving Ground",
-                desc: "Patterns from this build inform agentic systems delivered to clients."
-            }
-        ]
-    },
-    {
-        title: "Local Voice-to-RAG Memory System",
-        slug: "voice-to-rag-memory",
-        description: "A personal R&D build: a local-first system converting voice recordings into a queryable RAG-indexed memory store, exploring fully offline retrieval-augmented architecture.",
-        tag: "AI Solutions",
-        tagSecondary: "R&D Project",
-        challenge: "Explored whether a fully local, privacy-preserving RAG pipeline could reliably capture and surface meeting or seminar content on natural-language query, with zero cloud dependency.",
-        solution: "Built a local bot that continuously transcribes voice input and indexes it into a RAG-based memory layer, allowing conversational query over any past session — entirely offline.",
-        stack: ["Whisper", "Vector Database", "RAG Pipeline", "Python"],
-        outcomes: [
-            {
-                metric: "Local",
-                label: "Zero Cloud Dependency",
-                desc: "Fully offline execution — no data leaves the device."
-            },
-            {
-                metric: "R&D",
-                label: "Offline RAG Proving Ground",
-                desc: "Validates architecture used in privacy-sensitive client engagements."
-            }
-        ]
-    },
-    {
-        title: "Yuvaratna — Public Website",
-        slug: "yuvaratna",
-        description: "Designed and built the public website for Yuvaratna, a regional NGO focused on social work and community development.",
-        tag: "Web Development",
-        tagSecondary: "Client Work",
-        challenge: "Yuvaratna, a regional NGO, lacked a modern online presence to display their initiatives, events, and community updates, making it difficult to reach local volunteers and share program updates.",
-        solution: "Designed and developed a responsive, fast, and modern website using Next.js and Tailwind CSS, giving the organization a professional platform to showcase their social impact.",
-        stack: ["Next.js", "Tailwind CSS", "React", "Framer Motion"],
-        outcomes: [
-            {
-                metric: "NGO",
-                label: "Regional Presence",
-                desc: "Established a clean, professional public-facing portal for the organization."
-            },
-            {
-                metric: "Fast",
-                label: "Next.js Performance",
-                desc: "Optimized load times and responsive design for mobile-first audiences."
             }
         ]
     }

@@ -8,13 +8,13 @@ const Hero = () => {
 
     return (
         <section className="relative pt-20 pb-16 lg:pt-48 lg:pb-40 bg-stone-50 overflow-hidden">
-            {/* Subtle Texture/Grain Effect could be added via CSS here, using a clean gradient for now */}
+            {/* Subtle dot grid texture */}
             <div className="absolute inset-0 opacity-[0.03] text-stone-900"
                 style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }}>
             </div>
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-                {/* Social Proof / Trust Badge (Psychology: Authority) */}
+                {/* Trust badge */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -30,9 +30,9 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-5xl font-bold tracking-tight text-stone-900 sm:text-6xl md:text-7xl mb-6 md:mb-8 font-sans"
                 >
-                    <span className="block mb-1">Your Fractional CTO. </span>
+                    <span className="block mb-1">Your technical co-founder,</span>
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-stone-800 to-stone-600">
-                        Until You Don't Need One.
+                        without the co-founder equity.
                     </span>
                 </motion.h1>
 
@@ -42,7 +42,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="mt-6 md:mt-8 max-w-2xl mx-auto text-xl text-stone-600 leading-relaxed"
                 >
-                    We give non-technical founders <span className="font-semibold text-stone-800">C-level technical leadership</span> from day one — and exit with a fully-staffed, self-sufficient engineering team.
+                    I work directly with early-stage founders as a <span className="font-semibold text-stone-800">hands-on technical partner</span> — architecture, MVP builds, and fundraising-ready foundations — then hand over a codebase you fully own.
                 </motion.p>
 
                 <motion.div
@@ -67,7 +67,7 @@ const Hero = () => {
 
                     {/* Trust badges */}
                     <div className="mt-6 flex flex-wrap justify-center gap-3">
-                        {['IP Fully Transferred', 'Fixed-Fee Engagements', 'Built on the BOT Model'].map((badge, i) => (
+                        {['Direct Access, No Middlemen', 'Full IP Transfer', 'Fixed-Scope Engagements'].map((badge, i) => (
                             <span key={i} className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-white/70 text-stone-500 ring-1 ring-stone-200/80 backdrop-blur-sm">
                                 <span className="w-1.5 h-1.5 rounded-full bg-accent mr-2"></span>
                                 {badge}
@@ -77,7 +77,7 @@ const Hero = () => {
                 </motion.div>
             </div>
 
-            {/* Organic, fluid background shapes for a natural feel */}
+            {/* Background shapes */}
             <div className="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full overflow-hidden -z-10 pointer-events-none opacity-50">
                 <div className="absolute top-[-20%] left-[-10%] w-[50rem] h-[50rem] bg-orange-100/40 rounded-full blur-3xl mix-blend-multiply filter"></div>
                 <div className="absolute top-[10%] right-[-10%] w-[40rem] h-[40rem] bg-indigo-50/40 rounded-full blur-3xl mix-blend-multiply filter"></div>

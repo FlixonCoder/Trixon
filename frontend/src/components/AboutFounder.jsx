@@ -15,9 +15,9 @@ const AboutFounder = () => {
                         <div className="shrink-0">
                             <div className="w-[140px] h-[140px] rounded-full bg-stone-100 border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
                                 {assets.founder_img ? (
-                                    <Image 
-                                        src={assets.founder_img} 
-                                        alt="Mohammed Saqib Junaid Khan" 
+                                    <Image
+                                        src={assets.founder_img}
+                                        alt="Mohammed Saqib Junaid Khan"
                                         width={140}
                                         height={140}
                                         className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
@@ -39,15 +39,15 @@ const AboutFounder = () => {
 
                             <div className="space-y-4 text-lg text-stone-600 leading-relaxed mb-8">
                                 <p>
-                                    Mohammed leads the technical vision at Trixon, working alongside a growing team of engineers, designers, and product specialists. He founded Trixon after seeing the same pattern repeat: strong ideas, sharp founders, and technical infrastructure that couldn't keep up.
+                                    Trixon is me — a builder who works hands-on with early-stage founders because I've seen the same pattern too many times: strong ideas, sharp founders, and technical infrastructure that can't keep up. I built Trixon to close that gap myself, directly, without the layers a typical agency adds.
                                 </p>
                                 <p className="italic font-serif border-l-2 border-stone-200 pl-6 py-1">
-                                    "We take non-technical founders from idea to production-ready product. No fluff, no bloat — just execution."
+                                    "I take non-technical founders from idea to production-ready product. No fluff, no bloat — just execution, done by the person you're actually talking to."
                                 </p>
                                 <p>
                                     Every Trixon engagement is built on one core principle — the best technical partner is the one who makes themselves unnecessary by giving you full independence.
                                 </p>
-                             </div>
+                            </div>
 
                             {/* LinkedIn link */}
                             <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
@@ -58,8 +58,6 @@ const AboutFounder = () => {
                                 </a>
                                 <span className="text-sm text-stone-400">Saqib Junaid</span>
                             </div>
-
-                            <p className="text-sm text-stone-400 italic">Working with founders globally</p>
                         </div>
                     </div>
                 </MotionSection>

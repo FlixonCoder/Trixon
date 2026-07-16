@@ -12,7 +12,7 @@ const manrope = Manrope({
 
 export const metadata = {
   title: 'Fractional CTO for Startups | Build-Operate-Transfer | Trixon',
-  description: 'Trixon gives non-technical founders fractional CTO leadership and a fully-staffed engineering team — then exits cleanly. Fixed fees. Full IP transfer. No long-term dependency.',
+  description: 'Trixon is an independent technical partner for early-stage, non-technical founders. Direct access to the person writing your code — architecture, MVP builds, and full IP transfer at exit.',
   metadataBase: new URL('https://trixon.cloud'),
   alternates: {
     canonical: '/',
@@ -25,8 +25,8 @@ export const metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: 'Trixon — Your Technical Foundation, Built to Last Without Us',
-    description: 'Trixon gives non-technical founders fractional CTO leadership and a fully-staffed engineering team — then exits cleanly. Fixed fees. Full IP transfer. No long-term dependency.',
+    title: 'Trixon — Your Technical Co-Founder, Without the Co-Founder Equity',
+    description: 'I work directly with early-stage founders as a hands-on technical partner — architecture, MVP builds, and fundraising-ready foundations — then hand over a codebase you fully own.',
     url: 'https://trixon.cloud',
     type: 'website',
   },

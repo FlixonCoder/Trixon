@@ -7,21 +7,21 @@ const Timeline = () => {
             month: "1–3",
             title: "Build",
             subtitle: "Institutional Integrity",
-            desc: "We don't just 'write code.' We audit your architecture, select a tech stack that is easy to hire for in your local market, and automate your deployments from Day 1.",
+            desc: "I don't just 'write code.' I audit your architecture, select a tech stack that is easy to hire for in your local market, and automate your deployments from Day 1 — with documentation written as I go.",
             color: "bg-white text-stone-900 border-stone-200"
         },
         {
             month: "4–9",
             title: "Operate",
-            subtitle: "The Recruiting Sprint",
-            desc: "We shift from 'builders' to 'mentors.' We define Role Scorecards, conduct every technical interview, and ensure only the top 5% of talent reaches your desk.",
+            subtitle: "Stabilize & Prepare",
+            desc: "I keep building and stabilizing the product while helping you think through what your first internal hire(s) should look like — role definitions, technical interview structure, and evaluation criteria you can use, whether that's your first engineer or eventually a full-time CTO.",
             color: "bg-white text-stone-900 border-stone-200"
         },
         {
             month: "10–12",
             title: "Transfer",
             subtitle: "The Seamless Exit",
-            desc: "Our success is measured by your independence. We execute a formal shadowing period for your new internal lead and transition all legal IP and administrative rights.",
+            desc: "My success is measured by your independence. I execute a defined handover — full IP transfer, clean documentation, and a post-handover window where I'm available for questions. Nothing lives only in my head.",
             color: "bg-accent-light text-stone-900 border-accent ring-1 ring-accent/20"
         }
     ]

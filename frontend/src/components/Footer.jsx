@@ -41,7 +41,7 @@ const Footer = () => {
                             <span className="text-xl font-bold text-white font-sans tracking-tight">Trixon</span>
                         </div>
                         <p className="text-sm text-stone-400 leading-relaxed font-light">
-                            Technical Co-Founder leadership and software engineering maturity for growing startups.
+                            Independent technical partner for early-stage founders. Direct access, no middlemen.
                         </p>
                         <div className="flex gap-4">
                             <a href="https://www.linkedin.com/company/trixon-cloud/" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors" aria-label="LinkedIn">
@@ -52,46 +52,34 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Services Column */}
+                    {/* Engagements Column */}
                     <div className="space-y-4">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-stone-300">Services</h4>
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-stone-300">Engagements</h4>
                         <ul className="space-y-2.5 text-sm">
                             <li>
-                                <Link href="/services/ai-solutions" className="text-stone-400 hover:text-white transition-colors">AI Solutions</Link>
+                                <Link href="/services#audit" className="text-stone-400 hover:text-white transition-colors">Technical Audit</Link>
                             </li>
                             <li>
-                                <Link href="/services/product-saas-development" className="text-stone-400 hover:text-white transition-colors">Product & SaaS Development</Link>
+                                <Link href="/services#ttcf" className="text-stone-400 hover:text-white transition-colors">TTCF</Link>
                             </li>
                             <li>
-                                <Link href="/services/custom-software-engineering" className="text-stone-400 hover:text-white transition-colors">Custom Software Engineering</Link>
-                            </li>
-                            <li>
-                                <Link href="/services/data-analytics" className="text-stone-400 hover:text-white transition-colors">Data & Analytics</Link>
-                            </li>
-                            <li>
-                                <Link href="/services/infrastructure-engineering" className="text-stone-400 hover:text-white transition-colors">Infrastructure & Engineering</Link>
+                                <Link href="/services#bot" className="text-stone-400 hover:text-white transition-colors">Build-Operate-Transfer</Link>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Platform & Projects Column */}
+                    {/* Work Column */}
                     <div className="space-y-4">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-stone-300">Platform</h4>
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-stone-300">Work</h4>
                         <ul className="space-y-2.5 text-sm">
                             <li>
-                                <Link href="/how-we-hire" className="text-stone-400 hover:text-white transition-colors">How We Hire</Link>
-                            </li>
-                        </ul>
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-stone-300 pt-4">Projects</h4>
-                        <ul className="space-y-2.5 text-sm">
-                            <li>
-                                <Link href="/projects/ketpa" className="text-stone-400 hover:text-white transition-colors">Ketpa</Link>
+                                <Link href="/work" className="text-stone-400 hover:text-white transition-colors">Case Studies</Link>
                             </li>
                             <li>
-                                <Link href="/projects/ai-interrogation-engine" className="text-stone-400 hover:text-white transition-colors">AI Interrogation Engine</Link>
+                                <Link href="/work#ketpa" className="text-stone-400 hover:text-white transition-colors">Ketpa</Link>
                             </li>
                             <li>
-                                <Link href="/projects/telegram-lead-pipeline" className="text-stone-400 hover:text-white transition-colors">Telegram Pipeline</Link>
+                                <Link href="/work#yuvaratna" className="text-stone-400 hover:text-white transition-colors">Yuvaratna</Link>
                             </li>
                         </ul>
                     </div>
@@ -102,6 +90,9 @@ const Footer = () => {
                         <ul className="space-y-2.5 text-sm text-stone-400">
                             <li>
                                 <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                            </li>
+                            <li>
+                                <Link href="/#faqs" className="hover:text-white transition-colors">FAQ</Link>
                             </li>
                             <li>
                                 <button onClick={openContact} className="text-stone-400 hover:text-white transition-colors cursor-pointer text-left" suppressHydrationWarning>
