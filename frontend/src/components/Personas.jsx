@@ -8,22 +8,19 @@ const Personas = () => {
 
     const personas = [
         {
-            label: "The AI Prototype Founder",
-            pain: "You built a prototype with AI tools, but enterprise clients are asking about security and scalability.",
-            intervention: "I rebuild the foundation to meet the security and scalability bar enterprise buyers expect.",
-            outcome: "Full IP ownership, documented as I go — not reconstructed at the end."
+            label: "The Operator Drowning in Manual Work",
+            pain: "Your team is talented, but they're spending hours every day on repetitive tasks — data entry, follow-ups, scheduling, reporting. It's slowing you down and burning people out.",
+            intervention: "We map your workflows, identify the highest-ROI automation targets, and build the systems that eliminate the manual work — without disrupting how your team operates."
         },
         {
-            label: "The \"Burned\" Repeat Founder",
-            pain: "You've had a bad experience with a dev shop and now prioritize owning your IP and building an internal team.",
-            intervention: "I act as your internal advocate, building a codebase and processes that survive my departure.",
-            outcome: "Full IP ownership, documented as I go — not reconstructed at the end."
+            label: "The Startup That Needs AI, Now",
+            pain: "You know your product needs AI features — an assistant, a recommendation engine, automated outreach, a calling agent. But your dev team doesn't have the AI expertise, and hiring for it takes months.",
+            intervention: "We integrate AI directly into your product or ops stack — voice bots, LLM-powered workflows, intelligent dashboards — in weeks, not months. Fixed scope, clear deliverable."
         },
         {
-            label: "The \"Series A Bridge\" Company",
-            pain: "You just raised capital, but your technical foundation is a mess and you need a leader while you search for a CTO.",
-            intervention: "I stabilize the technical foundation and help you scope what a permanent CTO hire actually needs to walk into.",
-            outcome: "A clean, documented codebase ready for your next hire — internal or otherwise."
+            label: "The Business Running on Disconnected Tools",
+            pain: "Your stack is a patchwork of SaaS tools that don't talk to each other. Your team manually exports from one, imports to another, and spends Friday afternoons building reports that should update themselves.",
+            intervention: "We build the automation layer that connects your tools, eliminates the manual bridging, and gives you a real-time dashboard view of your business — without ripping out what you've already built."
         }
     ]
 
@@ -34,10 +31,10 @@ const Personas = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <MotionSection className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-serif italic text-stone-900 mb-6 font-light">
-                        I've Seen This <span className="font-sans font-bold not-italic">Before.</span>
+                        We've Seen This <span className="font-sans font-bold not-italic">Before.</span>
                     </h2>
                     <p className="mt-4 text-xl text-stone-600 max-w-2xl mx-auto">
-                        I've seen these patterns before. Here's how I solve them.
+                        Three types of businesses come to us. Here's how we solve each one.
                     </p>
                 </MotionSection>
 
@@ -57,8 +54,6 @@ const Personas = () => {
                                 <h3 className="text-sm font-bold text-accent uppercase tracking-widest mb-3">Trixon's intervention</h3>
                                 <p className="text-stone-600 leading-relaxed font-medium">{persona.intervention}</p>
                             </div>
-                            {/* Outcome line */}
-                            <p className="text-sm text-stone-400 italic mb-4">{persona.outcome}</p>
                             {/* CTA link */}
                             <div className="mt-auto pt-4 border-t border-stone-100">
                                 <button

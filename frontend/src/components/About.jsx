@@ -13,7 +13,7 @@ const About = () => {
                     </div>
 
                     <blockquote className="text-3xl md:text-5xl font-serif leading-tight text-stone-900 mb-12">
-                        "We don't claim to be the best in the world. We claim to be <span className="italic text-stone-500">your technical foundation — based on the proven Build-Operate-Transfer model used by global R&D centers,</span> adapted for the pace of startups."
+                        "We build the automations that run your business ops while your team focuses on the work that actually requires a human. <span className="italic text-stone-500">Every engagement ends with you owning a system that runs without us.</span>"
                     </blockquote>
 
                     <div className="flex flex-col items-center justify-center space-y-2">

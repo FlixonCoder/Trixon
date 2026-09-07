@@ -3,8 +3,8 @@ import MotionSection from '../../components/MotionSection';
 import Footer from '../../components/Footer';
 
 export const metadata = {
-    title: 'Services | Technical Audit, TTCF & BOT | Trixon',
-    description: 'Three engagement types for early-stage founders: Technical Audit, Temporary Technical Co-Founder (TTCF), and Build-Operate-Transfer (BOT). Direct access — no middlemen.',
+    title: 'Services | Automation Audit, AI Integration Sprint & Full Automation Build | Trixon',
+    description: 'Three ways to work with Trixon: Automation Audit, AI Integration Sprint, and Full Automation Build. Fixed scope. No retainer lock-ins. You own everything.',
     alternates: {
         canonical: '/services',
     },
@@ -12,24 +12,24 @@ export const metadata = {
 
 const capabilityGroups = [
     {
-        label: "Web & Frontend",
-        items: ["React / Next.js (App Router)", "Tailwind CSS / CSS Modules", "TypeScript", "Framer Motion"]
+        label: "Automation & Workflow",
+        items: ["n8n", "Make (Integromat)", "Zapier (custom logic)", "Webhook pipelines", "Custom Python automation scripts"]
     },
     {
-        label: "Backend & Data",
-        items: ["Node.js / Express / NestJS", "MongoDB / PostgreSQL", "REST APIs & GraphQL", "Redis Caching"]
+        label: "Voice & Calling Agents",
+        items: ["Retell AI", "Vapi", "Twilio", "ElevenLabs", "WhatsApp Business API", "Telegram Bot API"]
     },
     {
-        label: "AI & LLM",
-        items: ["OpenAI / Anthropic / Gemini APIs", "LangChain / LlamaIndex", "RAG Pipelines & Vector DBs", "Agentic Workflow Architecture"]
+        label: "AI & LLM Integration",
+        items: ["OpenAI", "Anthropic Claude", "Google Gemini", "LangChain", "RAG pipelines", "Agentic workflow architecture", "Custom prompt engineering"]
     },
     {
-        label: "Integrations & DevOps",
-        items: ["Docker / Vercel / Railway", "GitHub Actions CI/CD", "Stripe / Webhooks", "Telegram / WhatsApp APIs"]
+        label: "Dashboards & Data",
+        items: ["React + Recharts custom dashboards", "Google Sheets automation", "Airtable integrations", "PostgreSQL / MongoDB", "Real-time data pipelines"]
     },
     {
-        label: "Data Science & ML",
-        items: ["Python / FastAPI", "Pandas / NumPy", "Whisper / Local LLM (Ollama)", "ChromaDB / Pinecone"]
+        label: "CRM & Business Tool Integrations",
+        items: ["HubSpot", "Salesforce", "Notion", "Airtable", "Slack", "Google Workspace", "Any tool with an API"]
     }
 ];
 
@@ -44,15 +44,15 @@ export default function ServicesPage() {
 
                 <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
                     <MotionSection className="inline-flex items-center rounded-full px-4 py-1.5 text-xs font-bold text-accent uppercase tracking-widest ring-1 ring-stone-900/10 bg-white/50 backdrop-blur-sm mb-8 shadow-sm">
-                        Three Ways to Engage
+                        Three Engagement Types
                     </MotionSection>
 
                     <MotionSection>
                         <h1 className="text-4xl font-bold tracking-tight text-stone-900 sm:text-5xl md:text-6xl mb-8 font-sans">
-                            Technical Partnership for Early-Stage Founders
+                            AI Automations, Voice Agents &amp; Dashboards — Built for Your Business.
                         </h1>
                         <p className="max-w-2xl mx-auto text-xl text-stone-600 leading-relaxed">
-                            I work directly on every engagement — no account layers, no junior developers executing while someone else takes the meetings. Every service below is scoped and delivered personally.
+                            Every engagement is scoped, built, and delivered personally — no account managers, no offshore teams. You talk to the person building it. You own everything at the end.
                         </p>
                     </MotionSection>
                 </div>
@@ -67,25 +67,22 @@ export default function ServicesPage() {
             <section className="py-24 bg-white">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
-                    {/* Technical Audit */}
+                    {/* Automation Audit */}
                     <MotionSection id="audit" className="grid md:grid-cols-2 gap-12 items-start">
                         <div>
-                            <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent mb-4">01 — Entry Point</span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 font-sans mb-6">Technical Audit</h2>
+                            <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent mb-4">01 — Start Here</span>
+                            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 font-sans mb-6">Automation Audit</h2>
                             <p className="text-stone-600 leading-relaxed text-lg">
-                                An independent, no-obligation look at your codebase — a clear before/after benchmark and a set of prioritized recommendations you can act on immediately, with or without hiring me further.
+                                A one-week deep dive into your workflows, tools, and manual processes. We identify the highest-ROI automation targets and deliver a prioritised Automation Roadmap — actionable immediately, with or without hiring us to build it.
                             </p>
                             <p className="text-stone-500 mt-4 leading-relaxed">
-                                This is the lowest-risk way to see how I work before committing to anything larger.
-                            </p>
-                            <p className="text-sm text-stone-400 mt-4 italic">
-                                Typical turnaround: 1–3 weeks depending on codebase size and scope.
+                                The lowest-risk way to start. You get a clear picture of what to automate, in what order, and what the ROI looks like — in one week.
                             </p>
                         </div>
                         <div className="space-y-4">
                             {[
-                                { label: "What you get", items: ["Architecture assessment with clear risk ratings", "Prioritized list of technical debt issues", "Recommended next steps — actionable, not generic", "Written report you keep regardless of next steps"] },
-                                { label: "Good fit for", items: ["Pre-seed founders validating technical decisions", "Funded startups before hiring a CTO", "Founders who've been burned and want a second opinion"] }
+                                { label: "What you get", items: ["Workflow map of your current manual processes", "Prioritised Automation Roadmap (ranked by time saved and build complexity)", "Tool and integration recommendations — what to connect and how", "Written report — yours to keep regardless of next steps"] },
+                                { label: "Good fit for", items: ["Business owners with repetitive manual workflows they can't get off their plate", "Startups exploring AI integration but unsure where to start", "Teams using 4+ disconnected tools with no automation layer"] }
                             ].map((block, i) => (
                                 <div key={i} className="p-6 bg-stone-50 rounded-2xl border border-stone-100">
                                     <h4 className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">{block.label}</h4>
@@ -104,25 +101,22 @@ export default function ServicesPage() {
 
                     <div className="h-px bg-gradient-to-r from-transparent via-stone-200 to-transparent"></div>
 
-                    {/* TTCF */}
-                    <MotionSection id="ttcf" className="grid md:grid-cols-2 gap-12 items-start">
+                    {/* AI Integration Sprint */}
+                    <MotionSection id="sprint" className="grid md:grid-cols-2 gap-12 items-start">
                         <div>
-                            <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent mb-4">02 — Partnership</span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 font-sans mb-6">TTCF — Temporary Technical Co-Founder</h2>
+                            <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent mb-4">02 — Scoped Build</span>
+                            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 font-sans mb-6">AI Integration Sprint</h2>
                             <p className="text-stone-600 leading-relaxed text-lg">
-                                I join your company under a partnership arrangement, functioning as a hands-on technical lead — MVP development, architecture decisions, and fundraising-readiness — directly and personally.
+                                A focused, fixed-scope build of one specific automation, AI feature, or voice agent. We scope it, build it, and hand it over — typically in two to four weeks.
                             </p>
                             <p className="text-stone-500 mt-4 leading-relaxed">
-                                Tenure is flexible and scoped to your actual needs, not a fixed template.
-                            </p>
-                            <p className="text-sm text-stone-400 mt-4 italic">
-                                Equity discussed for longer-term TTCF arrangements. Typically preceded by a Technical Audit.
+                                No equity. No retainer. A clear deliverable, a clear timeline, and full ownership at the end. Typically follows an Automation Audit.
                             </p>
                         </div>
                         <div className="space-y-4">
                             {[
-                                { label: "What I own during tenure", items: ["Technical architecture and stack decisions", "MVP development and iteration", "Investor technical diligence readiness", "All documentation, written as I build"] },
-                                { label: "Good fit for", items: ["Non-technical founders pre-seed or seed stage", "Founders raising and needing tech credibility", "Early startups without a permanent CTO yet"] }
+                                { label: "What's included", items: ["Full build of one scoped automation or AI feature", "Weekly progress updates and live demos", "Full handover — code, credentials, documentation", "Walkthrough session so your team knows how to use and maintain it"] },
+                                { label: "Good fit for", items: ["Businesses that have identified a specific automation they need built", "Startups integrating their first AI feature into a product or workflow", "Teams that need a voice bot, calling agent, or LLM integration built fast"] }
                             ].map((block, i) => (
                                 <div key={i} className="p-6 bg-stone-50 rounded-2xl border border-stone-100">
                                     <h4 className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">{block.label}</h4>
@@ -141,25 +135,22 @@ export default function ServicesPage() {
 
                     <div className="h-px bg-gradient-to-r from-transparent via-stone-200 to-transparent"></div>
 
-                    {/* BOT */}
-                    <MotionSection id="bot" className="grid md:grid-cols-2 gap-12 items-start">
+                    {/* Full Automation Build */}
+                    <MotionSection id="full-build" className="grid md:grid-cols-2 gap-12 items-start">
                         <div>
-                            <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent mb-4">03 — Full Engagement</span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 font-sans mb-6">BOT — Build-Operate-Transfer</h2>
+                            <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent mb-4">03 — Complete Build</span>
+                            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 font-sans mb-6">Full Automation Build</h2>
                             <p className="text-stone-600 leading-relaxed text-lg">
-                                I take ownership of building or fixing your product within a fixed tenure (typically 6–12 months), working solo and communicating transparently about pace. The engagement concludes with full IP and documentation transfer.
+                                We design and build your complete automation layer — multi-step workflows, voice agents, AI-powered dashboards, data pipelines, and CRM integrations — delivered as a fully owned, documented system.
                             </p>
                             <p className="text-stone-500 mt-4 leading-relaxed">
-                                Nothing lives only in my head — documentation happens as I build, not retrofitted at the end.
-                            </p>
-                            <p className="text-sm text-stone-400 mt-4 italic">
-                                Typically 6–12 months. Monthly retainer engagement.
+                                Typically four to eight weeks for the initial build. Monthly retainer available after handover for ongoing expansion.
                             </p>
                         </div>
                         <div className="space-y-4">
                             {[
-                                { label: "What happens at exit", items: ["Full IP transfer — code, credentials, accounts", "Documentation clean enough for your next hire", "I help you think through what that hire needs to walk into", "Defined post-handover window for questions"] },
-                                { label: "Good fit for", items: ["Funded startups needing interim technical leadership", "Founders rebuilding after a bad agency experience", "Series A bridge period before a permanent CTO hire"] }
+                                { label: "What's delivered at handover", items: ["Full ownership — every system, credential, and access point transferred to you", "Clean documentation for every automation built", "Walkthrough training session for your team", "30-day post-handover support window"] },
+                                { label: "Good fit for", items: ["Businesses that want to automate their entire ops layer — not just one workflow", "Startups adding AI features, voice agents, and dashboards to their product", "Teams that want an ongoing automation partner as the business grows"] }
                             ].map((block, i) => (
                                 <div key={i} className="p-6 bg-stone-50 rounded-2xl border border-stone-100">
                                     <h4 className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">{block.label}</h4>
@@ -182,9 +173,9 @@ export default function ServicesPage() {
             <section className="py-24 bg-stone-50">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <MotionSection className="mb-16">
-                        <h2 className="text-3xl font-bold text-stone-900 font-sans mb-4">Technical Capabilities</h2>
+                        <h2 className="text-3xl font-bold text-stone-900 font-sans mb-4">What We Work With</h2>
                         <p className="text-stone-600 text-lg leading-relaxed max-w-2xl">
-                            A compact reference for technical due diligence. These are the stacks and tools I actually use — not a marketing list.
+                            The tools and platforms we build on — not a marketing list. Every item here is something we've shipped in production.
                         </p>
                     </MotionSection>
 
@@ -206,27 +197,10 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* ─── Solo-Operator Transparency ─── */}
-            <section className="py-24 bg-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <MotionSection className="p-10 bg-stone-900 text-stone-50 rounded-3xl">
-                        <h2 className="text-2xl md:text-3xl font-bold font-sans mb-6">How I handle solo-operator risk, upfront</h2>
-                        <div className="space-y-4 text-stone-300 leading-relaxed">
-                            <p>
-                                Documentation is written as I go, not reconstructed at handover. Response-time expectations are set in the engagement scope. Any period of reduced availability is flagged in advance.
-                            </p>
-                            <p>
-                                At the end of an engagement, you get full IP transfer and documentation clean enough that whoever comes next — your first hire or another vendor — can pick it up without needing me on a call.
-                            </p>
-                            <p>
-                                I'll help you structure what that next hire looks like — role definitions, interview structure, technical evaluation criteria — but the hiring and final decisions are yours. I don't run a recruiting pipeline.
-                            </p>
-                        </div>
-                    </MotionSection>
-                </div>
-            </section>
-
-            <Footer />
+            <Footer 
+                headline="Ready to stop doing it manually?" 
+                subtext="Book a free 30-minute Automation Audit call. We'll identify exactly what to automate first — no pitch deck, no commitment." 
+            />
         </main>
     );
 }

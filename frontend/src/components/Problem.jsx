@@ -11,17 +11,17 @@ const Problem = () => {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <MotionSection className="max-w-3xl mx-auto text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-serif italic font-light tracking-wide mb-6 text-stone-200">The Scale-Up Gap: Where Funded Startups Stall</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif italic font-light tracking-wide mb-6 text-stone-200">The Automation Gap: Where Growing Businesses Get Stuck</h2>
                     <p className="text-lg text-stone-400 max-w-2xl mx-auto">
-                        Finding a permanent CTO takes 100+ days and $400K/year. Hiring a traditional agency locks you into a black box. There is a better middle ground — fractional technical leadership today, full independence by the end of the engagement.
+                        Your team is smart. But they're spending half their day on tasks a system could handle — data entry, follow-ups, call routing, report building. That's the Automation Gap. And it's costing you more than you think.
                     </p>
                 </MotionSection>
 
                 <div className="grid gap-8 md:grid-cols-3 text-left">
                     {[
-                        { title: "The 100-Day Void", desc: "In 2026, finding a permanent CTO takes an average of 100+ days and costs over $400,000/year. Meanwhile, your product stalls and your runway burns." },
-                        { title: "The Black Box Trap", desc: "Your other choice? A traditional agency that treats your codebase like a 'black box,' creating a permanent dependency that scares away investors." },
-                        { title: "The Strategic Middle Ground", desc: "You get direct, hands-on technical judgment from day one — not a rotating cast of junior devs, and not a black-box agency retainer. I'm building your technical foundation, personally, so you can move fast without hiring a full-time CTO before you're ready." }
+                        { title: "The Manual Work Trap", desc: "Your team is doing the same 10 tasks every day — manually. Lead follow-ups, data entry, scheduling, report pulls. Smart people doing robot work. Every hour spent on this is an hour not spent on growth." },
+                        { title: "The Fragmented Tools Problem", desc: "You're running Notion, Airtable, HubSpot, Google Sheets, and three other tools — none of which talk to each other. Your team manually bridges the gaps. The data is never clean. The reports are always late." },
+                        { title: "The Missed AI Opportunity", desc: "Voice bots answer calls 24/7. Agents qualify leads before a human ever touches them. Dashboards update themselves in real time. Your competitors are already using this. The question is whether you'll catch up or get left behind." }
                     ].map((item, index) => (
                         <MotionSection key={index} delay={index * 0.2} className="group relative p-8 border-t border-stone-800 hover:border-stone-600 transition-colors duration-500">
                             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-stone-800/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

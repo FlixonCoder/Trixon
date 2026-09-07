@@ -309,7 +309,7 @@ const ReachOut = ({ isOpen, onClose }) => {
                                         </div>
                                         <div className="relative z-10">
                                             <h2 className="text-2xl font-serif italic mb-2">Pick a date</h2>
-                                            <p className="text-stone-400 text-sm mb-6">30-minute strategy session</p>
+                                            <p className="text-stone-400 text-sm mb-6">30-minute Automation Audit call</p>
 
                                             <div className="space-y-2">
                                                 {availableDates.map((date, i) => {
@@ -450,9 +450,9 @@ const ReachOut = ({ isOpen, onClose }) => {
                                         </div>
 
                                         <div className="relative z-10">
-                                            <h2 className="text-3xl font-serif italic mb-6">Secure your foundation.</h2>
+                                            <h2 className="text-3xl font-serif italic mb-6">Automate your operations.</h2>
                                             <p className="text-stone-400 mb-8 font-light leading-relaxed">
-                                                Tell us about your startup and we'll respond within 24 hours with a free technical strategy outline.
+                                                Tell us about your workflows and we'll respond within 24 hours with a free Automation Roadmap.
                                             </p>
                                         </div>
 
@@ -525,7 +525,7 @@ const ReachOut = ({ isOpen, onClose }) => {
                                                     <input
                                                         type="text" id="role" value={formData.role} onChange={handleChange} required
                                                         className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-stone-500 focus:ring-2 focus:ring-stone-200 outline-none transition-all text-stone-900 placeholder-stone-400"
-                                                        placeholder="Founder, CTO, etc."
+                                                        placeholder="Founder, Operator, etc."
                                                     />
                                                 </div>
                                                 <div>

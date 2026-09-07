@@ -39,13 +39,13 @@ const AboutFounder = () => {
 
                             <div className="space-y-4 text-lg text-stone-600 leading-relaxed mb-8">
                                 <p>
-                                    Trixon is me — a builder who works hands-on with early-stage founders because I've seen the same pattern too many times: strong ideas, sharp founders, and technical infrastructure that can't keep up. I built Trixon to close that gap myself, directly, without the layers a typical agency adds.
+                                    Trixon is me — a builder who got tired of watching businesses lose hours every day to work that machines should be doing. I started Trixon to build the automation systems, voice agents, and intelligent dashboards that give those hours back.
                                 </p>
                                 <p className="italic font-serif border-l-2 border-stone-200 pl-6 py-1">
-                                    "I take non-technical founders from idea to production-ready product. No fluff, no bloat — just execution, done by the person you're actually talking to."
+                                    "I build the automations that run your business ops while your team focuses on the work that actually requires a human. Every engagement is delivered by the person you're talking to — no layers, no handoffs."
                                 </p>
                                 <p>
-                                    Every Trixon engagement is built on one core principle — the best technical partner is the one who makes themselves unnecessary by giving you full independence.
+                                    Every Trixon engagement ends with you owning a system that runs without us. That's not a pitch — it's the only way we measure success.
                                 </p>
                             </div>
 

@@ -55,7 +55,7 @@ export const services = [
         slug: "product-saas-development",
         headline: "Scale from Prototype to Production SaaS",
         subheadline: "Engineering end-to-end SaaS products, MVPs, and web applications built for scale and transfer.",
-        overview: "We construct reliable, high-performance web products optimized for the pace of startups. Our Build-Operate-Transfer approach ensures everything is fully documented, clean, and ready to handover to your replacement team.",
+        overview: "We construct reliable, high-performance web products optimized for the pace of startups. Our fixed-scope delivery approach ensures everything is fully documented, clean, and ready to handover with full ownership.",
         problems: [
             "Prototypes built on low-code platforms that can't scale to enterprise customers.",
             "Technical debt slowing product iteration and delaying critical features.",
@@ -65,7 +65,7 @@ export const services = [
             "SaaS Architecture & Development",
             "Minimum Viable Product (MVP) Launches",
             "Full-Stack Web App Engineering",
-            "Fractional CTO Technical Leadership",
+            "Technical & Automation Leadership",
             "Stripe Subscriptions & Multi-tenancy Integrations"
         ],
         techStack: [

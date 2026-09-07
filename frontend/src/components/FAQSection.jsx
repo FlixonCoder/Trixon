@@ -5,64 +5,40 @@ import MotionSection from './MotionSection'
 
 const faqs = [
     {
-        question: "What is a fractional CTO, and do I actually need one?",
-        answer: "A fractional CTO gives you senior technical leadership — architecture decisions, hiring judgment, fundraising-readiness — without the cost or commitment of a full-time hire. You likely need one if you're non-technical and about to make expensive, hard-to-reverse technical decisions (choosing a stack, scoping an MVP, prepping for investor technical diligence)."
+        question: "What exactly does an AI Automation Agency build?",
+        answer: "We build the systems that eliminate manual work in your business — workflow automations that connect your tools, voice bots that handle inbound calls and lead qualification, calling agents that follow up with leads automatically, AI-powered dashboards that update in real time, and data pipelines that keep your records clean without human input."
     },
     {
-        question: "What is the Build-Operate-Transfer (BOT) model?",
-        answer: "I take ownership of building or fixing your product over a fixed tenure, then transfer full IP and documentation to you at the end — so you're never dependent on me continuing."
+        question: "What's an Automation Audit and why should I start there?",
+        answer: "The Automation Audit is a one-week engagement where we map your current workflows, identify where you're losing the most time to manual work, and produce a prioritised Automation Roadmap. It's the lowest-risk way to start — you get a clear, actionable plan regardless of whether you hire us to build it."
     },
     {
-        question: "How is Trixon different from a dev agency or freelance developer?",
-        answer: "You work directly with the person doing the work — no account manager, no junior developer executing while someone senior takes the meetings. That also means I'm selective about how many engagements I take on at once, so the work stays hands-on."
+        question: "How is Trixon different from a no-code automation tool like Zapier or Make?",
+        answer: "No-code tools are great for simple, two-step automations. Trixon builds what no-code can't handle — multi-step custom workflows, AI-powered decision logic, voice bots with real conversation handling, calling agents that adapt to responses, and dashboards connected to your specific data sources. We build custom, which means it fits your business exactly."
     },
     {
-        question: "How much does a Trixon engagement cost?",
-        answer: "Engagements are typically a monthly retainer, with equity discussed only for longer-term TTCF partnerships — scoped after an initial call and, often, a Technical Audit. I don't have a fixed price sheet because scope varies a lot by codebase and stage."
+        question: "How long does a typical build take?",
+        answer: "The Automation Audit takes one week. An AI Integration Sprint (a single, scoped automation or AI feature) typically takes two to four weeks. A Full Automation Build — a complete automation layer across your ops — runs four to eight weeks depending on complexity. All timelines and scope are agreed upfront."
     },
     {
-        question: "What is the Technical Audit, and how long does it take?",
-        answer: "A focused review of your codebase — architecture, scalability, and technical risk — with a prioritized set of recommendations. Usually 1–3 weeks depending on codebase size. It's also the lowest-commitment way to work together before anything bigger."
+        question: "Do we own the automations you build?",
+        answer: "Yes. Every system we build is fully yours at handover — code, credentials, documentation, and access. We don't create dependency. If you ever want to modify or extend what we've built, you can do it yourself, hire someone else, or come back to us."
     },
     {
-        question: "I built my MVP with AI tools like Cursor, Replit, or Lovable — can Trixon help me scale it?",
-        answer: "Yes. AI-assisted prototypes are usually fast to build and fragile to scale — I specialize in taking that first pass and making it production-ready without a full rewrite where avoidable."
+        question: "What tools and platforms do you build on?",
+        answer: "We build on the tools that give you the most flexibility and ownership — Python and Node.js for custom builds; n8n and Make for workflow orchestration; Retell AI, Vapi, and Twilio for voice and calling agents; OpenAI, Anthropic, and Gemini APIs for LLM integration; and PostgreSQL, MongoDB, and Airtable for data. We use whatever fits your stack, not a fixed template."
     },
     {
-        question: "I've been burned by a dev shop before. How do I know Trixon won't do the same thing?",
-        answer: "Documentation happens as I build, not at the end, and full IP transfers to you at exit — every account, credential, and decision record. Because it's just me, there's no incentive structure pushing toward a longer engagement than you actually need."
+        question: "Can you integrate with tools we already use?",
+        answer: "Yes. We build integrations with HubSpot, Salesforce, Notion, Airtable, Google Sheets, Slack, WhatsApp, Telegram, and most tools with an API. If you're already using a tool, we connect to it — we don't ask you to switch."
     },
     {
-        question: "We just raised funding — do we need Trixon or a full-time CTO?",
-        answer: "Often neither, yet. I can stabilize your technical foundation and help define what a full-time CTO hire actually needs to walk into, so you're not making that hire under pressure."
+        question: "Do you do ongoing work or just one-off builds?",
+        answer: "Both. Most clients start with a fixed-scope build (Automation Audit → Sprint or Full Build). After handover, many choose a monthly retainer to keep expanding the automation layer as the business grows. There's no obligation — the retainer is optional."
     },
     {
-        question: "Does Trixon only work with non-technical founders?",
-        answer: "No — semi-technical founders who want a second set of senior hands, or who don't have bandwidth to own the technical side alone, are a great fit too."
-    },
-    {
-        question: "What happens after the engagement ends — are we on our own?",
-        answer: "You get full IP and documentation transfer, and a defined post-handover window where I'm available for questions. After that, the goal is that you don't need me — that's the point of BOT."
-    },
-    {
-        question: "Do you hire the engineering team for us, or do we do that?",
-        answer: "I'll help you structure the hiring process — role definitions, interview structure, technical evaluation criteria — but the hiring and final decisions are yours. I don't run a recruiting pipeline."
-    },
-    {
-        question: "Is Trixon a good fit for a very early-stage or pre-seed startup?",
-        answer: "Yes, especially through a Technical Audit or a scoped MVP build — that's often the right entry point before a larger TTCF or BOT engagement makes sense."
-    },
-    {
-        question: "Is Trixon a big agency, or is it run by one person?",
-        answer: "It's run by one person — me. That's intentional: you get direct access to the person actually building your product, not a layer of account management."
-    },
-    {
-        question: "Can Trixon build AI features into my existing product, not just fix my architecture?",
-        answer: "Yes — LLM integration, RAG, agentic workflows, and custom AI features are a core part of what I build, not an add-on."
-    },
-    {
-        question: "How do I start working with Trixon?",
-        answer: "Book a free strategy session, or start with a Technical Audit if you want a lower-commitment first step."
+        question: "How do I start?",
+        answer: "Book a free 30-minute Automation Audit call. We'll ask about your current workflows, identify the biggest opportunity for automation, and tell you exactly what we'd build and how long it would take. No pitch deck required — just a direct conversation."
     }
 ]
 
@@ -86,7 +62,7 @@ const FAQSection = () => {
                         Frequently Asked Questions
                     </h2>
                     <p className="text-lg max-w-2xl mx-auto text-stone-400">
-                        Everything you need to know about working with an independent technical partner.
+                        Everything you need to know about working with an AI automation partner.
                     </p>
                 </MotionSection>
 

@@ -4,19 +4,19 @@ import MotionSection from './MotionSection'
 const WhatWeDo = () => {
     const items = [
         {
-            title: "Technical Audit",
-            desc: "An independent, no-obligation look at your codebase — a clear before/after benchmark and a set of prioritized recommendations you can act on immediately, with or without hiring me further. Typical turnaround: 1–3 weeks depending on codebase size.",
-            support: "The lowest-risk way to see how I work before committing to anything larger."
+            title: "Automation Audit",
+            desc: "A one-week deep dive into your current workflows and tools. We identify the highest-ROI automation opportunities, map what to build first, and deliver a prioritised Automation Roadmap — actionable with or without hiring us. The lowest-risk way to start.",
+            support: "The lowest-risk way to see how we work before committing to anything larger."
         },
         {
-            title: "TTCF — Temporary Technical Co-Founder",
-            desc: "I join your company under a partnership arrangement, functioning as a hands-on technical lead — MVP development, architecture decisions, and fundraising-readiness — directly and personally. Tenure is flexible and scoped to your actual needs.",
+            title: "AI Integration Sprint",
+            desc: "We integrate AI into a specific part of your product or workflow — a voice bot, a calling agent, an LLM-powered feature, or a connected automation. Fixed scope, fixed timeline (typically 2–4 weeks), clear deliverable. No equity, no retainer required.",
             support: "No account manager. No junior devs executing while someone else takes the calls."
         },
         {
-            title: "BOT — Build-Operate-Transfer",
-            desc: "I take ownership of building or fixing your product within a fixed tenure, working solo and communicating transparently about pace. The engagement concludes with full IP and documentation transfer — nothing lives only in my head.",
-            support: "Documentation happens as I build, not retrofitted at the end."
+            title: "Full Automation Build",
+            desc: "We design and build your complete automation layer — multi-step workflows, voice agents, dashboards, data pipelines, and CRM integrations — delivered as a fully owned, documented system. Monthly retainer engagement for ongoing expansion available after the initial build.",
+            support: "Documentation happens as we build, not retrofitted at the end."
         }
     ]
 
@@ -30,10 +30,10 @@ const WhatWeDo = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <MotionSection className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 mb-6 font-sans">
-                        Three Ways to Engage
+                        What We Build
                     </h2>
                     <p className="mt-4 text-xl text-stone-600 max-w-2xl mx-auto">
-                        Every engagement is scoped to what you actually need — no long-term contracts, no ambiguity.
+                        Fixed-scope engagements. Every build is scoped upfront — no retainer lock-ins, no ambiguity.
                     </p>
                 </MotionSection>
 

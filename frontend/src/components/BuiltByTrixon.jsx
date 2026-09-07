@@ -10,21 +10,21 @@ const BuiltByTrixon = () => {
         {
             name: "Ketpa Veterinary Platform",
             description: "Full-stack MVP with patient, doctor, and admin dashboards. Calendar-integrated appointment booking, email verification, and emergency pipeline — built for handover from day one.",
-            tag: "Product & SaaS Development",
+            tag: "SaaS Development · Workflow Automation",
             href: "/work",
             image: assets.ketpa2
         },
         {
-            name: "Yuvaratna — NGO Technical Co-Founder",
+            name: "Yuvaratna — Full Web Build",
             description: "Sole technical lead for 8 months. Designed, built, and maintained the organization's full web presence end-to-end from zero, using MERN stack.",
-            tag: "Technical Co-Founder (TTCF)",
+            tag: "Web Development · Technical Build",
             href: "/work",
             image: assets.yuvaratna1
         },
         {
             name: "AI Interrogation Engine",
-            description: "A Gemini-powered conversational AI system with custom personas, session memory, and prompt-level guardrails — built and deployed end-to-end in under 24 hours for a live event.",
-            tag: "AI Solutions",
+            description: "A Gemini-powered conversational AI system with custom personas, session memory, and prompt-level guardrails. Built and deployed end-to-end in under 24 hours — a demonstration of what rapid AI integration looks like in practice.",
+            tag: "AI Integration · Voice & Conversational AI",
             href: "/work",
             image: assets.chatbot1
         }

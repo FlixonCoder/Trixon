@@ -6,7 +6,11 @@ import Image from 'next/image';
 import { useContact } from '../context/ContactContext';
 import lightLogo from '../../public/light-logo.png';
 
-const Footer = () => {
+const Footer = ({
+    headline = "Ready to automate?",
+    subtext = "Book a free 30-minute Automation Audit call. We'll identify exactly what to build first — no pitch deck, no commitment.",
+    buttonText = "Get a Free Automation Audit"
+}) => {
     const { openContact } = useContact();
 
     return (
@@ -15,17 +19,17 @@ const Footer = () => {
                 {/* Top Section: CTA Grid */}
                 <MotionSection className="text-center max-w-4xl mx-auto mb-20">
                     <h2 className="text-4xl md:text-5xl font-serif italic mb-6 text-stone-150 leading-tight">
-                        Don't just build an app. Build an institution.
+                        {headline}
                     </h2>
                     <p className="text-lg md:text-xl text-stone-400 font-sans mb-10 max-w-2xl mx-auto font-light">
-                        Book your free 30-minute strategy session. No pitch deck required — just a direct conversation about your technical foundation.
+                        {subtext}
                     </p>
                     <button
                         onClick={openContact}
                         className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-stone-900 bg-white rounded-full transition-all duration-300 shadow-xl hover:scale-105 hover:bg-stone-50 cursor-pointer"
                         suppressHydrationWarning
                     >
-                        Secure Your Foundation
+                        {buttonText}
                         <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
@@ -41,7 +45,7 @@ const Footer = () => {
                             <span className="text-xl font-bold text-white font-sans tracking-tight">Trixon</span>
                         </div>
                         <p className="text-sm text-stone-400 leading-relaxed font-light">
-                            Independent technical partner for early-stage founders. Direct access, no middlemen.
+                            AI Automation Agency. We build the systems that run your business ops — workflows, voice agents, dashboards, and data pipelines.
                         </p>
                         <div className="flex gap-4">
                             <a href="https://www.linkedin.com/company/trixon-cloud/" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors" aria-label="LinkedIn">
@@ -52,25 +56,25 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Engagements Column */}
+                    {/* Services Column */}
                     <div className="space-y-4">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-stone-300">Engagements</h4>
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-stone-300">Services</h4>
                         <ul className="space-y-2.5 text-sm">
                             <li>
-                                <Link href="/services#audit" className="text-stone-400 hover:text-white transition-colors">Technical Audit</Link>
+                                <Link href="/services#audit" className="text-stone-400 hover:text-white transition-colors">Automation Audit</Link>
                             </li>
                             <li>
-                                <Link href="/services#ttcf" className="text-stone-400 hover:text-white transition-colors">TTCF</Link>
+                                <Link href="/services#sprint" className="text-stone-400 hover:text-white transition-colors">AI Integration Sprint</Link>
                             </li>
                             <li>
-                                <Link href="/services#bot" className="text-stone-400 hover:text-white transition-colors">Build-Operate-Transfer</Link>
+                                <Link href="/services#full-build" className="text-stone-400 hover:text-white transition-colors">Full Automation Build</Link>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Work Column */}
+                    {/* Results Column */}
                     <div className="space-y-4">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-stone-300">Work</h4>
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-stone-300">Results</h4>
                         <ul className="space-y-2.5 text-sm">
                             <li>
                                 <Link href="/work" className="text-stone-400 hover:text-white transition-colors">Case Studies</Link>
@@ -96,7 +100,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <button onClick={openContact} className="text-stone-400 hover:text-white transition-colors cursor-pointer text-left" suppressHydrationWarning>
-                                    Let's Talk
+                                    Get a Free Automation Audit
                                 </button>
                             </li>
                             <li className="pt-2">
@@ -111,7 +115,7 @@ const Footer = () => {
 
                 {/* Bottom Section: Copyright */}
                 <div className="mt-8 pt-8 border-t border-stone-800/50 text-stone-600 text-xs flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <p>&copy; {new Date().getFullYear()} Trixon. All rights reserved.</p>
+                    <p>&copy; 2026 Trixon. All rights reserved.</p>
                     <p className="text-stone-600 font-light">Worldwide remote operations.</p>
                 </div>
             </div>

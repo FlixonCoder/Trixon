@@ -21,7 +21,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium text-stone-600 ring-1 ring-stone-900/10 bg-white/50 backdrop-blur-sm mb-6 md:mb-10 shadow-sm"
                 >
-                    <span className="flex h-2 w-2 rounded-full bg-accent mr-2"></span> Based on the proven Build-Operate-Transfer model
+                    <span className="flex h-2 w-2 rounded-full bg-accent mr-2"></span> AI Automation Agency · Workflows · Voice Agents · Dashboards
                 </motion.div>
 
                 <motion.h1
@@ -30,9 +30,9 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-5xl font-bold tracking-tight text-stone-900 sm:text-6xl md:text-7xl mb-6 md:mb-8 font-sans"
                 >
-                    <span className="block mb-1">Your technical co-founder,</span>
+                    <span className="block mb-1">We build the systems that</span>
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-stone-800 to-stone-600">
-                        without the co-founder equity.
+                        run your business while you sleep.
                     </span>
                 </motion.h1>
 
@@ -42,7 +42,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="mt-6 md:mt-8 max-w-2xl mx-auto text-xl text-stone-600 leading-relaxed"
                 >
-                    I work directly with early-stage founders as a <span className="font-semibold text-stone-800">hands-on technical partner</span> — architecture, MVP builds, and fundraising-ready foundations — then hand over a codebase you fully own.
+                    Custom AI automations, voice bots, calling agents, and intelligent dashboards — built for businesses that are <span className="font-semibold text-stone-800">done doing things manually</span>.
                 </motion.p>
 
                 <motion.div
@@ -56,18 +56,18 @@ const Hero = () => {
                         onClick={openContact}
                         className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-stone-900 rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-stone-900/20 hover:bg-stone-800 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-2 cursor-pointer"
                     >
-                        Book a Free Strategy Session
+                        Get a Free Automation Audit
                         <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </button>
 
                     {/* Muted subtext below CTA */}
-                    <p className="mt-4 text-sm text-stone-400">No pitch deck. No commitment. 30 minutes.</p>
+                    <p className="mt-4 text-sm text-stone-400">No commitment. 30 minutes. We'll show you exactly what to automate first.</p>
 
                     {/* Trust badges */}
                     <div className="mt-6 flex flex-wrap justify-center gap-3">
-                        {['Direct Access, No Middlemen', 'Full IP Transfer', 'Fixed-Scope Engagements'].map((badge, i) => (
+                        {['No Manual Work', 'Fixed-Scope Builds', 'Results in 30 Days'].map((badge, i) => (
                             <span key={i} className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-white/70 text-stone-500 ring-1 ring-stone-200/80 backdrop-blur-sm">
                                 <span className="w-1.5 h-1.5 rounded-full bg-accent mr-2"></span>
                                 {badge}

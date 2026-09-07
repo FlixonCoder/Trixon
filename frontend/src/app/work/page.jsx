@@ -6,8 +6,8 @@ import Footer from '../../components/Footer';
 import { assets } from '../../assets/assets';
 
 export const metadata = {
-    title: 'Work & Case Studies | Trixon',
-    description: 'Real projects, shipped end-to-end. Case studies from Trixon engagements — Ketpa veterinary platform, Yuvaratna NGO, AI Interrogation Engine, and more.',
+    title: 'Results & Case Studies | Trixon',
+    description: 'Real automations, shipped end-to-end. Case studies from Trixon engagements — AI systems, workflow automations, voice integrations, and data pipelines.',
     alternates: {
         canonical: '/work',
     },
@@ -37,14 +37,14 @@ export default function WorkPage() {
                 </div>
                 <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
                     <MotionSection className="inline-flex items-center rounded-full px-4 py-1.5 text-xs font-bold text-accent uppercase tracking-widest ring-1 ring-stone-900/10 bg-white/50 backdrop-blur-sm mb-8 shadow-sm">
-                        Proof of Work
+                        Results
                     </MotionSection>
                     <MotionSection>
                         <h1 className="text-4xl font-bold tracking-tight text-stone-900 sm:text-5xl md:text-6xl mb-8 font-sans">
-                            Real projects, shipped end-to-end.
+                            Real automations. Real outcomes.
                         </h1>
                         <p className="max-w-2xl mx-auto text-xl text-stone-600 leading-relaxed">
-                            Here's what building with Trixon actually looks like.
+                            Here's what working with Trixon actually looks like.
                         </p>
                     </MotionSection>
                 </div>
@@ -60,7 +60,7 @@ export default function WorkPage() {
                     <MotionSection>
                         <div className="flex flex-wrap items-center gap-3 mb-6">
                             <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent border border-accent/20">
-                                Product & SaaS Development
+                                SaaS Development · Workflow Automation
                             </span>
                             <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-stone-100 text-stone-500 border border-stone-200">
                                 Client Work
@@ -141,17 +141,17 @@ export default function WorkPage() {
                     <MotionSection>
                         <div className="flex flex-wrap items-center gap-3 mb-6">
                             <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent border border-accent/20">
-                                Technical Co-Founder (TTCF)
+                                Web Development · Technical Build
                             </span>
                             <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-stone-100 text-stone-500 border border-stone-200">
                                 Client Work · 8 months
                             </span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-stone-900 font-sans mb-4">
-                            Yuvaratna — NGO Technical Co-Founder
+                            Yuvaratna — Full Web Build
                         </h2>
                         <p className="text-xl text-stone-600 mb-12 max-w-3xl leading-relaxed">
-                            Served as sole technical lead for a regional NGO for 8 months — designed, built, and maintained their full web presence end-to-end from zero. This engagement represents the TTCF model in practice: one person, full ownership, clean exit.
+                            Sole technical lead for a regional NGO for 8 months — designed, built, and maintained their full web presence end-to-end from zero. One person. Full ownership. Clean exit.
                         </p>
                     </MotionSection>
 
@@ -211,12 +211,12 @@ export default function WorkPage() {
                                 {assets.chatbot1 && <Image src={assets.chatbot1} alt="AI Interrogation Engine" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />}
                             </div>
                             <div className="flex flex-wrap gap-2 mb-4">
-                                <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent">AI Solutions</span>
+                                <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent">AI Integration · Conversational AI</span>
                                 <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-stone-100 text-stone-500">Live Deployment</span>
                             </div>
                             <h3 className="text-2xl font-bold text-stone-900 font-sans mb-3">AI Interrogation Engine</h3>
                             <p className="text-stone-600 leading-relaxed mb-6 text-sm">
-                                Gemini-powered conversational AI with custom personas, session memory, and prompt-level guardrails — built and deployed end-to-end in under 24 hours for a live event.
+                                A Gemini-powered conversational AI system with custom personas, session memory, and prompt-level guardrails. Built and deployed end-to-end in under 24 hours — a demonstration of what rapid AI integration looks like in practice.
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {["React", "Node.js", "Google Gemini 2.5 Flash", "MongoDB"].map(stackBadge)}
@@ -229,7 +229,7 @@ export default function WorkPage() {
                                 {assets.tele1 && <Image src={assets.tele1} alt="Telegram Lead Pipeline" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />}
                             </div>
                             <div className="flex flex-wrap gap-2 mb-4">
-                                <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent">Data & Analytics</span>
+                                <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent">Workflow Automation · Data Pipeline · AI Integration</span>
                                 <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-stone-100 text-stone-500">Client Work</span>
                             </div>
                             <h3 className="text-2xl font-bold text-stone-900 font-sans mb-3">Telegram Lead Pipeline + MERN Dashboard</h3>
@@ -251,13 +251,16 @@ export default function WorkPage() {
                         <p className="text-stone-400 text-sm font-medium uppercase tracking-widest mb-3">More coming</p>
                         <h3 className="text-2xl font-bold text-stone-700 font-sans mb-4">Case studies in progress</h3>
                         <p className="text-stone-500 leading-relaxed max-w-xl mx-auto">
-                            More case studies are being added as new engagements complete — including Technical Audits currently underway. This page will grow as the reference library builds.
+                            More case studies are being added as new engagements complete — including automation builds and AI integrations currently underway. This page will grow as the reference library builds.
                         </p>
                     </MotionSection>
                 </div>
             </section>
 
-            <Footer />
+            <Footer 
+                headline="Seen enough? Let's talk about your workflows." 
+                subtext="Book a free 30-minute Automation Audit call. We'll identify exactly what to automate first — no pitch deck, no commitment." 
+            />
         </main>
     );
 }

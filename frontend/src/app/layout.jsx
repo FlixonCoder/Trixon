@@ -11,8 +11,8 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: 'Fractional CTO for Startups | Build-Operate-Transfer | Trixon',
-  description: 'Trixon is an independent technical partner for early-stage, non-technical founders. Direct access to the person writing your code — architecture, MVP builds, and full IP transfer at exit.',
+  title: 'AI Automation Agency | Workflows, Voice Agents & Dashboards | Trixon',
+  description: 'Trixon builds custom AI automations, voice bots, calling agents, and intelligent dashboards for SMBs and startups. We automate what your team does manually — and hand you back your time.',
   metadataBase: new URL('https://trixon.cloud'),
   alternates: {
     canonical: '/',
@@ -25,10 +25,14 @@ export const metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: 'Trixon — Your Technical Co-Founder, Without the Co-Founder Equity',
-    description: 'I work directly with early-stage founders as a hands-on technical partner — architecture, MVP builds, and fundraising-ready foundations — then hand over a codebase you fully own.',
+    title: 'Trixon — AI Automation Agency for Businesses Done Doing Things Manually',
+    description: 'We build custom AI automations, voice agents, and intelligent dashboards that run your business ops without the manual work.',
     url: 'https://trixon.cloud',
     type: 'website',
+  },
+  twitter: {
+    title: 'Trixon — AI Automation Agency for Businesses Done Doing Things Manually',
+    description: 'We build custom AI automations, voice agents, and intelligent dashboards that run your business ops without the manual work.',
   },
 };
 

@@ -18,8 +18,8 @@ const NavBar = () => {
 
     const navLinks = [
         { label: 'Home', path: '/' },
-        { label: 'Services', path: '/services' },
-        { label: 'Work', path: '/work' },
+        { label: 'What We Build', path: '/services' },
+        { label: 'Results', path: '/work' },
         { label: 'FAQ', path: '/#faqs' },
     ];
 
@@ -51,7 +51,7 @@ const NavBar = () => {
                         ))}
                     </div>
 
-                    {/* Let's Talk CTA & Hamburger */}
+                    {/* CTA & Hamburger */}
                     <div className="flex items-center space-x-4">
                         <button
                             onClick={openContact}
@@ -59,7 +59,7 @@ const NavBar = () => {
                             className="text-white bg-stone-900 hover:bg-stone-800 font-medium rounded-full text-sm px-6 py-2.5 text-center transition-transform hover:scale-105 hidden md:block shadow-lg cursor-pointer"
                             suppressHydrationWarning
                         >
-                            Let's Talk
+                            Get a Free Automation Audit
                         </button>
 
                         {/* Hamburger menu trigger */}
@@ -102,14 +102,14 @@ const NavBar = () => {
                             </li>
                         ))}
 
-                        {/* Mobile Let's Talk CTA */}
+                        {/* Mobile CTA */}
                         <li className="pt-4">
                             <button
                                 onClick={() => { setIsMobileMenuOpen(false); openContact(); }}
                                 className="w-full text-white bg-stone-900 hover:bg-stone-800 font-medium rounded-full text-sm py-3 text-center"
                                 suppressHydrationWarning
                             >
-                                Let's Talk
+                                Get a Free Automation Audit
                             </button>
                         </li>
                     </ul>

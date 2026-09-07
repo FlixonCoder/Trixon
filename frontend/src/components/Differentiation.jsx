@@ -12,29 +12,29 @@ const Differentiation = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <MotionSection className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-serif italic text-stone-900 mb-6 font-light">
-                        Don't Just Build an App. Build an <span className="font-sans font-bold not-italic">Institution.</span>
+                        Stop Doing Manually What a <span className="font-sans font-bold not-italic">System Can Do For You.</span>
                     </h2>
                     <p className="mt-4 text-xl text-stone-600 max-w-2xl mx-auto">
-                        I'm the only partner whose primary goal is to make myself unnecessary.
+                        Every hour your team spends on a repeatable task is an hour we can give back.
                     </p>
                 </MotionSection>
 
                 <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto mb-16">
                     {[
                         {
-                            metric: "Full",
-                            label: "IP Transferred",
-                            desc: "Every account, domain, credential, and decision record — formally handed over at exit."
-                        },
-                        {
                             metric: "100%",
-                            label: "Ownership to you",
-                            desc: "You leave with a codebase and documentation that is fully yours."
+                            label: "Owned by You",
+                            desc: "Every automation, credential, and system we build is handed over fully at the end of the engagement."
                         },
                         {
-                            metric: "Clean",
-                            label: "Post-handover exit",
-                            desc: "Whoever comes next — your first hire or another vendor — can pick it up without needing me on a call."
+                            metric: "30",
+                            label: "Days to Live",
+                            desc: "Most automations are live and running within 30 days of kickoff."
+                        },
+                        {
+                            metric: "0",
+                            label: "Manual Steps Left",
+                            desc: "The goal of every build: zero manual steps remaining in the workflow we automate."
                         }
                     ].map((item, i) => (
                         <MotionSection key={i} delay={i * 0.2} className="group p-10 bg-white rounded-3xl shadow-sm border border-stone-100/50 hover:shadow-xl hover:border-stone-200 transition-all duration-300 text-center">
@@ -51,7 +51,7 @@ const Differentiation = () => {
                         onClick={openContact}
                         className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-stone-900 rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-stone-900/20 hover:bg-stone-800 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-2 cursor-pointer"
                     >
-                        Secure Your Foundation
+                        Get a Free Automation Audit
                         <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
@@ -63,7 +63,7 @@ const Differentiation = () => {
                             href="/work"
                             className="inline-flex items-center text-base font-medium text-stone-500 hover:text-stone-900 transition-colors border-b border-stone-300 hover:border-stone-900 pb-1"
                         >
-                            See what I've built →
+                            See what we've built →
                         </Link>
                     </div>
                 </MotionSection>
